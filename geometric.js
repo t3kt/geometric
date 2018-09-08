@@ -121,11 +121,10 @@ const Geo = (function () {
                 segment.previous.point);
         }
 
-        static fromSegments(segments) {
-            return segments.map(seg => Edge.fromSegment(seg));
-        }
-
-        interp(ratio) {
+        interp(ratio, flip = false) {
+            if (flip) {
+                ratio = 1 - ratio;
+            }
             return interpPoints(this.pt1, this.pt2, ratio);
         }
     }
@@ -316,18 +315,12 @@ const Geo = (function () {
     }
 
     function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2, attrs) {
-        const pt1A = flip1 ? edge1.pt2 : edge1.pt1;
-        const pt1B = flip1 ? edge1.pt1 : edge1.pt2;
-        const pt2A = flip2 ? edge2.pt2 : edge2.pt1;
-        const pt2B = flip2 ? edge2.pt1 : edge2.pt2;
-
         let lines = [];
         for (let i = 0; i < steps; i++) {
-            let pt1 = interpPoints(pt1A, pt1B, i / steps);
-            let pt2 = interpPoints(pt2A, pt2B, i / steps);
+            let ratio = i / steps;
             let line = new Path.Line({
-                from: pt1,
-                to: pt2,
+                from: edge1.interp(ratio, flip1),
+                to: edge2.interp(ratio, flip2),
                 strokeColor: '#660066',
                 closed: false
             });
@@ -337,61 +330,10 @@ const Geo = (function () {
         return lines;
     }
 
-    function addLineBridgeBetweenSegments(
-        segment1, segment2, numLines, flip1, flip2, attrs) {
-        numLines += 2;
-        let pt1A = segment1.previous.point;
-        let pt1B = segment1.point;
-        let pt2A = segment2.previous.point;
-        let pt2B = segment2.point;
-        if (flip1) {
-            [pt1A, pt1B] = [pt1B, pt1A];
-        }
-        if (flip2) {
-            [p21A, p21B] = [pt2B, pt2A];
-        }
-
-        const lines = [];
-        for (let i = 1; i < numLines - 1; i++) {
-            let pt1 = interpPoints(pt1A, pt1B, i / numLines);
-            let pt2 = interpPoints(pt2A, pt2B, i / numLines);
-            let line = new Path.Line({
-                from: pt1,
-                to: pt2,
-                strokeColor: '#ff00ff',
-                closed: false
-            });
-            attrs && attrs.applyTo(line);
-            lines.push(line);
-        }
-
-        return lines;
-    }
-
     function interpPoints(pt1, pt2, ratio) {
         return new Point(
             pt1.x + (pt2.x - pt1.x) * ratio,
             pt1.y + (pt2.y - pt1.y) * ratio);
-    }
-
-    function addLineBridgesBetweenAllSegments(
-        poly, numLines, flip1, flip2, attrs) {
-        const lines = [];
-        for (let i = 0; i < poly.length; i++) {
-            let segment1 = poly.segments[i];
-            if (!segment1) {
-                continue;
-            }
-            let segment2 = segment1.next;
-            lines.push(...addLineBridgeBetweenSegments(
-                segment1,
-                segment2,
-                numLines,
-                flip1,
-                flip2,
-                attrs));
-        }
-        return lines;
     }
 
     function addPolyAtCorners(pt1, pt2, numSides, flip, attrs) {
@@ -444,18 +386,6 @@ const Geo = (function () {
         }
     }
 
-    function addPolyOnSegment(segment, numSides, flip, attrs) {
-        let prevPt = segment.previous.point;
-        let currPt = segment.point;
-        return addPolyAtCorners(prevPt, currPt, numSides, flip, attrs);
-    }
-
-    function addPolyOnAllSegments(baseShape, numSides, flip, attrs) {
-        return baseShape.segments.map(function (segment) {
-            return addPolyOnSegment(segment, numSides, flip, attrs);
-        });
-    }
-
     function averagePoints(pts) {
         let x = 0, y = 0;
         pts.forEach(function (pt) {
@@ -463,21 +393,6 @@ const Geo = (function () {
             y += pt.y;
         });
         return new Point(x / pts.length, y / pts.length);
-    }
-
-    function addPolyOnSomeSegments(baseShape, selector, numSides, flip, attrs) {
-        if (Array.isArray(selector)) {
-            return selector.map(function (i) {
-                return addPolyOnSegment(baseShape.segments[i], numSides, flip, attrs);
-            });
-        }
-        const polys = [];
-        for (let i = selector.offset || 0;
-             i !== baseShape.segments.length - 1 && (!selector.end || i < selector.end);
-             i = (selector.step + i) % baseShape.segments.length) {
-            polys.push(addPolyOnSegment(baseShape.segments[i], numSides, flip, attrs));
-        }
-        return polys;
     }
 
     function toRadians(angleDegrees) {
@@ -503,15 +418,6 @@ const Geo = (function () {
         Attrs,
         EdgeProvider,
         Generator,
-        generateGraph,
-        generate: generateGroup,
-        addLineBridgeBetweenSegments,
-        addLineBridgesBetweenAllSegments,
-        addPolyAtCorners,
-        drawPolySegmentIndices,
-        addPolyOnSegment,
-        addPolyOnAllSegments,
-        addPolyOnSomeSegments,
     });
 
     return generateGraph;

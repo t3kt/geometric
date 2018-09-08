@@ -3,7 +3,7 @@ function main() {
     const renderHeight = 800;
     const G = Geo;
 
-    const {Point, Size, Path} = paper;
+    const {Point, Path} = paper;
 
     let centerPoint = new Point(renderWidth / 2, renderHeight / 2);
 
@@ -15,7 +15,6 @@ function main() {
         let radius = renderWidth / 6;
         let baseSides = 18;
         let baseShape = new Path.RegularPolygon(centerPoint, baseSides, radius);
-        baseShape.rotate(360 / baseSides / 2);
         baseShape.strokeColor = '#7e77ff';
 
         G(baseShape, [
