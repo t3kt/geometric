@@ -1,0 +1,8 @@
+#geo-canvas {
+    border: 1px solid #666666;
+}
+#geo-svg {
+    width: 90%;
+    height: 10em;
+    display: none;
+}
