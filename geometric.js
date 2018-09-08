@@ -29,59 +29,6 @@ const Geo = (function () {
         return items;
     }
 
-    function generateGraph(baseShape, specs) {
-        let allItems = [];
-        let orderedItemGroups = [];
-        let namedItemGroups = {};
-        specs = arrayify(specs);
-
-        for (let i = 0; i < specs.length; i++) {
-            let spec = specs[i];
-            if (!spec) {
-                orderedItemGroups.push(null);
-                continue;
-            }
-            let fromId = spec.from;
-            let context;
-            if (fromId == null) {
-                context = baseShape;
-            } else {
-                if (_.isNumber(fromId)) {
-                    if (fromId < 0) {
-                        fromId = i + fromId;
-                    }
-                    if (fromId < 0 || fromId >= i) {
-                        throw new Error('Invalid source context index: ' + fromId);
-                    }
-                    context = orderedItemGroups[fromId];
-                } else {
-                    if (!_.has(namedItemGroups, fromId)) {
-                        throw new Error('Source context not found: ' + fromId);
-                    }
-                    context = namedItemGroups[fromId];
-                }
-            }
-            if (spec.attrs == null) {
-                spec.attrs = _.omit(spec, ['id', 'from', 'edges', 'generators']);
-            }
-            let groupItems = generateGroup(context, {
-                edges: spec.edges,
-                generators: spec.generators,
-                attrs: spec.attrs
-            });
-            allItems.push(...groupItems);
-            orderedItemGroups.push(groupItems);
-            if (spec.id) {
-                if (_.has(namedItemGroups, spec.id)) {
-                    throw new Error('duplicate group id: ' + spec.id);
-                }
-                namedItemGroups[spec.id] = groupItems;
-            }
-        }
-
-        return allItems;
-    }
-
     class Attrs {
         constructor(opts = null) {
             opts = _.assign({
@@ -314,6 +261,91 @@ const Geo = (function () {
         }
     }
 
+    class GeoDocument {
+        constructor({name = {}, meta = {}, base = {}, groups = []}) {
+            this.name = name;
+            this.meta = meta;
+            this.base = base;
+            this.groups = arrayify(groups);
+        }
+
+        render() {
+            let {width, height} = paper.view.viewSize;
+
+            let baseShape = this.base;
+            let showBaseNumbers = baseShape.showNumbers;
+            if (_.isPlainObject(baseShape)) {
+                if (!baseShape.center) {
+                    baseShape.center = [width / 2, height / 2];
+                }
+                if (baseShape.radius == null) {
+                    baseShape.radius = 0.5;
+                }
+                baseShape.radius *= _.min([width, height]);
+                baseShape = new Path.RegularPolygon(baseShape);
+            }
+            if (showBaseNumbers) {
+                drawPolySegmentIndices(baseShape);
+            }
+            let allItems = [baseShape];
+            let orderedItemGroups = [];
+            let namedItemGroups = {};
+
+            for (let i = 0; i < this.groups.length; i++) {
+                let spec = this.groups[i];
+                if (!spec) {
+                    orderedItemGroups.push(null);
+                    continue;
+                }
+                let fromId = spec.from;
+                let context;
+                if (fromId == null) {
+                    context = baseShape;
+                } else {
+                    if (_.isNumber(fromId)) {
+                        if (fromId < 0) {
+                            fromId = i + fromId;
+                        }
+                        if (fromId < 0 || fromId >= i) {
+                            throw new Error('Invalid source context index: ' + fromId);
+                        }
+                        context = orderedItemGroups[fromId];
+                    } else {
+                        if (!_.has(namedItemGroups, fromId)) {
+                            throw new Error('Source context not found: ' + fromId);
+                        }
+                        context = namedItemGroups[fromId];
+                    }
+                }
+                if (spec.attrs == null) {
+                    spec.attrs = _.omit(spec, ['id', 'from', 'edges', 'generators']);
+                }
+                let groupItems = generateGroup(context, {
+                    edges: spec.edges,
+                    generators: spec.generators,
+                    attrs: spec.attrs
+                });
+                allItems.push(...groupItems);
+                orderedItemGroups.push(groupItems);
+                if (spec.id) {
+                    if (_.has(namedItemGroups, spec.id)) {
+                        throw new Error('duplicate group id: ' + spec.id);
+                    }
+                    namedItemGroups[spec.id] = groupItems;
+                }
+            }
+
+            return allItems;
+        }
+
+        static of(doc) {
+            if (doc instanceof GeoDocument) {
+                return doc;
+            }
+            return new GeoDocument(doc);
+        }
+    }
+
     function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2, attrs) {
         let lines = [];
         for (let i = 0; i < steps; i++) {
@@ -372,7 +404,6 @@ const Geo = (function () {
             }
             let prevPt = segment.previous.point;
             let currPt = segment.point;
-            // let midPt = new Point((prevPt.x + currPt.x)/2, (prevPt.y + currPt.y)/2);
             let textPt = averagePoints([prevPt, currPt, center]);
             textPt.x -= 6;
             textPt.y += 4;
@@ -387,12 +418,9 @@ const Geo = (function () {
     }
 
     function averagePoints(pts) {
-        let x = 0, y = 0;
-        pts.forEach(function (pt) {
-            x += pt.x;
-            y += pt.y;
-        });
-        return new Point(x / pts.length, y / pts.length);
+        return new Point(
+            _(pts).map(pt => pt.x).mean(),
+            _(pts).map(pt => pt.y).mean())
     }
 
     function toRadians(angleDegrees) {
@@ -407,20 +435,17 @@ const Geo = (function () {
         if (val == null) {
             return [];
         }
-        if (!Array.isArray(val)) {
+        if (!_.isArray(val)) {
             return [val];
         }
         return val;
     }
 
-    Object.assign(generateGraph, {
-        Edge,
-        Attrs,
-        EdgeProvider,
-        Generator,
+    Object.assign(GeoDocument.of, {
+        Document: GeoDocument.of
     });
 
-    return generateGraph;
+    return GeoDocument.of;
 })();
 
 
