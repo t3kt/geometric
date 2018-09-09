@@ -66,10 +66,10 @@ function main() {
 
     function generateJson() {
         let obj = currentPattern ? Geo.buildJsonFromPaper() : null;
-        return obj ? JSON.stringify(obj, null, '  ') : null;
+        return obj ? JSON.stringify(obj, null, '\t') : null;
     }
 
-    function performDownload(text, mimeType) {
+    function performDownload(text, mimeType, ext) {
         let a = document.getElementById('download-link');
         if (!text) {
             if (a) {
@@ -84,21 +84,21 @@ function main() {
             a = document.createElement('a');
             a.id = 'download-link';
         }
-        a.download = (currentPattern.name || 'pattern') + '.svg';
+        a.download = (currentPattern.name || 'pattern') + ext;
         a.href = window.URL.createObjectURL(blob);
-        a.dataset.downloadurl = ['image/svg+xml', a.download, a.href].join(':');
-        e.initEvent('click', true, false);
+        a.dataset.downloadurl = [mimeType, a.download, a.href].join(':');
+        e.initEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
         a.dispatchEvent(e);
     }
 
     function downloadSvg() {
         let svg = generateSvg();
-        performDownload(svg, 'image/svg+xml');
+        performDownload(svg, 'image/svg+xml', '-output.svg');
     }
 
     function downloadJson() {
         let json = generateJson();
-        performDownload(json, 'application/json')
+        performDownload(json, 'application/json', '-output.json');
     }
 
     function onButtonClick(event) {
