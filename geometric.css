@@ -1,5 +1,6 @@
 #geo-canvas {
     border: 1px solid #666666;
+    display: block;
 }
 #geo-svg {
     width: 90%;

@@ -1,67 +1,7 @@
-let pattern1 = Geo.Document({
-    name: 'pattern1',
-    base: {
-        sides: 16,
-        radius: 0.2,
-        strokeColor: '#7e77ff'
-    },
-    groups: [
-        {
-            id: 'hexes',
-            edges: {step: 2},
-            generators: {sides: 6},
-            strokeColor: '#426072'
-        },
-        {
-            id: 'squares',
-            edges: {start: 1, step: 2},
-            generators: {sides: 4},
-            strokeColor: '#302f72',
-            strokeWidth: 2,
-            // fillColor: '#426072',
-            // opacity: 0.6
-        },
-        {
-            from: 'squares',
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 10},
-            strokeColor: '#b987ff',
-            opacity: 0.5,
-        },
-        {
-            id: 'ring2',
-            from: 'hexes',
-            generators: {sides: 5},
-            strokeColor: '#308820',
-            strokeWidth: 2,
-            // fillColor: '#688865',
-            // opacity: 0.6
-        },
-        {
-            from: 'ring2',
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 10},
-            strokeColor: '#584c4a',
-            opacity: 0.5
-        },
-        {
-            edges: {start: 1, step: 2},
-            generators: {sides: 5, flip: true},
-            strokeColor: '#584c4a'
-        },
-        {
-            from: -1,
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 8},
-            strokeColor: '#337900'
-        },
-        {
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 4},
-            strokeColor: '#e079ff'
-        }
-    ]
-});
+let patterns = [
+    pattern1,
+    pattern2
+];
 
 function main() {
     const renderWidth = 800;
@@ -71,8 +11,35 @@ function main() {
     paper.setup(canvas);
     paper.view.viewSize.set(renderWidth, renderHeight);
 
+    function initPatternSelector() {
+        let selector = document.getElementById('pattern-selector');
+        selector.innerHTML = '';
+        for (let i = 0; i < patterns.length; i++) {
+            let pattern = patterns[i];
+            let option = document.createElement('option');
+            option.textContent = pattern.name;
+            option.value = i;
+            selector.appendChild(option);
+        }
+        selector.addEventListener('change', () => {
+            let val = parseInt(selector.value);
+            selectPattern(val);
+        });
+    }
+    initPatternSelector();
 
-    pattern1.render();
+    function selectPattern(index) {
+        paper.project.clear();
+        let pattern = patterns[index];
+        if (!pattern) {
+            return;
+        }
+        let doc = Geo.Document(pattern);
+        doc.render();
+        paper.view.draw();
+    }
+
+    selectPattern(0);
 
     document.getElementById('generate-svg').addEventListener('click', evt => {
         evt.preventDefault();
@@ -80,10 +47,8 @@ function main() {
 
         let textarea = document.getElementById('geo-svg');
         textarea.textContent = svgText;
-        textarea.style.display = '';
+        textarea.style.display = 'block';
     });
-
-    paper.view.draw();
 }
 
 window.onload = function () {

@@ -1,5 +1,5 @@
 const Geo = (function () {
-    const {Point, Path, PointText} = paper;
+    const {CompoundPath, Point, Path, PointText, Style} = paper;
 
     function generateGroup(context, {edges, generators, attrs}) {
         let edgeProviders = arrayify(edges || EdgeProvider.range({})).map(e => EdgeProvider.of(e));
@@ -31,15 +31,31 @@ const Geo = (function () {
 
     class Attrs {
         constructor(opts = null) {
-            opts = _.assign({
-                showNumbers: false,
-            }, opts || {});
-            this.opts = _.omit(opts, ['showNumbers']);
+            this.style = new Style(_.pick(opts, [
+                'strokeColor',
+                'strokeWidth',
+                'strokeCap',
+                'strokeJoin',
+                'strokeScaling',
+                'dashOffset',
+                'dashArray',
+                'miterLimit',
+                'fillColor',
+                'fillRule',
+                'shadowColor',
+                'shadowOffset',
+                'selectedColor',
+                'fontFamily',
+                'fontWeight',
+                'fontSize',
+                'leading',
+                'justification',
+            ]));
             this.showNumbers = opts.showNumbers;
         }
 
         applyTo(item) {
-            _.assign(item, this.opts);
+            item.style = this.style;
         }
 
         static of(obj) {
@@ -207,12 +223,10 @@ const Geo = (function () {
 
         static lineBridge({steps = 4, flip1 = false, flip2 = false, wrap = true}) {
             return new Generator((context, edges, attrs) => {
-                let bridgeLines = [];
-
                 if (!edges.length) {
-                    return bridgeLines;
+                    return [];
                 }
-
+                let bridges = [];
                 for (let edgePair of _.chunk(edges, 2)) {
                     if (edgePair.length === 1) {
                         if (wrap) {
@@ -221,11 +235,16 @@ const Geo = (function () {
                             continue;
                         }
                     }
-                    bridgeLines.push(...createLineBridgeBetweenEdges(
-                        edgePair[0], edgePair[1], steps, flip1, flip2, attrs));
+                    let bridgeLines = createLineBridgeBetweenEdges(
+                        edgePair[0], edgePair[1], steps, flip1, flip2);
+                    let bridge = new CompoundPath({
+                        children: bridgeLines,
+                        strokeColor: '#660066'
+                    });
+                    attrs && attrs.applyTo(bridge);
+                    bridges.push(bridge);
                 }
-
-                return bridgeLines;
+                return bridges;
             });
         }
 
@@ -272,18 +291,17 @@ const Geo = (function () {
         render() {
             let {width, height} = paper.view.viewSize;
 
-            let baseShape = this.base;
-            let showBaseNumbers = baseShape.showNumbers;
-            if (_.isPlainObject(baseShape)) {
-                if (!baseShape.center) {
-                    baseShape.center = [width / 2, height / 2];
-                }
-                if (baseShape.radius == null) {
-                    baseShape.radius = 0.5;
-                }
-                baseShape.radius *= _.min([width, height]);
-                baseShape = new Path.RegularPolygon(baseShape);
+            let baseShapeOpts = _.cloneDeep(this.base);
+            let showBaseNumbers = baseShapeOpts.showNumbers;
+            if (!baseShapeOpts.center) {
+                baseShapeOpts.center = [width / 2, height / 2];
             }
+            if (baseShapeOpts.radius == null) {
+                baseShapeOpts.radius = 0.5;
+            }
+            baseShapeOpts.radius *= _.min([width, height]);
+            let baseShape = new Path.RegularPolygon(baseShapeOpts);
+            baseShape.data.isPatternBaseShape = true;
             if (showBaseNumbers) {
                 drawPolySegmentIndices(baseShape);
             }
@@ -342,11 +360,11 @@ const Geo = (function () {
             if (doc instanceof GeoDocument) {
                 return doc;
             }
-            return new GeoDocument(doc);
+            return new GeoDocument(_.cloneDeep(doc));
         }
     }
 
-    function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2, attrs) {
+    function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2) {
         let lines = [];
         for (let i = 0; i < steps; i++) {
             let ratio = i / steps;
@@ -356,7 +374,6 @@ const Geo = (function () {
                 strokeColor: '#660066',
                 closed: false
             });
-            attrs && attrs.applyTo(line);
             lines.push(line);
         }
         return lines;
@@ -428,7 +445,7 @@ const Geo = (function () {
     }
 
     function toDegrees(angleRadians) {
-        return angleRadians * 360 / (2 * Math.PI);
+        return angleRadians * 180 / Math.PI;
     }
 
     function arrayify(val) {
