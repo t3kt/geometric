@@ -1,12 +1,12 @@
 const Geo = (function () {
-    const {CompoundPath, Point, Path, PointText, Style} = paper;
+    const {Point, Path, Style, Group} = paper;
 
     function generateGroup(context, {edges, generators, attrs}) {
         let edgeProviders = arrayify(edges || EdgeProvider.range({})).map(e => EdgeProvider.of(e));
         generators = arrayify(generators).map(g => Generator.of(g));
         attrs = arrayify(attrs || new Attrs({})).map(a => Attrs.of(a));
-        context = arrayify(context);
-        let items = [];
+        context = prepareContext(context);
+        let group = new paper.Group();
         for (let a of attrs) {
             for (let ctx of context) {
                 if (ctx == null) {
@@ -21,12 +21,42 @@ const Geo = (function () {
                         if (generator == null) {
                             continue;
                         }
-                        items.push(...generator.generate(ctx, edges, a));
+                        let genItems = arrayify(generator.generate(ctx, edges, a));
+                        group.addChildren(genItems);
+                        // items.push(...genItems);
                     }
                 }
             }
         }
+        if (group.isEmpty()) {
+            group.remove();
+            return [];
+        }
+        return [group];
+    }
+
+    function prepareContext(context) {
+        const items = [];
+        _addToContextList(items, context);
         return items;
+    }
+
+    function _addToContextList(output, item) {
+        if (!item || _.isEmpty(item)) {
+            return;
+        }
+
+        if (_.isArray(item)) {
+            for (let part of item) {
+                _addToContextList(output, part);
+            }
+        } else if (item instanceof paper.Group || item instanceof paper.Layer) {
+            for (let child of item.children) {
+                _addToContextList(output, child);
+            }
+        } else {
+            output.push(item);
+        }
     }
 
     class Attrs {
@@ -215,9 +245,9 @@ const Geo = (function () {
 
         static regularPoly({sides = 6, flip = false}) {
             return new Generator((context, edges, attrs) => {
-                return edges.map(edge => {
+                return new paper.Group(edges.map(edge => {
                     return addPolyAtCorners(edge.pt1, edge.pt2, sides, flip, attrs);
-                });
+                }));
             });
         }
 
@@ -237,7 +267,7 @@ const Geo = (function () {
                     }
                     let bridgeLines = createLineBridgeBetweenEdges(
                         edgePair[0], edgePair[1], steps, flip1, flip2);
-                    let bridge = new CompoundPath({
+                    let bridge = new Group({
                         children: bridgeLines,
                         strokeColor: '#660066'
                     });
@@ -424,7 +454,7 @@ const Geo = (function () {
             let textPt = averagePoints([prevPt, currPt, center]);
             textPt.x -= 6;
             textPt.y += 4;
-            new PointText({
+            new paper.PointText({
                 point: textPt,
                 content: i.toString(),
                 fillColor: 'black',
