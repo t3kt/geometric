@@ -1,38 +1,55 @@
 const Geo = (function () {
     const {Point, Path, Style, Group} = paper;
 
-    function generateGroup(context, {edges, generators, attrs}) {
+    function generateGroup(context, {edges, generators, attrs, name}) {
         let edgeProviders = arrayify(edges || EdgeProvider.range({})).map(e => EdgeProvider.of(e));
         generators = arrayify(generators).map(g => Generator.of(g));
-        attrs = arrayify(attrs || new Attrs({})).map(a => Attrs.of(a));
+        attrs = Attrs.of(attrs);
         context = prepareContext(context);
         let group = new paper.Group();
-        for (let a of attrs) {
-            for (let ctx of context) {
-                if (ctx == null) {
+        if (name) {
+            group.name = name;
+        }
+        for (let ctx of context) {
+            if (ctx == null) {
+                continue;
+            }
+            let contextGroup = new paper.Group();
+            for (let edgeProvider of edgeProviders) {
+                if (edgeProvider == null) {
                     continue;
                 }
-                for (let edgeProvider of edgeProviders) {
-                    if (edgeProvider == null) {
+                let edges = edgeProvider.getEdges(ctx);
+                let edgesGroup = new paper.Group();
+                for (let generator of generators) {
+                    if (generator == null) {
                         continue;
                     }
-                    let edges = edgeProvider.getEdges(ctx);
-                    for (let generator of generators) {
-                        if (generator == null) {
-                            continue;
-                        }
-                        let genItems = arrayify(generator.generate(ctx, edges, a));
-                        group.addChildren(genItems);
-                        // items.push(...genItems);
+                    let genItems = arrayify(generator.generate(ctx, edges, attrs));
+                    if (!genItems.length) {
+                        continue;
                     }
+                    let genGroup = new paper.Group(genItems);
+                    edgesGroup.addChild(genGroup);
                 }
+                if (edgesGroup.isEmpty()) {
+                    edgesGroup.remove();
+                } else {
+                    contextGroup.addChild(edgesGroup);
+                }
+            }
+            if (contextGroup.isEmpty()) {
+                contextGroup.remove();
+            } else {
+                group.addChild(contextGroup);
             }
         }
         if (group.isEmpty()) {
             group.remove();
             return [];
+        } else {
+            return [group];
         }
-        return [group];
     }
 
     function prepareContext(context) {
@@ -61,6 +78,7 @@ const Geo = (function () {
 
     class Attrs {
         constructor(opts = null) {
+            opts = opts || {};
             this.style = new Style(_.pick(opts, [
                 'strokeColor',
                 'strokeWidth',
@@ -365,13 +383,13 @@ const Geo = (function () {
                         context = namedItemGroups[fromId];
                     }
                 }
-                if (spec.attrs == null) {
-                    spec.attrs = _.omit(spec, ['id', 'from', 'edges', 'generators']);
-                }
+                let attrs = _.merge({}, spec.attrs || {}, _.omit(spec, ['id', 'from', 'edges', 'generators']));
+                let name = spec.id || ('group-' + i);
                 let groupItems = generateGroup(context, {
                     edges: spec.edges,
                     generators: spec.generators,
-                    attrs: spec.attrs
+                    attrs: attrs,
+                    name: name
                 });
                 allItems.push(...groupItems);
                 orderedItemGroups.push(groupItems);
