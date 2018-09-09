@@ -44,31 +44,40 @@ function main() {
 
     selectPattern(0);
 
-    function generateSVG() {
-        return paper.project.exportSVG({asString: true});
+    function generateSvg() {
+        return currentPattern ? paper.project.exportSVG({asString: true}) : null;
     }
 
-    function showSVG() {
-        if (!currentPattern) {
-            return;
-        }
-        let svg = generateSVG();
-        let textarea = document.getElementById('geo-svg');
-        textarea.textContent = svg;
-        textarea.style.display = 'block';
+    function showOutputText(text) {
+        let textarea = document.getElementById('output-text');
+        textarea.textContent = text || '';
+        textarea.style.display = text ? 'block' : 'none';
     }
 
-    function downloadSVG() {
+    function showSvg() {
+        let svg = generateSvg();
+        showOutputText(svg);
+    }
+
+    function showJson() {
+        let json = generateJson();
+        showOutputText(json);
+    }
+
+    function generateJson() {
+        let obj = currentPattern ? Geo.buildJsonFromPaper() : null;
+        return obj ? JSON.stringify(obj, null, '  ') : null;
+    }
+
+    function performDownload(text, mimeType) {
         let a = document.getElementById('download-link');
-        if (!currentPattern) {
+        if (!text) {
             if (a) {
                 a.remove();
             }
             return;
         }
-        // image/svg+xml
-        const svg = generateSVG();
-        const blob = new Blob([svg], {type: 'image/svg+xml'});
+        const blob = new Blob([text], {type: mimeType});
         const e = document.createEvent('MouseEvents');
 
         if (!a) {
@@ -82,16 +91,42 @@ function main() {
         a.dispatchEvent(e);
     }
 
+    function downloadSvg() {
+        let svg = generateSvg();
+        performDownload(svg, 'image/svg+xml');
+    }
 
-    document.getElementById('generate-svg').addEventListener('click', evt => {
-        evt.preventDefault();
-        showSVG();
-    });
+    function downloadJson() {
+        let json = generateJson();
+        performDownload(json, 'application/json')
+    }
 
-    document.getElementById('download-svg').addEventListener('click', evt => {
-        evt.preventDefault();
-        downloadSVG();
-    });
+    function onButtonClick(event) {
+        const button = event.target;
+        const action = button.id;
+        switch (action) {
+            case 'generate-svg':
+                showSvg();
+                break;
+            case 'download-svg':
+                downloadSvg();
+                break;
+            case 'generate-json':
+                showJson();
+                break;
+            case 'download-json':
+                downloadJson();
+                break;
+            default:
+                return;
+        }
+        event.preventDefault();
+    }
+
+    for (let btn of document.querySelectorAll('button')) {
+        btn.addEventListener('click', onButtonClick);
+    }
+    showOutputText(null);
 }
 
 window.onload = function () {

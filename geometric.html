@@ -13,11 +13,16 @@
 </head>
 <body>
     <h1>Geometric</h1>
-    <select id="pattern-selector"></select>
-    <canvas id="geo-canvas"></canvas>
-    <br/>
-    <button id="generate-svg">Generate SVG</button>
-    <button id="download-svg">Download SVG</button>
-    <textarea id="geo-svg"></textarea>
+    <header>
+        <select id="pattern-selector"></select>
+        <button id="generate-svg">Generate SVG</button>
+        <button id="download-svg">Download SVG</button>
+        <button id="generate-json">Generate JSON</button>
+        <button id="download-json">Download JSON</button>
+    </header>
+    <main>
+        <canvas id="geo-canvas"></canvas>
+        <textarea id="output-text"></textarea>
+    </main>
 </body>
 </html>

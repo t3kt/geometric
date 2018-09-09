@@ -1,6 +1,27 @@
 const Geo = (function () {
     const {Point, Path, Style, Group} = paper;
 
+    const styleFields = [
+        'strokeColor',
+        'strokeWidth',
+        'strokeCap',
+        'strokeJoin',
+        'strokeScaling',
+        'dashOffset',
+        'dashArray',
+        'miterLimit',
+        'fillColor',
+        'fillRule',
+        'shadowColor',
+        'shadowOffset',
+        'selectedColor',
+        'fontFamily',
+        'fontWeight',
+        'fontSize',
+        'leading',
+        'justification',
+    ];
+
     function generateGroup(context, {edges, generators, attrs, name}) {
         let edgeProviders = arrayify(edges || EdgeProvider.range({})).map(e => EdgeProvider.of(e));
         generators = arrayify(generators).map(g => Generator.of(g));
@@ -79,26 +100,7 @@ const Geo = (function () {
     class Attrs {
         constructor(opts = null) {
             opts = opts || {};
-            this.style = new Style(_.pick(opts, [
-                'strokeColor',
-                'strokeWidth',
-                'strokeCap',
-                'strokeJoin',
-                'strokeScaling',
-                'dashOffset',
-                'dashArray',
-                'miterLimit',
-                'fillColor',
-                'fillRule',
-                'shadowColor',
-                'shadowOffset',
-                'selectedColor',
-                'fontFamily',
-                'fontWeight',
-                'fontSize',
-                'leading',
-                'justification',
-            ]));
+            this.style = new Style(_.pick(opts, styleFields));
             this.showNumbers = opts.showNumbers;
         }
 
@@ -412,6 +414,63 @@ const Geo = (function () {
         }
     }
 
+    function cleanObj(obj) {
+        if (!obj || _.isEmpty(obj)) {
+            return null;
+        }
+        obj = _.omitBy(obj, val => val == null || val === '' || _.isEmpty(val));
+        if (_.isEmpty(obj)) {
+            return null;
+        }
+        return obj;
+    }
+
+    function buildJsonFromPaper() {
+        return buildJsonFromItem(paper.project);
+    }
+
+    function buildJsonFromItem(item) {
+        if (item == null) {
+            return null;
+        }
+        if (_.isNumber(item) || _.isString(item) || _.isBoolean(item)) {
+            return item;
+        }
+        if (_.isArray(item)) {
+            return _.map(item, buildJsonFromItem);
+        }
+        if (item instanceof paper.Color) {
+            return item.components;
+        }
+        if (item instanceof paper.Style) {
+            let obj = _(item._values).pick(styleFields).mapValues(buildJsonFromItem);
+            if (_.isEmpty(obj)) {
+                return null;
+            }
+            return obj;
+        }
+        if (item instanceof paper.Segment) {
+            return buildJsonFromItem(item.point);
+        }
+        if (item instanceof paper.Point) {
+            return [item.x, item.y];
+        }
+        let obj = {
+            type: item.className,
+            name: item.name,
+            style: buildJsonFromItem(item.style),
+            data: _.cloneDeep(item.data),
+        };
+        if (item instanceof paper.Path) {
+            obj.points = _.map(item.segments, buildJsonFromItem);
+        } else if (item instanceof paper.Project) {
+            obj.children = _.map(item.layers, buildJsonFromItem);
+        } else if (item.children && item.children.length) {
+            obj.children = _.map(item.children, buildJsonFromItem);
+        }
+        return cleanObj(obj);
+    }
+
     function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2) {
         let lines = [];
         for (let i = 0; i < steps; i++) {
@@ -507,7 +566,8 @@ const Geo = (function () {
     }
 
     Object.assign(GeoDocument.of, {
-        Document: GeoDocument.of
+        Document: GeoDocument.of,
+        buildJsonFromPaper
     });
 
     return GeoDocument.of;

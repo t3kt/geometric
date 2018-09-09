@@ -1,9 +1,13 @@
+header, main {
+    display: flex;
+    flex-direction: row;
+}
+
 #geo-canvas {
     border: 1px solid #666666;
-    display: block;
 }
-#geo-svg {
+#output-text {
     width: 90%;
-    height: 10em;
+    height: 50em;
     display: none;
 }
