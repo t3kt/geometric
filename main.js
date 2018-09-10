@@ -66,7 +66,7 @@ function main() {
 
     function generateJson() {
         let obj = currentPattern ? Geo.buildJsonFromPaper() : null;
-        return obj ? JSON.stringify(obj, null, '\t') : null;
+        return obj ? JSON.stringify(obj, null, ' ') : null;
     }
 
     function performDownload(text, mimeType, ext) {

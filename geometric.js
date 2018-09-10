@@ -266,7 +266,11 @@ const Geo = (function () {
         static regularPoly({sides = 6, flip = false}) {
             return new Generator((context, edges, attrs) => {
                 return new paper.Group(edges.map(edge => {
-                    return addPolyAtCorners(edge.pt1, edge.pt2, sides, flip, attrs);
+                    let poly = addPolyAtCorners(edge.pt1, edge.pt2, sides, flip, attrs);
+                    poly.data.generatorType = 'regularPoly';
+                    poly.data.sides = sides;
+                    poly.data.flip = flip;
+                    return poly;
                 }));
             });
         }
@@ -289,7 +293,14 @@ const Geo = (function () {
                         edgePair[0], edgePair[1], steps, flip1, flip2);
                     let bridge = new Group({
                         children: bridgeLines,
-                        strokeColor: '#660066'
+                        strokeColor: '#660066',
+                        data: {
+                            generatorType: 'lineBridge',
+                            steps: steps,
+                            flip1: flip1,
+                            flip2: flip2,
+                            wrap: wrap
+                        }
                     });
                     attrs && attrs.applyTo(bridge);
                     bridges.push(bridge);
@@ -418,11 +429,62 @@ const Geo = (function () {
         if (!obj || _.isEmpty(obj)) {
             return null;
         }
-        obj = _.omitBy(obj, val => val == null || val === '' || _.isEmpty(val));
+        obj = _.omitBy(obj, val => _.isEmpty(val));
         if (_.isEmpty(obj)) {
             return null;
         }
         return obj;
+    }
+
+    class BuiltNode {
+        constructor({style}) {
+            this.style = style;
+        }
+
+        _toObj() {
+            return {
+                style: this.style
+            };
+        }
+
+        toObj() {
+            return _.cloneDeep(cleanObj(this._toObj()));
+        }
+    }
+
+    class BuiltRegularPolygon extends BuiltNode {
+        constructor({center = [0.5, 0.5], sides = 6, radius = 0.5, style}) {
+            super({style: style});
+            this.center = center;
+            this.sides = sides;
+            this.radius = radius;
+        }
+
+        _toObj() {
+            return _.merge(super._toObj(), {
+                center: this.center,
+                sides: this.sides,
+                radius: this.radius
+            });
+        }
+    }
+
+    class BuiltPolygon extends BuiltNode {
+        constructor({points,}) {
+            super({});
+        }
+    }
+
+    class BuiltGroup extends BuiltNode {
+
+    }
+
+    class BuiltLine extends BuiltNode {
+
+    }
+
+    class BuiltDocument extends BuiltNode {
+
     }
 
     function buildJsonFromPaper() {
@@ -463,6 +525,7 @@ const Geo = (function () {
         };
         if (item instanceof paper.Path) {
             obj.points = _.map(item.segments, buildJsonFromItem);
+            obj.closed = item.closed;
         } else if (item instanceof paper.Project) {
             obj.children = _.map(item.layers, buildJsonFromItem);
         } else if (item.children && item.children.length) {
