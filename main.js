@@ -1,6 +1,7 @@
 let patterns = [
     pattern1,
-    pattern2
+    pattern2,
+    pattern3
 ];
 
 function main() {

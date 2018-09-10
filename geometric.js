@@ -102,10 +102,12 @@ const Geo = (function () {
             opts = opts || {};
             this.style = new Style(_.pick(opts, styleFields));
             this.showNumbers = opts.showNumbers;
+            this.opacity = opts.opacity;
         }
 
         applyTo(item) {
             item.style = this.style;
+            item.opacity = this.opacity;
         }
 
         static of(obj) {
@@ -208,6 +210,12 @@ const Geo = (function () {
             })
         }
 
+        // static zipper(provider1, provider2) {
+        //     return new EdgeProvider(poly => {
+        //        let edges1 = provider1.getEdges(poly)
+        //     });
+        // }
+
         static of(opts) {
             if (opts == null) {
                 return null;
@@ -220,6 +228,9 @@ const Geo = (function () {
             }
             if (_.isString(opts)) {
                 opts = {type: opts};
+            }
+            if (_.isArray(opts)) {
+                opts = {sides: opts};
             }
             opts = _.assign({type: 'range'}, opts || {});
             let type = opts.type;
