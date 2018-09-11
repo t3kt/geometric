@@ -372,8 +372,15 @@ const Geo = (function () {
                 baseShapeOpts.radius = 0.5;
             }
             baseShapeOpts.radius *= _.min([width, height]);
-            let baseShape = new Path.RegularPolygon(baseShapeOpts);
-            baseShape.data.isPatternBaseShape = true;
+            let baseShape = new Path.RegularPolygon(
+                _.merge({
+                        data: {
+                            sides: baseShapeOpts.sides,
+                            radius: baseShapeOpts.radius,
+                            isPatternBaseShape: true,
+                        }
+                    },
+                    baseShapeOpts));
             if (showBaseNumbers) {
                 drawPolySegmentIndices(baseShape);
             }
