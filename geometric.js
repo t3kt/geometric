@@ -1,26 +1,7 @@
-const Geo = (function () {
-    const {Point, Path, Style, Group} = paper;
-
-    const styleFields = [
-        'strokeColor',
-        'strokeWidth',
-        'strokeCap',
-        'strokeJoin',
-        'strokeScaling',
-        'dashOffset',
-        'dashArray',
-        'miterLimit',
-        'fillColor',
-        'fillRule',
-        'shadowColor',
-        'shadowOffset',
-        'selectedColor',
-        'fontFamily',
-        'fontWeight',
-        'fontSize',
-        'leading',
-        'justification',
-    ];
+_.extend(Geo, (function () {
+    const {Path, Group} = paper;
+    const {averagePoints, cleanObj, toRadians, arrayify, styleFields} = Geo.util;
+    const {Attrs, Edge} = Geo.model;
 
     function generateGroup(context, {edges, generators, attrs, name}) {
         let edgeProviders = arrayify(edges || EdgeProvider.range({})).map(e => EdgeProvider.of(e));
@@ -94,53 +75,6 @@ const Geo = (function () {
             }
         } else {
             output.push(item);
-        }
-    }
-
-    class Attrs {
-        constructor(opts = null) {
-            opts = opts || {};
-            this.style = new Style(_.pick(opts, styleFields));
-            this.showNumbers = opts.showNumbers;
-            this.opacity = opts.opacity;
-        }
-
-        applyTo(item) {
-            item.style = this.style;
-            item.opacity = this.opacity;
-        }
-
-        static of(obj) {
-            if (!obj) {
-                return new Attrs({});
-            }
-            if (obj instanceof Attrs) {
-                return obj;
-            }
-            if (obj instanceof String) {
-                return new Attrs({strokeColor: obj});
-            }
-            return new Attrs(obj);
-        }
-    }
-
-    class Edge {
-        constructor(pt1 = new Point(), pt2 = new Point()) {
-            this.pt1 = pt1;
-            this.pt2 = pt2;
-        }
-
-        static fromSegment(segment) {
-            return new Edge(
-                segment.point,
-                segment.previous.point);
-        }
-
-        interp(ratio, flip = false) {
-            if (flip) {
-                ratio = 1 - ratio;
-            }
-            return interpPoints(this.pt1, this.pt2, ratio);
         }
     }
 
@@ -443,68 +377,6 @@ const Geo = (function () {
         }
     }
 
-    function cleanObj(obj) {
-        if (!obj || _.isEmpty(obj)) {
-            return null;
-        }
-        obj = _.omitBy(obj, val => _.isEmpty(val));
-        if (_.isEmpty(obj)) {
-            return null;
-        }
-        return obj;
-    }
-
-    class BuiltNode {
-        constructor({style}) {
-            this.style = style;
-        }
-
-        _toObj() {
-            return {
-                style: this.style
-            };
-        }
-
-        toObj() {
-            return _.cloneDeep(cleanObj(this._toObj()));
-        }
-    }
-
-    class BuiltRegularPolygon extends BuiltNode {
-        constructor({center = [0.5, 0.5], sides = 6, radius = 0.5, style}) {
-            super({style: style});
-            this.center = center;
-            this.sides = sides;
-            this.radius = radius;
-        }
-
-        _toObj() {
-            return _.merge(super._toObj(), {
-                center: this.center,
-                sides: this.sides,
-                radius: this.radius
-            });
-        }
-    }
-
-    class BuiltPolygon extends BuiltNode {
-        constructor({points,}) {
-            super({});
-        }
-    }
-
-    class BuiltGroup extends BuiltNode {
-
-    }
-
-    class BuiltLine extends BuiltNode {
-
-    }
-
-    class BuiltDocument extends BuiltNode {
-
-    }
-
     function buildJsonFromPaper() {
         return buildJsonFromItem(paper.project);
     }
@@ -567,12 +439,6 @@ const Geo = (function () {
         return lines;
     }
 
-    function interpPoints(pt1, pt2, ratio) {
-        return new Point(
-            pt1.x + (pt2.x - pt1.x) * ratio,
-            pt1.y + (pt2.y - pt1.y) * ratio);
-    }
-
     function addPolyAtCorners(pt1, pt2, numSides, flip, attrs) {
         const diff = pt2.subtract(pt1);
         const sideLength = diff.length;
@@ -622,36 +488,12 @@ const Geo = (function () {
         }
     }
 
-    function averagePoints(pts) {
-        return new Point(
-            _(pts).map(pt => pt.x).mean(),
-            _(pts).map(pt => pt.y).mean())
-    }
-
-    function toRadians(angleDegrees) {
-        return angleDegrees * Math.PI / 180;
-    }
-
-    function toDegrees(angleRadians) {
-        return angleRadians * 180 / Math.PI;
-    }
-
-    function arrayify(val) {
-        if (val == null) {
-            return [];
-        }
-        if (!_.isArray(val)) {
-            return [val];
-        }
-        return val;
-    }
-
     Object.assign(GeoDocument.of, {
         Document: GeoDocument.of,
         buildJsonFromPaper
     });
 
     return GeoDocument.of;
-})();
+})());
 
 
