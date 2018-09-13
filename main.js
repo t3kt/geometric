@@ -102,6 +102,41 @@ function main() {
         performDownload(json, 'application/json', '-output.json');
     }
 
+    function OMG_NEW_STUFF() {
+        paper.project.clear();
+        let doc = new Geo.model.GeoDocument({
+            name: 'foo',
+            base: {
+                sides: 6,
+                radius: 0.1,
+                attrs: {
+                    strokeColor: '#006633',
+                    strokeWidth: 5
+                }
+            },
+            generators: [
+                {
+                    id: 'gen1',
+                    type: 'regPolyOnEdge',
+                    sides: 7,
+                    source: {}
+                },
+                {
+                    id: 'gen2',
+                    type: 'regPolyOnEdge',
+                    sides: 5,
+                    source: {
+                        from: 'gen1'
+                    }
+                }
+            ]
+        });
+
+
+        doc.build(paper, renderWidth, renderHeight);
+        paper.view.draw();
+    }
+
     function onButtonClick(event) {
         const button = event.target;
         const action = button.id;
@@ -117,6 +152,9 @@ function main() {
                 break;
             case 'download-json':
                 downloadJson();
+                break;
+            case 'OMG-NEW':
+                OMG_NEW_STUFF();
                 break;
             default:
                 return;

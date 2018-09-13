@@ -62,8 +62,23 @@ Geo.model = (function () {
         }
 
         static of(obj) {
-            //...
-
+            obj = obj || {};
+            if (obj instanceof IndexSelector || _.isFunction(obj.getIndices)) {
+                return obj;
+            }
+            if (_.isArray(obj)) {
+                obj = {indices: obj};
+            }
+            if (obj.type === 'indices' || obj.indices) {
+                return new IndexListSelector(obj);
+            }
+            if (obj.type === 'range' || !_.isNil(obj.start) || !_.isNil(obj.end) || !_.isNil(obj.step)) {
+                return new IndexRangeSelector(obj);
+            }
+            if (!obj.type) {
+                return new IndexSelector();
+            }
+            throw new Error('Unsupported index selector: ' + JSON.stringify(obj));
         }
     }
 
@@ -143,17 +158,43 @@ Geo.model = (function () {
             if (!key) {
                 return this.basisPoly ? [this.basisPoly] : [];
             }
-            return this.polyGroupsById[key] || [];
+            let group = this.polyGroupsById[key];
+            if (!group) {
+                return [];
+            }
+            return group.children;
+        }
+
+        addPolyGroup(id, polys, attrs) {
+            if (!polys || !polys.length) {
+                return;
+            }
+            let group = new paper.Group();
+            group.addChildren(polys);
+            attrs && attrs.applyTo(group);
+            if (id) {
+                this.polyGroupsById[id] = group;
+            }
         }
     }
 
     class Basis {
-        constructor({id, tags = []}) {
+        constructor({id, attrs}) {
             this.id = id;
-            this.tags = tags;
+            this.attrs = Attrs.of(attrs);
         }
 
         build(context) {
+        }
+
+        static of(obj) {
+            if (obj instanceof Basis || _.isFunction(obj.build)) {
+                return obj;
+            }
+            obj = obj || {};
+            if (obj.sides) {
+                return new RegularPolyBasis(obj);
+            }
         }
     }
 
@@ -186,6 +227,7 @@ Geo.model = (function () {
                     tags: this.tags
                 }
             });
+            this.attrs && this.attrs.applyTo(poly);
             context.basisPoly = poly;
             return poly;
         }
@@ -209,13 +251,16 @@ Geo.model = (function () {
                 if (!indices.length) {
                     continue;
                 }
-                edgeGroups.push(_.map(indices, i => poly.segments[i]));
+                edgeGroups.push(_.map(indices, i => Edge.fromSegment(poly.segments[i])));
             }
             return edgeGroups;
         }
 
         static of(obj) {
-
+            if (obj instanceof EdgeSource || _.isFunction(obj.getEdgeGroups)) {
+                return obj;
+            }
+            return new EdgeSource(obj);
         }
     }
 
@@ -224,10 +269,22 @@ Geo.model = (function () {
             this.tags = tags;
         }
 
-        getEdgePairGroups(context) {}
+        getEdgePairGroups(context) {
+        }
 
         static of(obj) {
+            obj = obj || {};
+            if (obj instanceof EdgePairSource || _.isFunction(obj.getEdgePairGroups)) {
+                return obj;
+            }
 
+            if (obj.type === 'zip') {
+                return new ZippedEdgePairSource(obj);
+            }
+            if (obj.type === 'seq') {
+                return new SequentialEdgePairSource(obj);
+            }
+            throw new Error('Unsupported edge pair source: ' + JSON.stringify(obj));
         }
     }
 
@@ -248,28 +305,54 @@ Geo.model = (function () {
     }
 
     class Generator {
-        constructor({id, tags = []}) {
+        constructor({id, attrs}) {
             this.id = id;
-            this.tags = tags;
+            this.attrs = Attrs.of(attrs);
+        }
+
+        generate(context) {
         }
 
         static of(obj) {
-
+            obj = obj || {};
+            if (obj instanceof Generator || _.isFunction(obj.generate)) {
+                return obj;
+            }
+            if (!obj.type || obj.type === 'regPolyOnEdge') {
+                return new RegularPolyOnEdgeGenerator(obj);
+            }
+            if (obj.type === 'lineBridgeOnEdge') {
+                return new LineBridgeGenerator(obj);
+            }
+            throw new Error('unsupported generator type: ' + JSON.stringify(obj));
         }
     }
 
     class RegularPolyOnEdgeGenerator extends Generator {
-        constructor({id, tags = [], sides = 6, flip = false, source}) {
-            super({id, tags});
+        constructor({id, attrs, sides = 6, flip = false, source}) {
+            super({id, attrs});
             this.sides = sides;
             this.flip = flip;
             this.source = EdgeSource.of(source);
         }
+
+        generate(context) {
+            let edgeGroups = this.source.getEdgeGroups(context);
+            let generatedPolys = [];
+            for (let edgeGroup of edgeGroups) {
+                for (let edge of edgeGroup) {
+                    let poly = util.createPolyAtCorners(context.paper,
+                        edge.pt1, edge.pt2, this.sides, this.flip, this.attrs);
+                    generatedPolys.push(poly);
+                }
+            }
+            context.addPolyGroup(this.id, generatedPolys, new Attrs({tags: this.tags}));
+        }
     }
 
     class LineBridgeGenerator extends Generator {
-        constructor({steps = 4, flip1 = false, flip2 = false, wrap = true, id, tags = []}) {
-            super({id, tags});
+        constructor({steps = 4, flip1 = false, flip2 = false, wrap = true, id, attrs}) {
+            super({id, attrs});
             this.steps = steps;
             this.flip1 = flip1;
             this.flip2 = flip2;
@@ -278,12 +361,25 @@ Geo.model = (function () {
     }
 
     class GeoDocument {
-        constructor({name, meta = {}, base = {}, groups = []}) {
+        constructor({name, meta = {}, base = {}, generators = []}) {
+            this.name = name;
+            this.meta = _.cloneDeep(meta || {});
+            this.base = Basis.of(base);
+            this.generators = _.map(generators, Generator.of);
+        }
+
+        build(paper, width = 500, height = 500) {
+            let context = new BuildContext({paper, width, height});
+            this.base.build(context);
+            for (let generator of this.generators) {
+                generator.generate(context);
+            }
         }
     }
 
     return {
         Attrs,
-        Edge
+        Edge,
+        GeoDocument,
     };
 })();

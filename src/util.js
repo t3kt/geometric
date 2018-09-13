@@ -61,6 +61,32 @@ Geo.util = (() => {
         return obj;
     }
 
+    function createPolyAtCorners(paper, pt1, pt2, numSides, flip, attrs) {
+        const diff = pt2.subtract(pt1);
+        const sideLength = diff.length;
+        const angleStep = (360 / numSides) * (flip ? -1 : 1);
+        const polyPoints = [
+            pt1.clone(),
+            pt2.clone()
+        ];
+        let pos = pt2.clone();
+        let angle = diff.angle;
+        for (let i = 2; i < numSides; i++) {
+            angle += angleStep;
+            pos.x += sideLength * Math.cos(toRadians(angle));
+            pos.y += sideLength * Math.sin(toRadians(angle));
+            polyPoints.push(pos.clone());
+        }
+        const poly = new paper.Path(
+            {
+                segments: polyPoints,
+                strokeColor: '#ff0000',
+                closed: true
+            });
+        attrs && attrs.applyTo(poly);
+        return poly;
+    }
+
     return {
         averagePoints,
         interpPoints,
@@ -68,6 +94,7 @@ Geo.util = (() => {
         toDegrees,
         arrayify,
         cleanObj,
+        createPolyAtCorners,
         styleFields
     };
 })();

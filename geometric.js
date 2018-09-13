@@ -1,6 +1,6 @@
 _.extend(Geo, (function () {
     const {Path, Group} = paper;
-    const {averagePoints, cleanObj, toRadians, arrayify, styleFields} = Geo.util;
+    const {averagePoints, cleanObj, toRadians, arrayify, createPolyAtCorners, styleFields} = Geo.util;
     const {Attrs, Edge} = Geo.model;
 
     function generateGroup(context, {edges, generators, attrs, name}) {
@@ -211,7 +211,7 @@ _.extend(Geo, (function () {
         static regularPoly({sides = 6, flip = false}) {
             return new Generator((context, edges, attrs) => {
                 return new paper.Group(edges.map(edge => {
-                    let poly = addPolyAtCorners(edge.pt1, edge.pt2, sides, flip, attrs);
+                    let poly = createPolyAtCorners(paper, edge.pt1, edge.pt2, sides, flip, attrs);
                     poly.data.generatorType = 'regularPoly';
                     poly.data.sides = sides;
                     poly.data.flip = flip;
@@ -437,33 +437,6 @@ _.extend(Geo, (function () {
             lines.push(line);
         }
         return lines;
-    }
-
-    function addPolyAtCorners(pt1, pt2, numSides, flip, attrs) {
-        const diff = pt2.subtract(pt1);
-        const sideLength = diff.length;
-        const angleStep = (360 / numSides) * (flip ? -1 : 1);
-        const polyPoints = [
-            pt1.clone(),
-            pt2.clone()
-        ];
-        let pos = pt2.clone();
-        let angle = diff.angle;
-        for (let i = 2; i < numSides; i++) {
-            angle += angleStep;
-            pos.x += sideLength * Math.cos(toRadians(angle));
-            pos.y += sideLength * Math.sin(toRadians(angle));
-            polyPoints.push(pos.clone());
-        }
-        const poly = new Path(
-            {
-                segments: polyPoints,
-                strokeColor: '#ff0000',
-                closed: true
-            });
-        attrs && attrs.applyTo(poly);
-        attrs && attrs.showNumbers && drawPolySegmentIndices(poly);
-        return poly;
     }
 
     function drawPolySegmentIndices(poly) {
