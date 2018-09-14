@@ -87,6 +87,25 @@ Geo.util = (() => {
         return poly;
     }
 
+    function createLineBridgeBetweenEdges(paper, edge1, edge2, steps, flip1, flip2, attrs) {
+        let lines = [];
+        for (let i = 0; i < steps; i++) {
+            let ratio = i / steps;
+            let line = new paper.Path.Line({
+                from: edge1.interp(ratio, flip1),
+                to: edge2.interp(ratio, flip2),
+                closed: false
+            });
+            lines.push(line);
+        }
+        let group = new paper.Group({
+            children: lines,
+            strokeColor: '#660066'
+        });
+        attrs && attrs.applyTo(group);
+        return group;
+    }
+
     return {
         averagePoints,
         interpPoints,
@@ -95,6 +114,7 @@ Geo.util = (() => {
         arrayify,
         cleanObj,
         createPolyAtCorners,
+        createLineBridgeBetweenEdges,
         styleFields
     };
 })();

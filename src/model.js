@@ -55,6 +55,28 @@ Geo.model = (function () {
         }
     }
 
+    class EdgeGroup {
+        constructor(edges, {name}) {
+            this.edges = edges;
+            this.name = name;
+        }
+    }
+
+    class EdgePair {
+        constructor(edge1, edge2) {
+            this.edge1 = edge1;
+            this.edge2 = edge2;
+            // TODO: name?
+        }
+    }
+
+    class EdgePairGroup {
+        constructor(edgePairs, {name}) {
+            this.edgePairs = edgePairs;
+            this.name = name;
+        }
+    }
+
     class IndexSelector {
         constructor() {
         }
@@ -154,6 +176,7 @@ Geo.model = (function () {
             this.height = height;
             this.basisPoly = null;
             this.polyGroupsById = {};
+            this.lineBridgeGroupsById = {};
             this.currentGeneratorIndex = 0;
         }
 
@@ -172,11 +195,21 @@ Geo.model = (function () {
             if (!polys || !polys.length) {
                 return;
             }
-            let group = new paper.Group();
-            group.addChildren(polys);
+            let group = new this.paper.Group(polys);
             attrs && attrs.applyTo(group);
             if (id) {
                 this.polyGroupsById[id] = group;
+            }
+        }
+
+        addLineBridgeGroup(id, bridges, attrs) {
+            if (!bridges || !bridges.length) {
+                return;
+            }
+            let group = new this.paper.Group(bridges);
+            attrs && attrs.applyTo(group);
+            if (id) {
+                this.lineBridgeGroupsById[id] = group;
             }
         }
     }
@@ -255,14 +288,19 @@ Geo.model = (function () {
                 if (!indices.length) {
                     continue;
                 }
-                edgeGroups.push(_.map(indices, i => Edge.fromSegment(poly.segments[i])));
+                let edges = _.map(indices, i => Edge.fromSegment(poly.segments[i]));
+                edgeGroups.push(new EdgeGroup(edges, {name: poly.name}));
             }
             return edgeGroups;
         }
 
         static of(obj) {
+            obj = obj || {};
             if (obj instanceof EdgeSource || _.isFunction(obj.getEdgeGroups)) {
                 return obj;
+            }
+            if (_.isString(obj)) {
+                obj = {from: obj};
             }
             return new EdgeSource(obj);
         }
@@ -297,6 +335,29 @@ Geo.model = (function () {
             super({tags});
             this.source1 = EdgeSource.of(source1);
             this.source2 = EdgeSource.of(source2);
+        }
+
+        getEdgePairGroups(context) {
+            let edgeGroups1 = this.source1.getEdgeGroups(context);
+            let edgeGroups2 = this.source2.getEdgeGroups(context);
+            if (edgeGroups1.length !== edgeGroups2.length) {
+                throw new Error('Mismatch in edge group list lengths: ' +
+                    edgeGroups1.length + ' != ' + edgeGroups2.length);
+            }
+            let pairGroups = [];
+            for (let groupIndex = 0; groupIndex < edgeGroups1.length; groupIndex++) {
+                let edgeGroup1 = edgeGroups1[groupIndex];
+                let edgeGroup2 = edgeGroups2[groupIndex];
+                if (edgeGroup1.edges.length !== edgeGroup2.edges.length) {
+                    throw new Error('Mismatch in edge group lengths at index ' + groupIndex + ': ' +
+                        edgeGroup1.edges.length + ' != ' + edgeGroup2.edges.length);
+                }
+                let pairGroup = new EdgePairGroup(
+                    _.zipWith(edgeGroup1.edges, edgeGroup2.edges, (edge1, edge2) => new EdgePair(edge1, edge2)),
+                    {name: edgeGroup1.name + '::' + edgeGroup2.name});
+                pairGroups.push(pairGroup);
+            }
+            return pairGroups;
         }
     }
 
@@ -347,8 +408,8 @@ Geo.model = (function () {
             for (let edgeGroupIndex = 0; edgeGroupIndex < edgeGroups.length; edgeGroupIndex++) {
                 let edgeGroup = edgeGroups[edgeGroupIndex];
                 let groupNamePrefix = namePrefix + edgeGroupIndex + '-poly';
-                for (let edgeIndex = 0; edgeIndex < edgeGroup.length; edgeIndex++) {
-                    let edge = edgeGroup[edgeIndex];
+                for (let edgeIndex = 0; edgeIndex < edgeGroup.edges.length; edgeIndex++) {
+                    let edge = edgeGroup.edges[edgeIndex];
                     let poly = util.createPolyAtCorners(context.paper,
                         edge.pt1, edge.pt2, this.sides, this.flip, this.attrs);
                     poly.name = groupNamePrefix + edgeIndex;
@@ -360,12 +421,30 @@ Geo.model = (function () {
     }
 
     class LineBridgeGenerator extends Generator {
-        constructor({steps = 4, flip1 = false, flip2 = false, wrap = true, id, attrs}) {
+        constructor({steps = 4, flip1 = false, flip2 = false, source, id, attrs}) {
             super({id, attrs});
             this.steps = steps;
             this.flip1 = flip1;
             this.flip2 = flip2;
-            this.wrap = wrap;
+            this.source = EdgePairSource.of(source);
+        }
+
+        generate(context) {
+            let edgePairGroups = this.source.getEdgePairGroups(context);
+            let generatedBridges = [];
+            let namePrefix = (this.id || ('__gen_' + context.currentGeneratorIndex)) + '-group';
+            for (let edgePairGroupIndex = 0; edgePairGroupIndex < edgePairGroups.length; edgePairGroupIndex++) {
+                let edgePairGroup = edgePairGroups[edgePairGroupIndex];
+                let groupNamePrefix = namePrefix + edgePairGroupIndex + '-bridge';
+                for (let edgePairIndex = 0; edgePairIndex < edgePairGroup.edgePairs.length; edgePairIndex++) {
+                    let edgePair = edgePairGroup.edgePairs[edgePairIndex];
+                    let bridge = util.createLineBridgeBetweenEdges(
+                        context.paper, edgePair.edge1, edgePair.edge2, this.steps, this.flip1, this.flip2, this.attrs);
+                    bridge.name = groupNamePrefix + edgePairIndex;
+                    generatedBridges.push(bridge);
+                }
+            }
+            context.addLineBridgeGroup(this.id, generatedBridges, this.attrs);
         }
     }
 

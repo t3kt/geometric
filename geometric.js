@@ -1,6 +1,7 @@
 _.extend(Geo, (function () {
     const {Path, Group} = paper;
-    const {averagePoints, cleanObj, toRadians, arrayify, createPolyAtCorners, styleFields} = Geo.util;
+    const {averagePoints, cleanObj, arrayify, styleFields} = Geo.util;
+    const {createPolyAtCorners, createLineBridgeBetweenEdges} = Geo.util;
     const {Attrs, Edge} = Geo.model;
 
     function generateGroup(context, {edges, generators, attrs, name}) {
@@ -234,19 +235,18 @@ _.extend(Geo, (function () {
                             continue;
                         }
                     }
-                    let bridgeLines = createLineBridgeBetweenEdges(
-                        edgePair[0], edgePair[1], steps, flip1, flip2);
-                    let bridge = new Group({
-                        children: bridgeLines,
-                        strokeColor: '#660066',
-                        data: {
-                            generatorType: 'lineBridge',
-                            steps: steps,
-                            flip1: flip1,
-                            flip2: flip2,
-                            wrap: wrap
-                        }
-                    });
+                    let bridge = createLineBridgeBetweenEdges(
+                        paper,
+                        edgePair[0], edgePair[1], steps, flip1, flip2, new Attrs({
+                            strokeColor: '#660066',
+                            data: {
+                                generatorType: 'lineBridge',
+                                steps: steps,
+                                flip1: flip1,
+                                flip2: flip2,
+                                wrap: wrap
+                            }
+                        }));
                     attrs && attrs.applyTo(bridge);
                     bridges.push(bridge);
                 }
@@ -422,21 +422,6 @@ _.extend(Geo, (function () {
             obj.children = _.map(item.children, buildJsonFromItem);
         }
         return cleanObj(obj);
-    }
-
-    function createLineBridgeBetweenEdges(edge1, edge2, steps, flip1, flip2) {
-        let lines = [];
-        for (let i = 0; i < steps; i++) {
-            let ratio = i / steps;
-            let line = new Path.Line({
-                from: edge1.interp(ratio, flip1),
-                to: edge2.interp(ratio, flip2),
-                strokeColor: '#660066',
-                closed: false
-            });
-            lines.push(line);
-        }
-        return lines;
     }
 
     function drawPolySegmentIndices(poly) {
