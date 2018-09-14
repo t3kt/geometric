@@ -1,4 +1,4 @@
-Geo.model = (function () {
+_.extend(Geo, (function () {
     const {Point, Style} = paper;
     const {util} = Geo;
 
@@ -484,8 +484,8 @@ Geo.model = (function () {
     }
 
     return {
-        Attrs,
-        Edge,
-        GeoDocument,
+        Document(obj) {
+            return new GeoDocument(obj);
+        }
     };
-})();
+})());

@@ -39,9 +39,7 @@ function main() {
         if (!currentPattern) {
             return;
         }
-        // let doc = Geo.Document(currentPattern);
-        // doc.render();
-        let doc = new Geo.model.GeoDocument(currentPattern);
+        let doc = Geo.Document(currentPattern);
         doc.build(paper, renderWidth, renderHeight);
         paper.view.draw();
     }
