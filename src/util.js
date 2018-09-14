@@ -106,6 +106,28 @@ Geo.util = (() => {
         return group;
     }
 
+    function drawPolySegmentIndices(paper, poly) {
+        let center = poly.bounds.center;
+        for (let i = 0; i < poly.segments.length; i++) {
+            let segment = poly.segments[i];
+            if (!segment) {
+                continue;
+            }
+            let prevPt = segment.previous.point;
+            let currPt = segment.point;
+            let textPt = averagePoints([prevPt, currPt, center]);
+            textPt.x -= 6;
+            textPt.y += 4;
+            new paper.PointText({
+                point: textPt,
+                content: i.toString(),
+                fillColor: 'black',
+                fontFamily: 'Courier New',
+                fontSize: 12
+            });
+        }
+    }
+
     return {
         averagePoints,
         interpPoints,
