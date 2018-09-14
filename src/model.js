@@ -154,6 +154,7 @@ Geo.model = (function () {
             this.height = height;
             this.basisPoly = null;
             this.polyGroupsById = {};
+            this.currentGeneratorIndex = 0;
         }
 
         getSourcePolys(key) {
@@ -230,6 +231,7 @@ Geo.model = (function () {
                 }
             });
             this.attrs && this.attrs.applyTo(poly);
+            poly.name = '_basis';
             context.basisPoly = poly;
             return poly;
         }
@@ -341,10 +343,15 @@ Geo.model = (function () {
         generate(context) {
             let edgeGroups = this.source.getEdgeGroups(context);
             let generatedPolys = [];
-            for (let edgeGroup of edgeGroups) {
-                for (let edge of edgeGroup) {
+            let namePrefix = (this.id || ('__gen_' + context.currentGeneratorIndex)) + '-group';
+            for (let edgeGroupIndex = 0; edgeGroupIndex < edgeGroups.length; edgeGroupIndex++) {
+                let edgeGroup = edgeGroups[edgeGroupIndex];
+                let groupNamePrefix = namePrefix + edgeGroupIndex + '-poly';
+                for (let edgeIndex = 0; edgeIndex < edgeGroup.length; edgeIndex++) {
+                    let edge = edgeGroup[edgeIndex];
                     let poly = util.createPolyAtCorners(context.paper,
                         edge.pt1, edge.pt2, this.sides, this.flip, this.attrs);
+                    poly.name = groupNamePrefix + edgeIndex;
                     generatedPolys.push(poly);
                 }
             }
@@ -375,6 +382,7 @@ Geo.model = (function () {
             this.base.build(context);
             for (let generator of this.generators) {
                 generator.generate(context);
+                context.currentGeneratorIndex++;
             }
         }
     }
