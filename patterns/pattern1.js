@@ -3,57 +3,75 @@ const pattern1 = {
     base: {
         sides: 16,
         radius: 0.2,
-        strokeColor: '#7e77ff'
+        attrs: {
+            strokeColor: '#7e77ff'
+        }
     },
-    groups: [
+    generators: [
         {
             id: 'hexes',
-            edges: {step: 2},
-            generators: {sides: 6},
-            strokeColor: '#426072'
+            source: {step: 2},
+            sides: 6,
+            attrs: {
+                strokeColor: '#426072'
+            }
         },
         {
             id: 'squares',
-            edges: {start: 1, step: 2},
-            generators: {sides: 4},
-            strokeColor: '#302f72',
-            strokeWidth: 2,
-            // fillColor: '#426072',
-            // opacity: 0.6
+            source: {start: 1, step: 2},
+            sides: 4,
+            attrs: {
+                strokeColor: '#302f72',
+                strokeWidth: 2,
+                // fillColor: '#426072',
+                // opacity: 0.6
+            }
         },
-        {
-            from: 'squares',
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 10},
-            strokeColor: '#b987ff',
-            opacity: 0.5,
-        },
+        // {
+        //     type: 'lineBridgeOnEdge',
+        //     source: {from: 'squares', type: 'seq'},
+        //     steps: 10,
+        //     attrs: {
+        //         strokeColor: '#b987ff',
+        //         opacity: 0.5
+        //     }
+        // },
         {
             id: 'ring2',
-            from: 'hexes',
-            generators: {sides: 5},
-            strokeColor: '#308820',
-            strokeWidth: 2,
-            // fillColor: '#688865',
-            // opacity: 0.6
+            source: {from: 'hexes'},
+            sides: 5,
+            attrs: {
+                strokeColor: '#308820',
+                strokeWidth: 2,
+                // fillColor: '#688865',
+                // opacity: 0.6
+            }
         },
+        // {
+        //     source: {from: 'ring2', type: 'seq'},
+        //     type: 'lineBridgeOnEdge',
+        //     steps: 10,
+        //     attrs: {
+        //         strokeColor: '#584c4a',
+        //         opacity: 0.5
+        //     }
+        // },
         {
-            from: 'ring2',
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 10},
-            strokeColor: '#584c4a',
-            opacity: 0.5
+            id: 'pentas',
+            source: {start: 1, step: 2},
+            sides: 5,
+            flip: true,
+            attrs: {
+                strokeColor: '#584c4a'
+            }
         },
-        {
-            edges: {start: 1, step: 2},
-            generators: {sides: 5, flip: true},
-            strokeColor: '#584c4a'
-        },
-        {
-            from: -1,
-            edges: 'stepwise',
-            generators: {type: 'lineBridge', steps: 8},
-            strokeColor: '#337900'
-        }
+        // {
+        //     type: 'lineBridgeOnEdge',
+        //     source: {source: {from: 'pentas'}, type: 'seq'},
+        //     steps: 8,
+        //     attrs: {
+        //         strokeColor: '#337900'
+        //     }
+        // }
     ]
 };

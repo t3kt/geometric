@@ -1,7 +1,8 @@
 let patterns = [
     pattern1,
     pattern2,
-    pattern3
+    pattern3,
+    pattern4,
 ];
 
 function main() {
@@ -38,8 +39,10 @@ function main() {
         if (!currentPattern) {
             return;
         }
-        let doc = Geo.Document(currentPattern);
-        doc.render();
+        // let doc = Geo.Document(currentPattern);
+        // doc.render();
+        let doc = new Geo.model.GeoDocument(currentPattern);
+        doc.build(paper, renderWidth, renderHeight);
         paper.view.draw();
     }
 
@@ -102,77 +105,6 @@ function main() {
         performDownload(json, 'application/json', '-output.json');
     }
 
-    function OMG_NEW_STUFF() {
-        paper.project.clear();
-        let doc = new Geo.model.GeoDocument({
-            name: 'foo',
-            base: {
-                sides: 6,
-                radius: 0.1,
-                attrs: {
-                    strokeColor: '#006633',
-                    strokeWidth: 3
-                }
-            },
-            generators: [
-                {
-                    id: 'gen1',
-                    type: 'regPolyOnEdge',
-                    sides: 5,
-                    source: {},
-                    attrs: {
-                        strokeColor: '#773366',
-                        strokeWidth: 5
-                    }
-                },
-                {
-                    id: 'gen2',
-                    type: 'regPolyOnEdge',
-                    sides: 5,
-                    source: {
-                        from: 'gen1',
-                        start: 3,
-                        end: 5
-                    },
-                    attrs: {
-                        strokeColor: '#688865',
-                        strokeWidth: 2
-                    }
-                },
-                {
-                    id: 'bridgegen1',
-                    type: 'lineBridgeOnEdge',
-                    steps: 4,
-                    source: {
-                        type: 'zip',
-                        source1: {from: 'gen1', indices: [1, 2]},
-                        source2: {from: 'gen1', indices: [2, 3]}
-                    },
-                    attrs: {
-                        strokeColor: '#FF0000'
-                    }
-                },
-                // {
-                //     id: 'bridgegen2',
-                //     type: 'lineBridgeOnEdge',
-                //     steps: 4,
-                //     source: {
-                //         type: 'zip',
-                //         source1: {from: 'gen1', indices: [3, 4]},
-                //         source2: {from: 'gen2', indices: [1, 2]}
-                //     },
-                //     attrs: {
-                //         strokeColor: '#342eff'
-                //     }
-                // }
-            ]
-        });
-
-
-        doc.build(paper, renderWidth, renderHeight);
-        paper.view.draw();
-    }
-
     function onButtonClick(event) {
         const button = event.target;
         const action = button.id;
@@ -188,9 +120,6 @@ function main() {
                 break;
             case 'download-json':
                 downloadJson();
-                break;
-            case 'OMG-NEW':
-                OMG_NEW_STUFF();
                 break;
             default:
                 return;

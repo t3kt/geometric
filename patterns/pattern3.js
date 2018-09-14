@@ -5,48 +5,53 @@ const pattern3 = {
         radius: 0.15,
         strokeColor: '#6b3d75'
     },
-    groups: [
+    generators: [
         {
             id: 'pentagon1',
-            // edges: {step: 3},
-            generators: {sides: 5},
-            strokeColor: '#302f72'
+            // source: {step: 3},
+            sides: 5,
+            attrs: {
+                strokeColor: '#302f72'
+            }
         },
         {
             id: 'square1',
-            from: 'pentagon1',
-            edges: {type: 'sides', sides: [3, 4]},
-            generators: {sides: 4},
-            strokeColor: '#426072',
-            opacity: 0.9
+            source: {from: 'pentagon1', indices: [3, 4]},
+            sides: 4,
+            attrs: {
+                strokeColor: '#426072',
+                opacity: 0.9
+            }
         },
         {
             id: 'hexagon1',
-            from: 'square1',
-            // edges: {type: 'sides', sides: [3, 4]},
-            generators: {sides: 6},
-            strokeColor: '#308820',
-            opacity: 0.8,
-        },
-        {
-            from: 'square1',
-            edges: 'stepwise',
-            generators: {
-                type: 'lineBridge',
-                steps: 4
+            source: {
+                from: 'square1',
+                // indices: [3, 4]
             },
-            strokeColor: '#426072',
-            opacity: 0.8
+            sides: 6,
+            attrs: {
+                strokeColor: '#308820',
+                opacity: 0.8,
+            }
         },
-        {
-            from: 'hexagon1',
-            edges: 'stepwise',
-            generators: {
-                type: 'lineBridge',
-                steps: 4
-            },
-            strokeColor: '#426072',
-            opacity: 0.5
-        }
+        // {
+        //     type: 'lineBridgeOnEdge',
+        //     source: {source: {from: 'square1'}, type: 'seq'},
+        //     steps: 4,
+        //     attrs: {
+        //         strokeColor: '#426072',
+        //         opacity: 0.8
+        //     }
+        // },
+        // {
+        //     type: 'lineBridgeOnEdge',
+        //     source: {source: {from: 'hexagon1'}, type: 'seq'},
+        //     steps: 4,
+        //     attrs: {
+        //         strokeColor: '#426072',
+        //         opacity: 0.5
+        //     }
+        // }
     ]
 };

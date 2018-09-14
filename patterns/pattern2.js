@@ -3,26 +3,35 @@ const pattern2 = {
     base: {
         sides: 14,
         radius: 0.2,
-        strokeColor: '#7e77ff'
+        attrs: {
+            strokeColor: '#7e77ff'
+        }
     },
-    groups: [
+    generators: [
         {
             id: 'hexes',
-            edges: {step: 2},
-            generators: {sides: 6},
-            strokeColor: '#426072'
+            source: {step: 2},
+            sides: 6,
+            attrs: {
+                strokeColor: '#426072'
+            }
         },
         {
             id: 'ring2',
-            from: 'hexes',
-            generators: {sides: 5},
-            strokeColor: '#308820',
-            strokeWidth: 2,
+            source: {from: 'hexes'},
+            sides: 5,
+            attrs: {
+                strokeColor: '#308820',
+                strokeWidth: 2
+            }
         },
         {
-            edges: {start: 1, step: 2},
-            generators: {sides: 5, flip: true},
-            strokeColor: '#584c4a'
+            source: {start: 1, step: 2},
+            sides: 5,
+            flip: true,
+            attrs: {
+                strokeColor: '#584c4a'
+            }
         }
     ]
 };
