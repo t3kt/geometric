@@ -278,20 +278,15 @@ Geo.model = (function () {
         }
 
         getEdgeGroups(context) {
-            let polys = context.getSourcePolys(this.from);
-            if (!polys.length) {
-                return [];
-            }
-            let edgeGroups = [];
-            for (let poly of polys) {
-                let indices = this.selector.getIndices(poly.segments.length);
-                if (!indices.length) {
-                    continue;
-                }
-                let edges = _.map(indices, i => Edge.fromSegment(poly.segments[i]));
-                edgeGroups.push(new EdgeGroup(edges, {name: poly.name}));
-            }
-            return edgeGroups;
+            const selector = this.selector;
+            return _(context.getSourcePolys(this.from))
+                .map((poly) =>
+                    new EdgeGroup(
+                        _.map(selector.getIndices(poly.segments.length),
+                            i => Edge.fromSegment(poly.segments[i])),
+                        {name: poly.name}))
+                .filter(edgeGroup => edgeGroup.edges.length)
+                .value();
         }
 
         static of(obj) {
@@ -366,6 +361,28 @@ Geo.model = (function () {
             super({tags});
             this.wrap = wrap;
             this.source = EdgeSource.of(source);
+        }
+
+        getEdgePairGroups(context) {
+            const wrap = this.wrap;
+            return _(this.source.getEdgeGroups(context))
+                .map((edgeGroup, edgeGroupIndex)=> {
+                    let edges = edgeGroup.edges;
+                    let secondEdges;
+                    if (wrap) {
+                        secondEdges = _.slice(edges, 1).concat([edges[0]]);
+                    } else {
+                        secondEdges = _.slice(edges, 1);
+                        edges = _.slice(edges, 0, edges.length - 1);
+                    }
+                    // TODO: names
+                    return new EdgePairGroup(
+                        _.zipWith(edges, secondEdges, (edge1, edge2)=>new EdgePair(edge1, edge2)),
+                        {});
+
+                })
+                .filter(pairGroup=>pairGroup.edgePairs.length)
+                .value();
         }
     }
 

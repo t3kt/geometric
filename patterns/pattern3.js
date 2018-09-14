@@ -32,26 +32,26 @@ const pattern3 = {
             sides: 6,
             attrs: {
                 strokeColor: '#308820',
-                opacity: 0.8,
+                opacity: 0.9,
             }
         },
-        // {
-        //     type: 'lineBridgeOnEdge',
-        //     source: {source: {from: 'square1'}, type: 'seq'},
-        //     steps: 4,
-        //     attrs: {
-        //         strokeColor: '#426072',
-        //         opacity: 0.8
-        //     }
-        // },
-        // {
-        //     type: 'lineBridgeOnEdge',
-        //     source: {source: {from: 'hexagon1'}, type: 'seq'},
-        //     steps: 4,
-        //     attrs: {
-        //         strokeColor: '#426072',
-        //         opacity: 0.5
-        //     }
-        // }
+        {
+            type: 'lineBridgeOnEdge',
+            source: {source: {from: 'square1'}, type: 'seq'},
+            steps: 4,
+            attrs: {
+                strokeColor: '#426072',
+                opacity: 0.8
+            }
+        },
+        {
+            type: 'lineBridgeOnEdge',
+            source: {source: {from: 'hexagon1'}, type: 'seq'},
+            steps: 4,
+            attrs: {
+                strokeColor: '#426072',
+                opacity: 0.7
+            }
+        }
     ]
 };

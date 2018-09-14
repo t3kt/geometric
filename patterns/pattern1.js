@@ -27,15 +27,15 @@ const pattern1 = {
                 // opacity: 0.6
             }
         },
-        // {
-        //     type: 'lineBridgeOnEdge',
-        //     source: {from: 'squares', type: 'seq'},
-        //     steps: 10,
-        //     attrs: {
-        //         strokeColor: '#b987ff',
-        //         opacity: 0.5
-        //     }
-        // },
+        {
+            type: 'lineBridgeOnEdge',
+            source: {source:{from: 'squares'}, type: 'seq'},
+            steps: 10,
+            attrs: {
+                strokeColor: '#b987ff',
+                opacity: 0.8
+            }
+        },
         {
             id: 'ring2',
             source: {from: 'hexes'},
@@ -47,15 +47,15 @@ const pattern1 = {
                 // opacity: 0.6
             }
         },
-        // {
-        //     source: {from: 'ring2', type: 'seq'},
-        //     type: 'lineBridgeOnEdge',
-        //     steps: 10,
-        //     attrs: {
-        //         strokeColor: '#584c4a',
-        //         opacity: 0.5
-        //     }
-        // },
+        {
+            source: {source: {from: 'ring2'}, type: 'seq'},
+            type: 'lineBridgeOnEdge',
+            steps: 10,
+            attrs: {
+                strokeColor: '#584c4a',
+                opacity: 0.8
+            }
+        },
         {
             id: 'pentas',
             source: {start: 1, step: 2},
@@ -65,13 +65,13 @@ const pattern1 = {
                 strokeColor: '#584c4a'
             }
         },
-        // {
-        //     type: 'lineBridgeOnEdge',
-        //     source: {source: {from: 'pentas'}, type: 'seq'},
-        //     steps: 8,
-        //     attrs: {
-        //         strokeColor: '#337900'
-        //     }
-        // }
+        {
+            type: 'lineBridgeOnEdge',
+            source: {source: {from: 'pentas'}, type: 'seq'},
+            steps: 8,
+            attrs: {
+                strokeColor: '#337900'
+            }
+        }
     ]
 };
