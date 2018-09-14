@@ -13,7 +13,9 @@ Geo.model = (function () {
 
         applyTo(item) {
             item.style = this.style;
-            item.opacity = this.opacity;
+            if (this.opacity != null) {
+                item.opacity = this.opacity;
+            }
             if (this.tags) {
                 item.data.tags = this.tags;
             }
@@ -199,8 +201,8 @@ Geo.model = (function () {
     }
 
     class RegularPolyBasis extends Basis {
-        constructor({sides = 6, radius = 0.5, center = [0.5, 0.5], id, tags = []}) {
-            super({id, tags});
+        constructor({sides = 6, radius = 0.5, center = [0.5, 0.5], id, attrs}) {
+            super({id, attrs});
             this.sides = sides;
             this.radius = radius;
             this.center = center;
@@ -346,7 +348,7 @@ Geo.model = (function () {
                     generatedPolys.push(poly);
                 }
             }
-            context.addPolyGroup(this.id, generatedPolys, new Attrs({tags: this.tags}));
+            context.addPolyGroup(this.id, generatedPolys, this.attrs);
         }
     }
 

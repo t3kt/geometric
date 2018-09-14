@@ -111,22 +111,32 @@ function main() {
                 radius: 0.1,
                 attrs: {
                     strokeColor: '#006633',
-                    strokeWidth: 5
+                    strokeWidth: 3
                 }
             },
             generators: [
                 {
                     id: 'gen1',
                     type: 'regPolyOnEdge',
-                    sides: 7,
-                    source: {}
+                    sides: 5,
+                    source: {},
+                    attrs: {
+                        strokeColor: '#773366',
+                        strokeWidth: 5
+                    }
                 },
                 {
                     id: 'gen2',
                     type: 'regPolyOnEdge',
                     sides: 5,
                     source: {
-                        from: 'gen1'
+                        from: 'gen1',
+                        start: 3,
+                        end: 5
+                    },
+                    attrs: {
+                        strokeColor: '#688865',
+                        strokeWidth: 2
                     }
                 }
             ]
