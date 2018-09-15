@@ -20,10 +20,13 @@
 	</header>
 	<main class="mdl-layout__content">
 		<div id="body-container">
-			<canvas id="geo-canvas"></canvas>
+			<div id="canvas-container">
+				<canvas id="geo-canvas"></canvas>
+			</div>
 			<div id="side-panel">
 				<div class="toolbar">
 					<select id="pattern-selector"></select>
+					<button id="load-from-editor">Load From Editor</button>
 				</div>
 				<div class="mdl-textfield
 						mdl-js-textfield
@@ -50,7 +53,7 @@
 							id="output-text"
 							class="mdl-textfield__input"
 							type="text"
-							rows="10"></textarea>
+							rows="30"></textarea>
 					<label for="editor-text" class="mdl-textfield__label">Output</label>
 				</div>
 				<div class="toolbar"></div>

@@ -39106,11 +39106,42 @@ module.exports={
 module.exports={
 	"name": "pattern3",
 	"base": {
-		"sides": 10,
+		"sides": 12,
 		"radius": 0.15,
 		"strokeColor": "#6b3d75"
 	},
 	"generators": [
+		{
+			"id": "centerBridges",
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"step": 3
+				},
+				"type": "seq"
+			},
+			"steps": 4,
+			"attrs": {
+				"strokeColor": "#776072",
+				"opacity": 0.7
+			}
+		},
+		{
+			"id": "centerBridges",
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"step": 3,
+					"start": 2
+				},
+				"type": "seq"
+			},
+			"steps": 4,
+			"attrs": {
+				"strokeColor": "#776033",
+				"opacity": 0.7
+			}
+		},
 		{
 			"id": "pentagon1",
 			"sides": 5,
@@ -39399,7 +39430,14 @@ function main() {
 
     function setEditorText(text) {
         let textarea = document.getElementById('editor-text');
-        textarea.textContent = text || '';
+        textarea.value = text || '';
+    }
+
+    function loadFromEditor() {
+        let textarea = document.getElementById('editor-text');
+        let docjson = textarea.value.trim();
+        let obj = JSON.parse(docjson);
+        loadPattern(obj);
     }
 
     function showSvg() {
@@ -39464,6 +39502,9 @@ function main() {
                 break;
             case 'download-json':
                 downloadJson();
+                break;
+            case 'load-from-editor':
+                loadFromEditor();
                 break;
             default:
                 return;

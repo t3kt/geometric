@@ -72,7 +72,14 @@ function main() {
 
     function setEditorText(text) {
         let textarea = document.getElementById('editor-text');
-        textarea.textContent = text || '';
+        textarea.value = text || '';
+    }
+
+    function loadFromEditor() {
+        let textarea = document.getElementById('editor-text');
+        let docjson = textarea.value.trim();
+        let obj = JSON.parse(docjson);
+        loadPattern(obj);
     }
 
     function showSvg() {
@@ -137,6 +144,9 @@ function main() {
                 break;
             case 'download-json':
                 downloadJson();
+                break;
+            case 'load-from-editor':
+                loadFromEditor();
                 break;
             default:
                 return;
