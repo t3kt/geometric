@@ -35,3 +35,4 @@ const pattern2 = {
         }
     ]
 };
+module.exports = pattern2;

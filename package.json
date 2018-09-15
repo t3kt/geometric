@@ -1,0 +1,11 @@
+{
+  "name": "geometric",
+  "devDependencies": {
+    "browserify": "^16.2.2"
+  },
+  "main": "src/base.js",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "paper": "^0.11.5"
+  }
+}

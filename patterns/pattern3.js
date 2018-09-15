@@ -55,3 +55,4 @@ const pattern3 = {
         }
     ]
 };
+module.exports = pattern3;

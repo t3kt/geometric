@@ -1,4 +1,14 @@
-let patterns = [
+const GeoModel = require('./model');
+const GeoExporter = require('./exporter');
+const GeoUtil = require('./util');
+const paper = require('paper');
+
+const pattern1 = require('../patterns/pattern1');
+const pattern2 = require('../patterns/pattern2');
+const pattern3 = require('../patterns/pattern3');
+const pattern4 = require('../patterns/pattern4');
+
+const patterns = [
     pattern1,
     pattern2,
     pattern3,
@@ -39,7 +49,7 @@ function main() {
         if (!currentPattern) {
             return;
         }
-        let doc = Geo.Document(currentPattern);
+        let doc = new GeoModel.GeoDocument(currentPattern);
         doc.build(paper, renderWidth, renderHeight);
         paper.view.draw();
     }
@@ -67,7 +77,7 @@ function main() {
     }
 
     function generateJson() {
-        let obj = currentPattern ? Geo.buildJsonFromPaper() : null;
+        let obj = currentPattern ? GeoExporter.buildJsonFromPaper() : null;
         return obj ? JSON.stringify(obj, null, ' ') : null;
     }
 

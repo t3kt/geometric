@@ -75,3 +75,4 @@ const pattern1 = {
         }
     ]
 };
+module.exports = pattern1;

@@ -61,3 +61,4 @@ const pattern4 = {
         // }
     ]
 };
+module.exports = pattern4;
