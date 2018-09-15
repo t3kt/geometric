@@ -1,5 +1,5 @@
-const GeoModel = require('./model');
-const GeoExporter = require('./exporter');
+const GeoModel = require('./geometric/model');
+const GeoExporter = require('./geometric/exporter');
 const paper = require('paper');
 
 const pattern1 = require('../patterns/pattern1');
