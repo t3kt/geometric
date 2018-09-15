@@ -1,6 +1,5 @@
 const GeoModel = require('./model');
 const GeoExporter = require('./exporter');
-const GeoUtil = require('./util');
 const paper = require('paper');
 
 const pattern1 = require('../patterns/pattern1');
@@ -44,36 +43,46 @@ function main() {
     initPatternSelector();
 
     function selectPattern(index) {
-        paper.project.clear();
-        currentPattern = patterns[index];
-        if (!currentPattern) {
-            return;
-        }
-        let doc = new GeoModel.GeoDocument(currentPattern);
-        doc.build(paper, renderWidth, renderHeight);
-        paper.view.draw();
+        loadPattern(patterns[index]);
     }
 
     selectPattern(0);
+
+    function loadPattern(pattern) {
+        currentPattern = pattern;
+        paper.project.clear();
+        setEditorText(pattern ? JSON.stringify(pattern, null, '  '): '');
+        setOutputText('');
+        if (!pattern) {
+            return;
+        }
+        let doc = GeoModel.parseDocument(pattern);
+        doc.build(paper, renderWidth, renderHeight);
+        paper.view.draw();
+    }
 
     function generateSvg() {
         return currentPattern ? paper.project.exportSVG({asString: true}) : null;
     }
 
-    function showOutputText(text) {
+    function setOutputText(text) {
         let textarea = document.getElementById('output-text');
         textarea.textContent = text || '';
-        textarea.style.display = text ? 'block' : 'none';
+    }
+
+    function setEditorText(text) {
+        let textarea = document.getElementById('editor-text');
+        textarea.textContent = text || '';
     }
 
     function showSvg() {
         let svg = generateSvg();
-        showOutputText(svg);
+        setOutputText(svg);
     }
 
     function showJson() {
         let json = generateJson();
-        showOutputText(json);
+        setOutputText(json);
     }
 
     function generateJson() {
@@ -138,7 +147,6 @@ function main() {
     for (let btn of document.querySelectorAll('button')) {
         btn.addEventListener('click', onButtonClick);
     }
-    showOutputText(null);
 }
 
 window.onload = function () {

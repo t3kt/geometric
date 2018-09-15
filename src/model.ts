@@ -90,6 +90,7 @@ class Attrs {
         if (obj instanceof String) {
             return new Attrs({strokeColor: obj});
         }
+        obj = util.stripIgnoredItems(obj);
         return new Attrs(obj);
     }
 }
@@ -125,6 +126,7 @@ class IndexSelector {
         if (_.isArray(obj)) {
             obj = {indices: obj};
         }
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'indices' || obj.indices) {
             return new IndexListSelector(obj);
         }
@@ -262,6 +264,7 @@ abstract class Basis {
             return obj;
         }
         obj = obj || {};
+        obj = util.stripIgnoredItems(obj);
         if (obj.sides) {
             return new RegularPolyBasis(obj);
         }
@@ -339,6 +342,7 @@ class EdgeSource {
         if (_.isString(obj)) {
             obj = {from: obj};
         }
+        obj = util.stripIgnoredItems(obj);
         return new EdgeSource(obj);
     }
 }
@@ -358,6 +362,7 @@ abstract class EdgePairSource {
             return obj;
         }
 
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'zip') {
             return new ZippedEdgePairSource(obj);
         }
@@ -452,6 +457,7 @@ abstract class Generator {
         if (obj instanceof Generator || _.isFunction(obj.generate)) {
             return obj;
         }
+        obj = util.stripIgnoredItems(obj);
         if (!obj.type || obj.type === 'regPolyOnEdge') {
             return new RegularPolyOnEdgeGenerator(obj);
         }
@@ -536,7 +542,7 @@ export class GeoDocument {
         this.name = name;
         this.meta = _.cloneDeep(meta || {});
         this.base = Basis.of(base);
-        this.generators = _.map(generators, Generator.of);
+        this.generators = _.map(util.stripIgnoredItems(generators), Generator.of);
     }
 
     build(paper: paper.PaperScope, width: number = 500, height: number = 500) {
@@ -547,5 +553,10 @@ export class GeoDocument {
             context.currentGeneratorIndex++;
         }
     }
+}
+
+export function parseDocument(obj) : GeoDocument {
+    let doc = new GeoDocument(util.stripIgnoredItems(obj));
+    return doc;
 }
 

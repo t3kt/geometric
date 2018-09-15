@@ -94,6 +94,7 @@ var Attrs = /** @class */ (function () {
         if (obj instanceof String) {
             return new Attrs({ strokeColor: obj });
         }
+        obj = util.stripIgnoredItems(obj);
         return new Attrs(obj);
     };
     return Attrs;
@@ -130,6 +131,7 @@ var IndexSelector = /** @class */ (function () {
         if (_.isArray(obj)) {
             obj = { indices: obj };
         }
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'indices' || obj.indices) {
             return new IndexListSelector(obj);
         }
@@ -253,6 +255,7 @@ var Basis = /** @class */ (function () {
             return obj;
         }
         obj = obj || {};
+        obj = util.stripIgnoredItems(obj);
         if (obj.sides) {
             return new RegularPolyBasis(obj);
         }
@@ -322,6 +325,7 @@ var EdgeSource = /** @class */ (function () {
         if (_.isString(obj)) {
             obj = { from: obj };
         }
+        obj = util.stripIgnoredItems(obj);
         return new EdgeSource(obj);
     };
     return EdgeSource;
@@ -336,6 +340,7 @@ var EdgePairSource = /** @class */ (function () {
         if (obj instanceof EdgePairSource || _.isFunction(obj.getEdgePairGroups)) {
             return obj;
         }
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'zip') {
             return new ZippedEdgePairSource(obj);
         }
@@ -418,6 +423,7 @@ var Generator = /** @class */ (function () {
         if (obj instanceof Generator || _.isFunction(obj.generate)) {
             return obj;
         }
+        obj = util.stripIgnoredItems(obj);
         if (!obj.type || obj.type === 'regPolyOnEdge') {
             return new RegularPolyOnEdgeGenerator(obj);
         }
@@ -491,7 +497,7 @@ var GeoDocument = /** @class */ (function () {
         this.name = name;
         this.meta = _.cloneDeep(meta || {});
         this.base = Basis.of(base);
-        this.generators = _.map(generators, Generator.of);
+        this.generators = _.map(util.stripIgnoredItems(generators), Generator.of);
     }
     GeoDocument.prototype.build = function (paper, width, height) {
         if (width === void 0) { width = 500; }
@@ -507,3 +513,8 @@ var GeoDocument = /** @class */ (function () {
     return GeoDocument;
 }());
 exports.GeoDocument = GeoDocument;
+function parseDocument(obj) {
+    var doc = new GeoDocument(util.stripIgnoredItems(obj));
+    return doc;
+}
+exports.parseDocument = parseDocument;

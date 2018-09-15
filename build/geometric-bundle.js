@@ -38955,248 +38955,317 @@ return paper;
 }.call(this, typeof self === 'object' ? self : null);
 
 },{"./node/extend.js":2,"./node/self.js":2,"acorn":1}],5:[function(require,module,exports){
-const pattern1 = {
-    name: 'pattern1',
-    base: {
-        sides: 16,
-        radius: 0.2,
-        attrs: {
-            strokeColor: '#7e77ff'
-        }
-    },
-    generators: [
-        {
-            id: 'hexes',
-            source: {step: 2},
-            sides: 6,
-            attrs: {
-                strokeColor: '#426072'
-            }
-        },
-        {
-            id: 'squares',
-            source: {start: 1, step: 2},
-            sides: 4,
-            attrs: {
-                strokeColor: '#302f72',
-                strokeWidth: 2,
-                // fillColor: '#426072',
-                // opacity: 0.6
-            }
-        },
-        {
-            type: 'lineBridgeOnEdge',
-            source: {source:{from: 'squares'}, type: 'seq'},
-            steps: 10,
-            attrs: {
-                strokeColor: '#b987ff',
-                opacity: 0.8
-            }
-        },
-        {
-            id: 'ring2',
-            source: {from: 'hexes'},
-            sides: 5,
-            attrs: {
-                strokeColor: '#308820',
-                strokeWidth: 2,
-                // fillColor: '#688865',
-                // opacity: 0.6
-            }
-        },
-        {
-            source: {source: {from: 'ring2'}, type: 'seq'},
-            type: 'lineBridgeOnEdge',
-            steps: 10,
-            attrs: {
-                strokeColor: '#584c4a',
-                opacity: 0.8
-            }
-        },
-        {
-            id: 'pentas',
-            source: {start: 1, step: 2},
-            sides: 5,
-            flip: true,
-            attrs: {
-                strokeColor: '#584c4a'
-            }
-        },
-        {
-            type: 'lineBridgeOnEdge',
-            source: {source: {from: 'pentas'}, type: 'seq'},
-            steps: 8,
-            attrs: {
-                strokeColor: '#337900'
-            }
-        }
-    ]
-};
-module.exports = pattern1;
+module.exports={
+	"name": "pattern1",
+	"base": {
+		"sides": 16,
+		"radius": 0.2,
+		"attrs": {
+			"strokeColor": "#7e77ff"
+		}
+	},
+	"generators": [
+		{
+			"id": "hexes",
+			"source": {
+				"step": 2
+			},
+			"sides": 6,
+			"attrs": {
+				"strokeColor": "#426072"
+			}
+		},
+		{
+			"id": "squares",
+			"source": {
+				"start": 1,
+				"step": 2
+			},
+			"sides": 4,
+			"attrs": {
+				"strokeColor": "#302f72",
+				"strokeWidth": 2,
+				"_fillColor": "#426072",
+				"_opacity": 0.6
+			}
+		},
+		{
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"from": "squares"
+				},
+				"type": "seq"
+			},
+			"steps": 10,
+			"attrs": {
+				"strokeColor": "#b987ff",
+				"opacity": 0.8
+			}
+		},
+		{
+			"id": "ring2",
+			"source": {
+				"from": "hexes"
+			},
+			"sides": 5,
+			"attrs": {
+				"strokeColor": "#308820",
+				"strokeWidth": 2,
+				"_fillColor": "#688865",
+				"_opacity": 0.6
+			}
+		},
+		{
+			"source": {
+				"source": {
+					"from": "ring2"
+				},
+				"type": "seq"
+			},
+			"type": "lineBridgeOnEdge",
+			"steps": 10,
+			"attrs": {
+				"strokeColor": "#584c4a",
+				"opacity": 0.8
+			}
+		},
+		{
+			"id": "pentas",
+			"source": {
+				"start": 1,
+				"step": 2
+			},
+			"sides": 5,
+			"flip": true,
+			"attrs": {
+				"strokeColor": "#584c4a"
+			}
+		},
+		{
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"from": "pentas"
+				},
+				"type": "seq"
+			},
+			"steps": 8,
+			"attrs": {
+				"strokeColor": "#337900"
+			}
+		}
+	]
+}
 },{}],6:[function(require,module,exports){
-const pattern2 = {
-    name: 'pattern2',
-    base: {
-        sides: 14,
-        radius: 0.2,
-        attrs: {
-            strokeColor: '#7e77ff'
-        }
-    },
-    generators: [
-        {
-            id: 'hexes',
-            source: {step: 2},
-            sides: 6,
-            attrs: {
-                strokeColor: '#426072'
-            }
-        },
-        {
-            id: 'ring2',
-            source: {from: 'hexes'},
-            sides: 5,
-            attrs: {
-                strokeColor: '#308820',
-                strokeWidth: 2
-            }
-        },
-        {
-            source: {start: 1, step: 2},
-            sides: 5,
-            flip: true,
-            attrs: {
-                strokeColor: '#584c4a'
-            }
-        }
-    ]
-};
-module.exports = pattern2;
+module.exports={
+	"name": "pattern2",
+	"base": {
+		"sides": 14,
+		"radius": 0.2,
+		"attrs": {
+			"strokeColor": "#7e77ff"
+		}
+	},
+	"generators": [
+		{
+			"id": "hexes",
+			"source": {
+				"step": 2
+			},
+			"sides": 6,
+			"attrs": {
+				"strokeColor": "#426072"
+			}
+		},
+		{
+			"id": "ring2",
+			"source": {
+				"from": "hexes"
+			},
+			"sides": 5,
+			"attrs": {
+				"strokeColor": "#308820",
+				"strokeWidth": 2
+			}
+		},
+		{
+			"source": {
+				"start": 1,
+				"step": 2
+			},
+			"sides": 5,
+			"flip": true,
+			"attrs": {
+				"strokeColor": "#584c4a"
+			}
+		}
+	]
+}
 },{}],7:[function(require,module,exports){
-const pattern3 = {
-    name: 'pattern3',
-    base: {
-        sides: 10,
-        radius: 0.15,
-        strokeColor: '#6b3d75'
-    },
-    generators: [
-        {
-            id: 'pentagon1',
-            // source: {step: 3},
-            sides: 5,
-            attrs: {
-                strokeColor: '#302f72'
-            }
-        },
-        {
-            id: 'square1',
-            source: {from: 'pentagon1', indices: [3, 4]},
-            sides: 4,
-            attrs: {
-                strokeColor: '#426072',
-                opacity: 0.9
-            }
-        },
-        {
-            id: 'hexagon1',
-            source: {
-                from: 'square1',
-                // indices: [3, 4]
-            },
-            sides: 6,
-            attrs: {
-                strokeColor: '#308820',
-                opacity: 0.9,
-            }
-        },
-        {
-            type: 'lineBridgeOnEdge',
-            source: {source: {from: 'square1'}, type: 'seq'},
-            steps: 4,
-            attrs: {
-                strokeColor: '#426072',
-                opacity: 0.8
-            }
-        },
-        {
-            type: 'lineBridgeOnEdge',
-            source: {source: {from: 'hexagon1'}, type: 'seq'},
-            steps: 4,
-            attrs: {
-                strokeColor: '#426072',
-                opacity: 0.7
-            }
-        }
-    ]
-};
-module.exports = pattern3;
+module.exports={
+	"name": "pattern3",
+	"base": {
+		"sides": 10,
+		"radius": 0.15,
+		"strokeColor": "#6b3d75"
+	},
+	"generators": [
+		{
+			"id": "pentagon1",
+			"sides": 5,
+			"attrs": {
+				"strokeColor": "#302f72"
+			}
+		},
+		{
+			"id": "square1",
+			"source": {
+				"from": "pentagon1",
+				"indices": [
+					3,
+					4
+				]
+			},
+			"sides": 4,
+			"attrs": {
+				"strokeColor": "#426072",
+				"opacity": 0.9
+			}
+		},
+		{
+			"id": "hexagon1",
+			"source": {
+				"from": "square1"
+			},
+			"sides": 6,
+			"attrs": {
+				"strokeColor": "#308820",
+				"opacity": 0.9
+			}
+		},
+		{
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"from": "square1"
+				},
+				"type": "seq"
+			},
+			"steps": 4,
+			"attrs": {
+				"strokeColor": "#426072",
+				"opacity": 0.8
+			}
+		},
+		{
+			"type": "lineBridgeOnEdge",
+			"source": {
+				"source": {
+					"from": "hexagon1"
+				},
+				"type": "seq"
+			},
+			"steps": 4,
+			"attrs": {
+				"strokeColor": "#426072",
+				"opacity": 0.7
+			}
+		}
+	]
+}
 },{}],8:[function(require,module,exports){
-const pattern4 = {
-    name: 'pattern4',
-    base: {
-        sides: 6,
-        radius: 0.1,
-        attrs: {
-            strokeColor: '#006633',
-            strokeWidth: 3
-        }
-    },
-    generators: [
-        {
-            id: 'gen1',
-            type: 'regPolyOnEdge',
-            sides: 5,
-            source: {},
-            attrs: {
-                strokeColor: '#773366',
-                strokeWidth: 5
-            }
-        },
-        {
-            id: 'gen2',
-            type: 'regPolyOnEdge',
-            sides: 5,
-            source: {
-                from: 'gen1',
-                start: 3,
-                end: 5
-            },
-            attrs: {
-                strokeColor: '#688865',
-                strokeWidth: 2
-            }
-        },
-        {
-            id: 'bridgegen1',
-            type: 'lineBridgeOnEdge',
-            steps: 4,
-            source: {
-                type: 'zip',
-                source1: {from: 'gen1', indices: [1, 2]},
-                source2: {from: 'gen1', indices: [2, 3]}
-            },
-            attrs: {
-                strokeColor: '#FF0000'
-            }
-        },
-        // {
-        //     id: 'bridgegen2',
-        //     type: 'lineBridgeOnEdge',
-        //     steps: 4,
-        //     source: {
-        //         type: 'zip',
-        //         source1: {from: 'gen1', indices: [3, 4]},
-        //         source2: {from: 'gen2', indices: [1, 2]}
-        //     },
-        //     attrs: {
-        //         strokeColor: '#342eff'
-        //     }
-        // }
-    ]
-};
-module.exports = pattern4;
+module.exports={
+	"name": "pattern4",
+	"base": {
+		"sides": 6,
+		"radius": 0.1,
+		"attrs": {
+			"strokeColor": "#006633",
+			"strokeWidth": 3
+		}
+	},
+	"generators": [
+		{
+			"id": "gen1",
+			"type": "regPolyOnEdge",
+			"sides": 5,
+			"source": {},
+			"attrs": {
+				"strokeColor": "#773366",
+				"strokeWidth": 5
+			}
+		},
+		{
+			"id": "gen2",
+			"type": "regPolyOnEdge",
+			"sides": 5,
+			"source": {
+				"from": "gen1",
+				"start": 3,
+				"end": 5
+			},
+			"attrs": {
+				"strokeColor": "#688865",
+				"strokeWidth": 2
+			}
+		},
+		{
+			"id": "bridgegen1",
+			"type": "lineBridgeOnEdge",
+			"steps": 4,
+			"source": {
+				"type": "zip",
+				"source1": {
+					"from": "gen1",
+					"indices": [
+						1,
+						2
+					]
+				},
+				"source2": {
+					"from": "gen1",
+					"indices": [
+						2,
+						3
+					]
+				}
+			},
+			"attrs": {
+				"strokeColor": "#FF0000"
+			}
+		},
+		{
+			"_ignore": 1,
+			"id": "bridgegen2",
+			"type": "lineBridgeOnEdge",
+			"steps": 4,
+			"source": {
+				"type": "zip",
+				"source1": {
+					"from": "gen1",
+					"indices": [
+						3,
+						4
+					]
+				},
+				"source2": {
+					"from": "gen2",
+					"indices": [
+						1,
+						2
+					]
+				}
+			},
+			"attrs": {
+				"strokeColor": "#342eff"
+			}
+		}
+	]
+}
 },{}],9:[function(require,module,exports){
+arguments[4][2][0].apply(exports,arguments)
+},{"dup":2}],10:[function(require,module,exports){
 const util = require('./util');
 const paper = require('paper');
 const _ = require('lodash');
@@ -39255,10 +39324,9 @@ module.exports = {
 };
 
 
-},{"./util":12,"lodash":3,"paper":4}],10:[function(require,module,exports){
+},{"./util":13,"lodash":3,"paper":4}],11:[function(require,module,exports){
 const GeoModel = require('./model');
 const GeoExporter = require('./exporter');
-const GeoUtil = require('./util');
 const paper = require('paper');
 
 const pattern1 = require('../patterns/pattern1');
@@ -39302,36 +39370,46 @@ function main() {
     initPatternSelector();
 
     function selectPattern(index) {
-        paper.project.clear();
-        currentPattern = patterns[index];
-        if (!currentPattern) {
-            return;
-        }
-        let doc = new GeoModel.GeoDocument(currentPattern);
-        doc.build(paper, renderWidth, renderHeight);
-        paper.view.draw();
+        loadPattern(patterns[index]);
     }
 
     selectPattern(0);
+
+    function loadPattern(pattern) {
+        currentPattern = pattern;
+        paper.project.clear();
+        setEditorText(pattern ? JSON.stringify(pattern, null, '  '): '');
+        setOutputText('');
+        if (!pattern) {
+            return;
+        }
+        let doc = GeoModel.parseDocument(pattern);
+        doc.build(paper, renderWidth, renderHeight);
+        paper.view.draw();
+    }
 
     function generateSvg() {
         return currentPattern ? paper.project.exportSVG({asString: true}) : null;
     }
 
-    function showOutputText(text) {
+    function setOutputText(text) {
         let textarea = document.getElementById('output-text');
         textarea.textContent = text || '';
-        textarea.style.display = text ? 'block' : 'none';
+    }
+
+    function setEditorText(text) {
+        let textarea = document.getElementById('editor-text');
+        textarea.textContent = text || '';
     }
 
     function showSvg() {
         let svg = generateSvg();
-        showOutputText(svg);
+        setOutputText(svg);
     }
 
     function showJson() {
         let json = generateJson();
-        showOutputText(json);
+        setOutputText(json);
     }
 
     function generateJson() {
@@ -39396,7 +39474,6 @@ function main() {
     for (let btn of document.querySelectorAll('button')) {
         btn.addEventListener('click', onButtonClick);
     }
-    showOutputText(null);
 }
 
 window.onload = function () {
@@ -39404,7 +39481,7 @@ window.onload = function () {
 };
 
 
-},{"../patterns/pattern1":5,"../patterns/pattern2":6,"../patterns/pattern3":7,"../patterns/pattern4":8,"./exporter":9,"./model":11,"./util":12,"paper":4}],11:[function(require,module,exports){
+},{"../patterns/pattern1":5,"../patterns/pattern2":6,"../patterns/pattern3":7,"../patterns/pattern4":8,"./exporter":10,"./model":12,"paper":4}],12:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -39501,6 +39578,7 @@ var Attrs = /** @class */ (function () {
         if (obj instanceof String) {
             return new Attrs({ strokeColor: obj });
         }
+        obj = util.stripIgnoredItems(obj);
         return new Attrs(obj);
     };
     return Attrs;
@@ -39537,6 +39615,7 @@ var IndexSelector = /** @class */ (function () {
         if (_.isArray(obj)) {
             obj = { indices: obj };
         }
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'indices' || obj.indices) {
             return new IndexListSelector(obj);
         }
@@ -39660,6 +39739,7 @@ var Basis = /** @class */ (function () {
             return obj;
         }
         obj = obj || {};
+        obj = util.stripIgnoredItems(obj);
         if (obj.sides) {
             return new RegularPolyBasis(obj);
         }
@@ -39729,6 +39809,7 @@ var EdgeSource = /** @class */ (function () {
         if (_.isString(obj)) {
             obj = { from: obj };
         }
+        obj = util.stripIgnoredItems(obj);
         return new EdgeSource(obj);
     };
     return EdgeSource;
@@ -39743,6 +39824,7 @@ var EdgePairSource = /** @class */ (function () {
         if (obj instanceof EdgePairSource || _.isFunction(obj.getEdgePairGroups)) {
             return obj;
         }
+        obj = util.stripIgnoredItems(obj);
         if (obj.type === 'zip') {
             return new ZippedEdgePairSource(obj);
         }
@@ -39825,6 +39907,7 @@ var Generator = /** @class */ (function () {
         if (obj instanceof Generator || _.isFunction(obj.generate)) {
             return obj;
         }
+        obj = util.stripIgnoredItems(obj);
         if (!obj.type || obj.type === 'regPolyOnEdge') {
             return new RegularPolyOnEdgeGenerator(obj);
         }
@@ -39898,7 +39981,7 @@ var GeoDocument = /** @class */ (function () {
         this.name = name;
         this.meta = _.cloneDeep(meta || {});
         this.base = Basis.of(base);
-        this.generators = _.map(generators, Generator.of);
+        this.generators = _.map(util.stripIgnoredItems(generators), Generator.of);
     }
     GeoDocument.prototype.build = function (paper, width, height) {
         if (width === void 0) { width = 500; }
@@ -39914,8 +39997,13 @@ var GeoDocument = /** @class */ (function () {
     return GeoDocument;
 }());
 exports.GeoDocument = GeoDocument;
+function parseDocument(obj) {
+    var doc = new GeoDocument(util.stripIgnoredItems(obj));
+    return doc;
+}
+exports.parseDocument = parseDocument;
 
-},{"./util":12,"lodash":3,"paper":4}],12:[function(require,module,exports){
+},{"./util":13,"lodash":3,"paper":4}],13:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var paper = require("paper");
@@ -40043,5 +40131,34 @@ function drawPolySegmentIndices(paper, poly) {
     }
 }
 exports.drawPolySegmentIndices = drawPolySegmentIndices;
+function isIgnoredItem(obj, key) {
+    if (key === void 0) { key = null; }
+    if (_.isString(key) && _.startsWith(key, '_')) {
+        return true;
+    }
+    if (_.isNil(obj)) {
+        return true;
+    }
+    if (_.isArray(obj) && !obj.length) {
+        return true;
+    }
+    if (_.isPlainObject(obj) && obj._ignore) {
+        return true;
+    }
+    return false;
+}
+function stripIgnoredItems(obj) {
+    if (!obj) {
+        return obj;
+    }
+    if (_.isArray(obj)) {
+        return _.filter(obj, function (item) { return !isIgnoredItem(item); });
+    }
+    if (_.isPlainObject(obj)) {
+        return _.omitBy(obj, function (value, key) { return isIgnoredItem(value, key); });
+    }
+    return obj;
+}
+exports.stripIgnoredItems = stripIgnoredItems;
 
-},{"lodash":3,"paper":4}]},{},[9,10,11,12]);
+},{"lodash":3,"paper":4}]},{},[9,10,11,12,13]);

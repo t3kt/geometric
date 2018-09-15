@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Geometric</title>
-    <link rel="stylesheet" href="geometric.css">
-    <script src="build/geometric-bundle.js"></script>
+	<meta charset="UTF-8">
+	<title>Geometric</title>
+	<script src="material/material.js"></script>
+	<link href="material/material.css" rel="stylesheet"/>
+	<link href="material/material.indigo-pink.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="geometric.css">
+	<script src="build/geometric-bundle.js"></script>
 </head>
 <body>
-    <h1>Geometric</h1>
-    <header>
-        <select id="pattern-selector"></select>
-        <button id="generate-svg">Generate SVG</button>
-        <button id="download-svg">Download SVG</button>
-        <button id="generate-json">Generate JSON</button>
-        <button id="download-json">Download JSON</button>
-    </header>
-    <main>
-        <canvas id="geo-canvas"></canvas>
-        <textarea id="output-text"></textarea>
-    </main>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row">
+			<span class="mdl-layout-title">Geometric</span>
+			<div class="mdl-layout-spacer"></div>
+		</div>
+	</header>
+	<main class="mdl-layout__content">
+		<div id="body-container">
+			<canvas id="geo-canvas"></canvas>
+			<div id="side-panel">
+				<div class="toolbar">
+					<select id="pattern-selector"></select>
+				</div>
+				<div class="mdl-textfield
+						mdl-js-textfield
+						mdl-textfield--floating-label
+						mdl-textfield--full-width">
+					<textarea
+							id="editor-text"
+							class="mdl-textfield__input"
+							type="text"
+							rows="10"></textarea>
+						<label for="editor-text" class="mdl-textfield__label">Editor</label>
+				</div>
+				<div class="toolbar">
+					<button id="generate-svg">Generate SVG</button>
+					<button id="download-svg">Download SVG</button>
+					<button id="generate-json">Generate JSON</button>
+					<button id="download-json">Download JSON</button>
+				</div>
+				<div class="mdl-textfield
+						mdl-js-textfield
+						mdl-textfield--floating-label
+						mdl-textfield--full-width">
+					<textarea
+							id="output-text"
+							class="mdl-textfield__input"
+							type="text"
+							rows="10"></textarea>
+					<label for="editor-text" class="mdl-textfield__label">Output</label>
+				</div>
+				<div class="toolbar"></div>
+			</div>
+		</div>
+	</main>
+</div>
 </body>
 </html>

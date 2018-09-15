@@ -125,3 +125,32 @@ function drawPolySegmentIndices(paper, poly) {
     }
 }
 exports.drawPolySegmentIndices = drawPolySegmentIndices;
+function isIgnoredItem(obj, key) {
+    if (key === void 0) { key = null; }
+    if (_.isString(key) && _.startsWith(key, '_')) {
+        return true;
+    }
+    if (_.isNil(obj)) {
+        return true;
+    }
+    if (_.isArray(obj) && !obj.length) {
+        return true;
+    }
+    if (_.isPlainObject(obj) && obj._ignore) {
+        return true;
+    }
+    return false;
+}
+function stripIgnoredItems(obj) {
+    if (!obj) {
+        return obj;
+    }
+    if (_.isArray(obj)) {
+        return _.filter(obj, function (item) { return !isIgnoredItem(item); });
+    }
+    if (_.isPlainObject(obj)) {
+        return _.omitBy(obj, function (value, key) { return isIgnoredItem(value, key); });
+    }
+    return obj;
+}
+exports.stripIgnoredItems = stripIgnoredItems;

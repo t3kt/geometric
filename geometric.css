@@ -1,13 +1,22 @@
-header, main {
+#body-container {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
 }
 
 #geo-canvas {
     border: 1px solid #666666;
 }
-#output-text {
-    width: 90%;
-    height: 50em;
-    display: none;
+#side-panel {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: stretch;
 }
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+

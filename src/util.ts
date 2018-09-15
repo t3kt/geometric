@@ -142,3 +142,32 @@ export function drawPolySegmentIndices(paper: paper.PaperScope, poly) {
         });
     }
 }
+
+function isIgnoredItem(obj, key = null) {
+    if (_.isString(key) && _.startsWith(key, '_')) {
+        return true;
+    }
+    if (_.isNil(obj)) {
+        return true;
+    }
+    if (_.isArray(obj) && !obj.length) {
+        return true;
+    }
+    if (_.isPlainObject(obj) && obj._ignore) {
+        return true;
+    }
+    return false;
+}
+
+export function stripIgnoredItems(obj) {
+    if (!obj) {
+        return obj;
+    }
+    if (_.isArray(obj)) {
+        return _.filter(obj, item => !isIgnoredItem(item));
+    }
+    if (_.isPlainObject(obj)) {
+        return _.omitBy(obj, (value, key) => isIgnoredItem(value, key));
+    }
+    return obj;
+}
