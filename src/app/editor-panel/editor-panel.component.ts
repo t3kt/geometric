@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EditorModel} from "../model/EditorModel";
+import {buildJsonFromItem} from "../../geometric/exporter";
 
 @Component({
   selector: 'editor-panel',
@@ -12,6 +13,7 @@ export class EditorPanelComponent implements OnInit {
   }
 
   specText: string = '';
+  outputText: string = '';
 
   ngOnInit() {
   }
@@ -19,6 +21,25 @@ export class EditorPanelComponent implements OnInit {
   applyChanges() {
     const specObj = JSON.parse(this.specText);
     this.editorModel.parseDocument(specObj);
+  }
+
+  generateSvg() {
+    const doc = this.editorModel.doc.value;
+    if (!doc) {
+      this.outputText = '';
+    } else {
+      this.outputText = this.editorModel.paperScope.project.exportSVG({asString: true});
+    }
+  }
+
+  generateJson() {
+    const doc = this.editorModel.doc.value;
+    if (!doc) {
+      this.outputText = '';
+    } else {
+      const outObj = buildJsonFromItem(this.editorModel.paperScope);
+      this.outputText = JSON.stringify(outObj, null, '  ');
+    }
   }
 
 }

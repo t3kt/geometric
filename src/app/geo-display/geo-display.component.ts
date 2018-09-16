@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {EditorModel} from '../model/EditorModel';
-import {paper, PaperScope} from 'paper';
+import {PaperScope} from 'paper';
 
 @Component({
   selector: 'geo-display',
@@ -12,28 +12,26 @@ export class GeoDisplayComponent implements OnInit {
   @ViewChild('geoCanvas')
   canvas: ElementRef;
 
-  private readonly _paper: PaperScope;
-
   constructor(private editorModel: EditorModel) {
     editorModel.changed.subscribe(() => this.render());
-    this._paper = paper;
   }
 
   ngOnInit() {
-    this._paper.setup(this.canvas.nativeElement);
+    this.editorModel.paperScope.setup(this.canvas.nativeElement);
     this.render();
   }
 
   render() {
-    this._paper.project.clear();
+    const paper = this.editorModel.paperScope;
+    paper.project.clear();
     const doc = this.editorModel.doc.value;
     if (!doc) {
       return;
     }
     const size = this.editorModel.size.value;
-    this._paper.view.viewSize.set(size.width, size.height);
-    doc.build(this._paper, size.width, size.height);
-    this._paper.view.draw();
+    paper.view.viewSize.set(size.width, size.height);
+    doc.build(paper, size.width, size.height);
+    paper.view.draw();
   }
 
 }

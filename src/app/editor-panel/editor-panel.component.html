@@ -12,6 +12,16 @@
     </div>
   </mat-tab>
   <mat-tab label="Output">
-    <p>output stuff</p>
+    <mat-toolbar>
+      <button mat-button (click)="generateJson()">Generate JSON</button>
+      <button mat-button (click)="generateSvg()">Generate SVG</button>
+    </mat-toolbar>
+    <div class="tab-body">
+      <mat-form-field appearance="fill">
+      <textarea
+        matInput
+        [ngModel]="outputText"></textarea>
+      </mat-form-field>
+    </div>
   </mat-tab>
 </mat-tab-group>

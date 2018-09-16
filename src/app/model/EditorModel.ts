@@ -13,6 +13,8 @@ export class EditorModel {
   readonly doc = new ObservableValue<GeoDocument>();
   readonly size = new ObservableValue<paper.Size>(new paper.Size(800, 800));
 
+  readonly paperScope: paper.PaperScope = paper;
+
   constructor() {
     this.doc.changed.subscribe(() => this.changed.emit());
     this.size.changed.subscribe(() => this.changed.emit());

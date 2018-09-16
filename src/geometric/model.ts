@@ -235,6 +235,7 @@ class BuildContext {
       attrs.applyTo(group);
     }
     if (id) {
+      group.name = id;
       this.polyGroupsById[id] = group;
     }
   }
@@ -248,6 +249,7 @@ class BuildContext {
       attrs.applyTo(group);
     }
     if (id) {
+      group.name = id;
       this.lineBridgeGroupsById[id] = group;
     }
   }
@@ -504,6 +506,11 @@ class RegularPolyOnEdgeGenerator extends Generator {
         const poly = util.createPolyAtCorners(context.paper,
           edge.pt1, edge.pt2, this.sides, this.flip, this.attrs);
         poly.name = groupNamePrefix + edgeIndex;
+        _.assign(poly.data, {
+          generatorType: 'regPolyOnEdge',
+          sides: this.sides,
+          flip: this.flip,
+        });
         generatedPolys.push(poly);
       }
     }
@@ -537,6 +544,12 @@ class LineBridgeGenerator extends Generator {
         const bridge = util.createLineBridgeBetweenEdges(
           context.paper, edgePair.edge1, edgePair.edge2, this.steps, this.flip1, this.flip2, this.attrs);
         bridge.name = groupNamePrefix + edgePairIndex;
+        _.assign(bridge.data, {
+          generatorType: 'lineBridgeOnEdge',
+          steps: this.steps,
+          flip1: this.flip1,
+          flip2: this.flip2,
+        });
         generatedBridges.push(bridge);
       }
     }
