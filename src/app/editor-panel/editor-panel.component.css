@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: stretch;
+}
+
+mat-tab-group {
+  flex-grow: 1;
+}
+
+.tab-body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+mat-form-field {
+  flex-grow: 1;
+}

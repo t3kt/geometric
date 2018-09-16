@@ -1,0 +1,17 @@
+<mat-tab-group>
+  <mat-tab label="Specification">
+    <mat-toolbar>
+      <button mat-button (click)="applyChanges()">Apply Changes</button>
+    </mat-toolbar>
+    <div class="tab-body">
+      <mat-form-field appearance="fill">
+      <textarea
+        matInput
+        [(ngModel)]="specText"></textarea>
+      </mat-form-field>
+    </div>
+  </mat-tab>
+  <mat-tab label="Output">
+    <p>output stuff</p>
+  </mat-tab>
+</mat-tab-group>
