@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GeoDisplayComponent } from './geo-display/geo-display.component';
+import {EditorModel} from "./model/EditorModel";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { GeoDisplayComponent } from './geo-display/geo-display.component';
     BrowserModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [EditorModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
