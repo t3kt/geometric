@@ -1,0 +1,51 @@
+{
+  "name": "pattern5",
+  "base": {
+    "sides": 20,
+    "radius": 0.2,
+    "attrs": {
+      "strokeColor": "#006633",
+      "strokeWidth": 1
+    }
+  },
+  "generators": [
+    {
+      "id": "gen1",
+      "type": "regPolyOnEdge",
+      "sides": 5,
+      "source": {"step": 2},
+      "attrs": {
+        "strokeColor": "#773366",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "gen2",
+      "type": "regPolyOnEdge",
+      "sides": 4,
+      "source": {"step": 2, "start": 1}
+    },
+    {
+      "id":"gen3",
+      "type": "regPolyOnEdge",
+      "sides": 10,
+      "flip": true,
+      "source": {"step":4}
+    },
+    {
+      "_ignore": 1,
+      "id": "gen5",
+      "type": "regPolyOnEdge",
+      "sides": 5,
+      "source": {
+        "from": "gen1",
+        "start": 3,
+        "end": 5
+      },
+      "attrs": {
+        "strokeColor": "#688865",
+        "strokeWidth": 2
+      }
+    }
+  ]
+}
