@@ -33,6 +33,22 @@
       "source": {"step":4}
     },
     {
+      "id": "gen4",
+      "type": "regPolyOnEdge",
+      "sides": 7,
+      "source": {
+        "from": [
+          {"from": "gen1", "step": 5},
+          {"from": "gen2", "step": 5, "start": 2}
+        ],
+        "indices": [3, 4]
+      },
+      "attrs": {
+        "strokeColor": "#0000FF",
+        "strokeWidth": 1
+      }
+    },
+    {
       "_ignore": 1,
       "id": "gen5",
       "type": "regPolyOnEdge",
@@ -45,6 +61,19 @@
       "attrs": {
         "strokeColor": "#688865",
         "strokeWidth": 2
+      }
+    },
+    {
+      "_ignore": 1,
+      "id": "gen6",
+      "type": "regPolyOnEdge",
+      "sides": 7,
+      "source": {
+        "from": {}
+      },
+      "attrs": {
+        "strokeColor": "#00FFFF",
+        "strokeWidth": 1
       }
     }
   ]

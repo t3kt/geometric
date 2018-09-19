@@ -63,6 +63,32 @@ export function cleanObj(obj) {
   return obj;
 }
 
+export function getPathsInGroup(item: paper.Item | paper.Item[]): paper.Path[] {
+  const paths: paper.Path[] = [];
+  _findPathsInItem(item, paths);
+  return paths;
+}
+
+function _findPathsInItem(item: paper.Item | paper.Item[], paths: paper.Path[]) {
+  if (!item) {
+    return;
+  }
+  if (_.isArray(item)) {
+    for (let subItem of item) {
+      _findPathsInItem(subItem, paths);
+    }
+  } else {
+    if (item instanceof paper.Path) {
+      paths.push(item);
+    }
+    if (item.children) {
+      for (let child of item.children) {
+        _findPathsInItem(child, paths);
+      }
+    }
+  }
+}
+
 export function createPolyAtCorners(
   paper: paper.PaperScope,
   pt1: paper.Point,

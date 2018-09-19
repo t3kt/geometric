@@ -2,6 +2,16 @@ import {paper} from 'paper';
 import * as _ from 'lodash';
 import * as util from './util';
 
+class PolyGroup {
+  name?: string;
+  polys: paper.Path[];
+
+  constructor({name, polys}) {
+    this.name = name;
+    this.polys = polys || [];
+  }
+}
+
 class Edge {
   pt1: paper.Point;
   pt2: paper.Point;
@@ -27,7 +37,7 @@ class Edge {
 
 class EdgeGroup {
   edges: Edge[];
-  name: string;
+  name?: string;
 
   constructor(edges: Edge[], {name}) {
     this.edges = edges;
@@ -48,7 +58,7 @@ class EdgePair {
 
 class EdgePairGroup {
   edgePairs: EdgePair[];
-  name: string;
+  name?: string;
 
   constructor(edgePairs, {name}) {
     this.edgePairs = edgePairs;
@@ -220,10 +230,7 @@ class BuildContext {
       return this.basisPoly ? [this.basisPoly] : [];
     }
     const group = this.polyGroupsById[key];
-    if (!group) {
-      return [];
-    }
-    return group.children;
+    return util.getPathsInGroup(group);
   }
 
   addPolyGroup(id: string, polys: paper.Path[], attrs?: Attrs) {
@@ -322,15 +329,90 @@ class RegularPolyBasis extends Basis {
   }
 }
 
-class EdgeSource {
+abstract class PolySource {
+  protected constructor({name}) {
+    this.name = name;
+  }
 
-  constructor({from, tags = [], ...opts}) {
+  name?: string;
+
+  abstract getPolyGroups(context: BuildContext): PolyGroup[];
+
+  static of(obj): PolySource {
+    obj = obj || {};
+    if (obj instanceof PolySource || _.isFunction(obj.getPolyGroup)) {
+      return obj;
+    }
+    if (_.isString(obj)) {
+      obj = {from: obj};
+    }
+    if (_.isArray(obj)) {
+      obj = {sources: obj};
+    }
+    obj = util.stripIgnoredItems(obj);
+    if (obj.sources) {
+      return new MultiPolySource(obj);
+    }
+    return new SinglePolySource(obj);
+  }
+}
+
+class SinglePolySource extends PolySource {
+  constructor({name, from, ...opts}) {
+    super({name});
     this.from = from;
-    this.tags = tags;
     this.selector = IndexSelector.of(opts);
   }
 
   from?: string;
+  selector: IndexSelector;
+
+  getPolyGroups(context: BuildContext): PolyGroup[] {
+    const sourcePolys = context.getSourcePolys(this.from);
+    const indices = this.selector.getIndices(sourcePolys.length);
+    return [
+      new PolyGroup({
+        name: this.name,
+        polys: _.map(indices, i => sourcePolys[i])
+      })
+    ];
+  }
+}
+
+class MultiPolySource extends PolySource {
+  constructor({name, sources}) {
+    super({name});
+    const namePrefix = this.name ? (this.name + '-') : '';
+    this.sources = _.map(sources || [], (sourceObj, sourceIndex) => {
+      return PolySource.of(
+        _.extend({
+          name: !namePrefix ? null :
+            (namePrefix + (sourceObj.name || ('source-' + sourceIndex)))
+        }, sourceObj));
+    });
+  }
+
+  sources?: PolySource[];
+
+  getPolyGroups(context: BuildContext): PolyGroup[] {
+    return _(this.sources)
+      .map((source) => source.getPolyGroups(context))
+      .flatten()
+      .value();
+  }
+}
+
+class EdgeSource {
+
+  constructor({name, from, tags = [], ...opts}) {
+    this.name = name;
+    this.from = PolySource.of(from);
+    this.tags = tags;
+    this.selector = IndexSelector.of(opts);
+  }
+
+  name?: string;
+  from?: PolySource;
   tags: string[];
   selector: IndexSelector;
 
@@ -348,12 +430,18 @@ class EdgeSource {
 
   getEdgeGroups(context: BuildContext): EdgeGroup[] {
     const selector = this.selector;
-    return _(context.getSourcePolys(this.from))
-      .map((poly) =>
-        new EdgeGroup(
-          _.map(selector.getIndices(poly.segments.length),
-            i => Edge.fromSegment(poly.segments[i])),
-          {name: poly.name}))
+    const namePrefix = this.name ? (this.name + '-') : '';
+    return _(this.from.getPolyGroups(context))
+      .map((polyGroup, polyGroupIndex) => {
+        const polyGroupPrefix = namePrefix + (polyGroup.name || ('polygroup-' + polyGroupIndex));
+        return _.map(polyGroup.polys, (poly, polyIndex) =>
+          new EdgeGroup(
+            _.map(selector.getIndices(poly.segments.length),
+              i => Edge.fromSegment(poly.segments[i])), {
+              name: polyGroupPrefix + (poly.name || ('group-' + polyIndex))
+            }));
+      })
+      .flatten()
       .filter(edgeGroup => edgeGroup.edges.length)
       .value();
   }
@@ -508,6 +596,7 @@ class RegularPolyOnEdgeGenerator extends Generator {
         poly.name = groupNamePrefix + edgeIndex;
         _.assign(poly.data, {
           generatorType: 'regPolyOnEdge',
+          outputType: 'poly',
           sides: this.sides,
           flip: this.flip,
         });
@@ -546,6 +635,7 @@ class LineBridgeGenerator extends Generator {
         bridge.name = groupNamePrefix + edgePairIndex;
         _.assign(bridge.data, {
           generatorType: 'lineBridgeOnEdge',
+          outputType: 'lineBridge',
           steps: this.steps,
           flip1: this.flip1,
           flip2: this.flip2,

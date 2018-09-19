@@ -1,0 +1,123 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800"
+     height="800">
+  <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter"
+     stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-size="none" text-anchor="none"
+     style="mix-blend-mode: normal">
+    <path
+      d="M374.97049,558.03013l-47.60897,-15.46909l-40.49861,-29.42396l-29.42396,-40.49861l-15.46909,-47.60897l0,-50.05903l15.46909,-47.60897l29.42396,-40.49861l40.49861,-29.42396l47.60897,-15.46909l50.05903,0l47.60897,15.46909l40.49861,29.42396l29.42396,40.49861l15.46909,47.60897v50.05903l-15.46909,47.60897l-29.42396,40.49861l-40.49861,29.42396l-47.60897,15.46909z"
+      data-paper-data="{&quot;sides&quot;:20,&quot;radius&quot;:0.2,&quot;center&quot;:[0.5,0.5],&quot;isBasis&quot;:true}"
+      id="_basis" stroke="#006633" stroke-width="1"/>
+    <g id="gen1" stroke="#773366" stroke-width="2">
+      <path d="M374.97049,558.03013h50.05903l15.46909,47.60897l-40.49861,29.42396l-40.49861,-29.42396z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly0"/>
+      <path d="M286.86292,513.13708l40.49861,29.42396l-15.46909,47.60897h-50.05903l-15.46909,-47.60897z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly1"/>
+      <path d="M241.96987,425.02951l15.46909,47.60897l-40.49861,29.42396l-40.49861,-29.42396l15.46909,-47.60897z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly2"/>
+      <path d="M257.43896,327.36152l-15.46909,47.60897h-50.05903l-15.46909,-47.60897l40.49861,-29.42396z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly3"/>
+      <path d="M327.36152,257.43896l-40.49861,29.42396l-40.49861,-29.42396l15.46909,-47.60897h50.05903z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly4"/>
+      <path d="M425.02951,241.96987l-50.05903,0l-15.46909,-47.60897l40.49861,-29.42396l40.49861,29.42396z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly5"/>
+      <path d="M513.13708,286.86292l-40.49861,-29.42396l15.46909,-47.60897l50.05903,0l15.46909,47.60897z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly6"/>
+      <path d="M558.03013,374.97049l-15.46909,-47.60897l40.49861,-29.42396l40.49861,29.42396l-15.46909,47.60897z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly7"/>
+      <path d="M542.56104,472.63848l15.46909,-47.60897l50.05903,0l15.46909,47.60897l-40.49861,29.42396z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly8"/>
+      <path d="M472.63848,542.56104l40.49861,-29.42396l40.49861,29.42396l-15.46909,47.60897h-50.05903z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:5,&quot;flip&quot;:false}"
+            id="gen1-group0-poly9"/>
+    </g>
+    <g id="gen2" stroke="#ff0000" stroke-width="1">
+      <path d="M327.36152,542.56104l47.60897,15.46909l-15.46909,47.60897l-47.60897,-15.46909z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly0"/>
+      <path d="M257.43896,472.63848l29.42396,40.49861l-40.49861,29.42396l-29.42396,-40.49861z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly1"/>
+      <path d="M241.96987,374.97049l0,50.05903l-50.05903,0l0,-50.05903z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly2"/>
+      <path d="M286.86292,286.86292l-29.42396,40.49861l-40.49861,-29.42396l29.42396,-40.49861z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly3"/>
+      <path d="M374.97049,241.96987l-47.60897,15.46909l-15.46909,-47.60897l47.60897,-15.46909z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly4"/>
+      <path d="M472.63848,257.43896l-47.60897,-15.46909l15.46909,-47.60897l47.60897,15.46909z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly5"/>
+      <path d="M542.56104,327.36152l-29.42396,-40.49861l40.49861,-29.42396l29.42396,40.49861z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly6"/>
+      <path d="M558.03013,425.02951v-50.05903h50.05903v50.05903z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly7"/>
+      <path d="M513.13708,513.13708l29.42396,-40.49861l40.49861,29.42396l-29.42396,40.49861z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly8"/>
+      <path d="M425.02951,558.03013l47.60897,-15.46909l15.46909,47.60897l-47.60897,15.46909z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:4,&quot;flip&quot;:false}"
+            id="gen2-group0-poly9"/>
+    </g>
+    <g id="gen3" stroke="#ff0000" stroke-width="1">
+      <path
+        d="M374.97049,558.03013h50.05903l40.49861,-29.42396l15.46909,-47.60897l-15.46909,-47.60897l-40.49861,-29.42396h-50.05903l-40.49861,29.42396l-15.46909,47.60897l15.46909,47.60897z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:10,&quot;flip&quot;:true}"
+        id="gen3-group0-poly0"/>
+      <path
+        d="M241.96987,425.02951l15.46909,47.60897l40.49861,29.42396h50.05903l40.49861,-29.42396l15.46909,-47.60897l-15.46909,-47.60897l-40.49861,-29.42396l-50.05903,0l-40.49861,29.42396z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:10,&quot;flip&quot;:true}"
+        id="gen3-group0-poly1"/>
+      <path
+        d="M327.36152,257.43896l-40.49861,29.42396l-15.46909,47.60897l15.46909,47.60897l40.49861,29.42396h50.05903l40.49861,-29.42396l15.46909,-47.60897l-15.46909,-47.60897l-40.49861,-29.42396z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:10,&quot;flip&quot;:true}"
+        id="gen3-group0-poly2"/>
+      <path
+        d="M513.13708,286.86292l-40.49861,-29.42396l-50.05903,0l-40.49861,29.42396l-15.46909,47.60897l15.46909,47.60897l40.49861,29.42396l50.05903,0l40.49861,-29.42396l15.46909,-47.60897z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:10,&quot;flip&quot;:true}"
+        id="gen3-group0-poly3"/>
+      <path
+        d="M542.56104,472.63848l15.46909,-47.60897l-15.46909,-47.60897l-40.49861,-29.42396l-50.05903,0l-40.49861,29.42396l-15.46909,47.60897l15.46909,47.60897l40.49861,29.42396l50.05903,0z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:10,&quot;flip&quot;:true}"
+        id="gen3-group0-poly4"/>
+    </g>
+    <g id="gen4" stroke="#0000ff" stroke-width="1">
+      <path
+        d="M400,635.06306l40.49861,-29.42396l48.25504,13.31755l19.67445,46.03067l-23.72141,44.08176l-49.25456,8.93838l-37.69803,-32.93577z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group0-poly0"/>
+      <path
+        d="M359.50139,605.6391l40.49861,29.42396l2.24589,50.00862l-37.69803,32.93577l-49.25456,-8.93838l-23.72141,-44.08176l19.67445,-46.03067z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group0-poly1"/>
+      <path
+        d="M400,164.93694l-40.49861,29.42396l-48.25504,-13.31755l-19.67445,-46.03067l23.72141,-44.08176l49.25456,-8.93838l37.69803,32.93577z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group1-poly0"/>
+      <path
+        d="M440.49861,194.3609l-40.49861,-29.42396l-2.24589,-50.00862l37.69803,-32.93577l49.25456,8.93838l23.72141,44.08176l-19.67445,46.03067z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group1-poly1"/>
+      <path
+        d="M191.91084,374.97049l0,50.05903l-39.13772,31.21129l-48.80394,-11.13918l-21.7198,-45.10163l21.7198,-45.10163l48.80394,-11.13918z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group2-poly0"/>
+      <path
+        d="M608.08916,425.02951v-50.05903l39.13772,-31.21129l48.80394,11.13918l21.7198,45.10163l-21.7198,45.10163l-48.80394,11.13918z"
+        data-paper-data="{&quot;generatorType&quot;:&quot;regPolyOnEdge&quot;,&quot;outputType&quot;:&quot;poly&quot;,&quot;sides&quot;:7,&quot;flip&quot;:false}"
+        id="gen4-group3-poly0"/>
+    </g>
+  </g>
+</svg>
