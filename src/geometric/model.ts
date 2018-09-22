@@ -564,6 +564,9 @@ abstract class Generator {
     if (obj.type === 'lineBridgeOnEdge') {
       return new LineBridgeGenerator(obj);
     }
+    if (obj.type == 'rhombusOnEdgePair') {
+      return new RhombusOnEdgesGenerator(obj);
+    }
     throw new Error('unsupported generator type: ' + JSON.stringify(obj));
   }
 
@@ -603,6 +606,61 @@ class RegularPolyOnEdgeGenerator extends Generator {
         generatedPolys.push(poly);
       }
     }
+    context.addPolyGroup(this.id, generatedPolys, this.attrs);
+  }
+}
+
+class RhombusOnEdgesGenerator extends Generator {
+  source: EdgePairSource;
+
+  constructor({id, attrs, source}) {
+    super({id, attrs});
+    this.source = EdgePairSource.of(source);
+  }
+
+  generate(context: BuildContext) {
+    const edgePairGroups = this.source.getEdgePairGroups(context);
+    const generatedPolys = [];
+    const namePrefix = (this.id || ('__gen_' + context.currentGeneratorIndex)) + '-group';
+    const attrs = this.attrs;
+    _.forEach(edgePairGroups, (edgePairGroup, edgePairGroupIndex) => {
+      const groupNamePrefix = namePrefix + edgePairGroupIndex + '-bridge';
+      _.forEach(edgePairGroup.edgePairs, (edgePair, edgePairIndex) => {
+       const e1pt1 = edgePair.edge1.pt1;
+       const e1pt2 = edgePair.edge1.pt2;
+       const e2pt1 = edgePair.edge2.pt1;
+       const e2pt2 = edgePair.edge2.pt2;
+        let pt1;
+        let pt2;
+        let pt3;
+        if (e1pt1.equals(e2pt1)) {
+          pt1 = e1pt2;
+          pt2 = e1pt1;
+          pt3 = e2pt2;
+        } else if (e1pt1.equals(e2pt2)) {
+          pt1 = e1pt2;
+          pt2 = e1pt1;
+          pt3 = e2pt1;
+        } else if (e1pt2.equals(e2pt1)) {
+          pt1 = e1pt1;
+          pt2 = e1pt2;
+          pt3 = e2pt2;
+        } else if (e1pt2.equals(e2pt2)) {
+          pt1 = e1pt1;
+          pt2 = e1pt2;
+          pt3 = e2pt1;
+        } else {
+          throw new Error('Invalid rhombus edges [' + e1pt1 + ', ' + e1pt2 + '] [' + e2pt1 + ', ' + e2pt2 + ']');
+        }
+        const poly = util.createRhombusFromCorners(context.paper, pt1, pt2, pt3, attrs);
+        poly.name = groupNamePrefix + edgePairIndex;
+        _.assign(poly.data, {
+          generatorType: 'rhombusOnEdgePair',
+          outputType: 'poly',
+        });
+        generatedPolys.push(poly);
+      });
+    });
     context.addPolyGroup(this.id, generatedPolys, this.attrs);
   }
 }

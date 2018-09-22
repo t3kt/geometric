@@ -1,0 +1,30 @@
+{
+  "name": "pattern6",
+  "base": {
+    "sides": 8,
+    "radius": 0.2,
+    "attrs": {
+      "strokeColor": "#006633",
+      "strokeWidth": 1
+    }
+  },
+  "generators": [
+    {
+      "id": "gen1",
+      "type": "rhombusOnEdgePair",
+      "source": {
+        "type": "zip",
+        "source1": {
+          "indices": [0]
+        },
+        "source2": {
+          "indices": [1]
+        }
+      },
+      "attrs": {
+        "strokeColor": "#773366",
+        "strokeWidth": 2
+      }
+    }
+  ]
+}

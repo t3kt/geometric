@@ -123,6 +123,47 @@ export function createPolyAtCorners(
   return poly;
 }
 
+/*
+     [2]
+   /  a  \
+[1] b   b [3]
+   \  a  /
+     [*]
+ */
+export function createRhombusFromCorners(
+  paper: paper.PaperScope,
+  pt1: paper.Point,
+  pt2: paper.Point,
+  pt3: paper.Point,
+  attrs?) : paper.Path {
+  const diff1to2 = pt2.subtract(pt1);
+  const diff2to3 = pt3.subtract(pt2);
+  const sideLength = diff1to2.length;
+  if (Math.abs(sideLength - diff2to3.length) > 0.00001) {
+    throw new Error('Side lengths do not match (' + sideLength + ' != ' + diff2to3.length + ')');
+  }
+  const angleA = diff2to3.angle - diff1to2.angle;
+  const angleB = 180 - angleA;
+  const pt4 = pt1.clone();
+  pt4.x += sideLength * Math.cos(toRadians(angleB));
+  pt4.y += sideLength * Math.sin(toRadians(angleB));
+  const polyPoints = [
+    pt1.clone(),
+    pt2.clone(),
+    pt3.clone(),
+    pt4
+  ];
+  const poly = new paper.Path({
+    segments: polyPoints,
+    strokeColor: '#00ff00',
+    closed: true
+  });
+  if (attrs) {
+    attrs.applyTo(poly);
+  }
+  return poly;
+}
+
 export function createLineBridgeBetweenEdges(
   paper: paper.PaperScope,
   edge1,
