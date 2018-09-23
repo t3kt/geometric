@@ -106,7 +106,7 @@ class _PatternLoader:
 		if objtype == 'Path':
 			poly = self._AddPathPoly(
 				obj,
-				ispoly=attrs.get('isBasis') or attrs.get('generatorType') == 'regPolyOnEdge')
+				ispoly=attrs.get('isBasis') or attrs.get('outputType') == 'poly')
 			if not poly:
 				return
 			self.polyattrs.append(attrs)
@@ -128,9 +128,8 @@ class _PatternLoader:
 			return None
 		n = len(srcpoints)
 		if ispoly:
-			n += 1
 			poly = self.sop.appendPoly(
-				n, closed=False, addPoints=True)
+				n, closed=True, addPoints=True)
 		else:
 			poly = self.sop.appendPoly(
 				n, closed=False, addPoints=True)
@@ -138,10 +137,6 @@ class _PatternLoader:
 			poly[i].point.x = srcpoint[0]
 			poly[i].point.y = srcpoint[1]
 			poly[i].uv[0] = mod.tdu.remap(i, 0, n - 1, 0, 1)
-		if ispoly:
-			poly[n - 1].point.x = srcpoints[0][0]
-			poly[n - 1].point.y = srcpoints[0][1]
-			poly[n - 1].uv[0] = 1
 		return poly
 
 
