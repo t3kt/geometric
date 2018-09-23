@@ -26,7 +26,7 @@ export class BuildModel {
     });
     return new BuildModel({
       context: context,
-      basisPoly: BuildPoly.fromPaperPath(context, context.basisPoly, {}),
+      basisPoly: context.basisPoly ? BuildPoly.fromPaperPath(context, context.basisPoly, {}) : null,
       polyGroups: polyGroups,
       lineBridgeGroups: lineBridgeGroups,
     });

@@ -34,7 +34,7 @@ export class EditorModel {
   }
 
   public parseDocument(obj) {
-    this.doc.value = parseDocument(obj);
+    this.doc.value = obj ? parseDocument(obj) : null;
   }
 
   public notifyBuilt() {
@@ -81,7 +81,9 @@ export class EditorModel {
     if (!buildInfo) {
       return;
     }
-    this.buildPolyAnnotations(buildInfo.basisPoly, layer);
+    if (buildInfo.basisPoly) {
+      this.buildPolyAnnotations(buildInfo.basisPoly, layer);
+    }
     for (let group of buildInfo.polyGroups) {
       this.buildGroupAnnotations(group, layer);
     }
