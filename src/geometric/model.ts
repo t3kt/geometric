@@ -221,6 +221,7 @@ export class BuildContext {
   width: number;
   height: number;
   basisPoly: paper.Path;
+  orderedPolyGroups: paper.Group[];
   polyGroupsById: { [key: string]: paper.Group };
   lineBridgeGroupsById: { [key: string]: paper.Group };
   currentGeneratorIndex: number;
@@ -230,6 +231,7 @@ export class BuildContext {
     this.width = width;
     this.height = height;
     this.basisPoly = null;
+    this.orderedPolyGroups = [];
     this.polyGroupsById = {};
     this.lineBridgeGroupsById = {};
     this.currentGeneratorIndex = 0;
@@ -239,7 +241,16 @@ export class BuildContext {
     if (!key) {
       return this.basisPoly ? [this.basisPoly] : [];
     }
-    const group = this.polyGroupsById[key];
+    let group: paper.Group;
+    if (key == '_prev') {
+      if (this.orderedPolyGroups.length) {
+        group = _.last(this.orderedPolyGroups);
+      } else {
+        return this.basisPoly ? [this.basisPoly] : [];
+      }
+    } else {
+      group = this.polyGroupsById[key];
+    }
     return util.getPathsInGroup(group);
   }
 
@@ -255,6 +266,7 @@ export class BuildContext {
       group.name = id;
       this.polyGroupsById[id] = group;
     }
+    this.orderedPolyGroups.push(group);
   }
 
   addLineBridgeGroup(id: string, bridges: paper.Group[], attrs?: Attrs) {
@@ -269,6 +281,7 @@ export class BuildContext {
       group.name = id;
       this.lineBridgeGroupsById[id] = group;
     }
+    this.orderedPolyGroups.push(group);
   }
 }
 
