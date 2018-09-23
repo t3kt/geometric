@@ -1,0 +1,1620 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800"
+     height="800">
+  <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+     stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+     font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+    <path
+      d="M349.94097,716.06027l-95.21793,-30.93818l-80.99721,-58.84792l-58.84792,-80.99721l-30.93818,-95.21793l0,-100.11806l30.93818,-95.21793l58.84792,-80.99721l80.99721,-58.84792l95.21793,-30.93818l100.11806,0l95.21793,30.93818l80.99721,58.84792l58.84792,80.99721l30.93818,95.21793l0,100.11806l-30.93818,95.21793l-58.84792,80.99721l-80.99721,58.84792l-95.21793,30.93818z"
+      data-paper-data="{&quot;sides&quot;:20,&quot;radius&quot;:0.4,&quot;center&quot;:[0.5,0.5],&quot;isBasis&quot;:true}"
+      id="_basis" stroke="#006633"/>
+    <g id="gen1" stroke="#773366" opacity="0.6">
+      <path d="M450.05903,716.06027l-100.11806,0l-95.21793,-30.93818l100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge0"/>
+      <path d="M254.72304,685.12209l-80.99721,-58.84792l-58.84792,-80.99721l80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge1"/>
+      <path d="M114.87791,545.27696l-30.93818,-95.21793l0,-100.11806l30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge2"/>
+      <path d="M83.93973,349.94097l30.93818,-95.21793l58.84792,-80.99721l-30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge3"/>
+      <path d="M173.72583,173.72583l80.99721,-58.84792l95.21793,-30.93818l-80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge4"/>
+      <path d="M349.94097,83.93973l100.11806,0l95.21793,30.93818l-100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge5"/>
+      <path d="M545.27696,114.87791l80.99721,58.84792l58.84792,80.99721l-80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge6"/>
+      <path d="M685.12209,254.72304l30.93818,95.21793l0,100.11806l-30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge7"/>
+      <path d="M716.06027,450.05903l-30.93818,95.21793l-58.84792,80.99721l30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge8"/>
+      <path d="M626.27417,626.27417l-80.99721,58.84792l-95.21793,30.93818l80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen1-group0-bridge9"/>
+    </g>
+    <g id="gen2" stroke="#773366" opacity="0.6">
+      <path d="M354.8411,685.12209l-100.11806,0l-58.84792,-80.99721l100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group0-bridge0"/>
+      <path d="M195.87512,604.12488l-80.99721,-58.84792l0,-100.11806l80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group1-bridge0"/>
+      <path d="M114.87791,445.1589l-30.93818,-95.21793l58.84792,-80.99721l30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group2-bridge0"/>
+      <path d="M142.78765,268.94376l30.93818,-95.21793l95.21793,-30.93818l-30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group3-bridge0"/>
+      <path d="M268.94376,142.78765l80.99721,-58.84792l95.21793,30.93818l-80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group4-bridge0"/>
+      <path d="M445.1589,114.87791l100.11806,0l58.84792,80.99721l-100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group5-bridge0"/>
+      <path d="M604.12488,195.87512l80.99721,58.84792l0,100.11806l-80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group6-bridge0"/>
+      <path d="M685.12209,354.8411l30.93818,95.21793l-58.84792,80.99721l-30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group7-bridge0"/>
+      <path d="M657.21235,531.05624l-30.93818,95.21793l-95.21793,30.93818l30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group8-bridge0"/>
+      <path d="M531.05624,657.21235l-80.99721,58.84792l-95.21793,-30.93818l80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen2-group9-bridge0"/>
+    </g>
+    <g id="gen3" stroke="#773366" opacity="0.6">
+      <path d="M295.99318,604.12488l-100.11806,0l0,-100.11806l100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group0-bridge0"/>
+      <path d="M195.87512,504.00682l-80.99721,-58.84792l58.84792,-80.99721l80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group1-bridge0"/>
+      <path d="M173.72583,364.16169l-30.93818,-95.21793l95.21793,-30.93818l30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group2-bridge0"/>
+      <path d="M238.00558,238.00558l30.93818,-95.21793l95.21793,30.93818l-30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group3-bridge0"/>
+      <path d="M364.16169,173.72583l80.99721,-58.84792l58.84792,80.99721l-80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group4-bridge0"/>
+      <path d="M504.00682,195.87512l100.11806,0l0,100.11806l-100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group5-bridge0"/>
+      <path d="M604.12488,295.99318l80.99721,58.84792l-58.84792,80.99721l-80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group6-bridge0"/>
+      <path d="M626.27417,435.83831l30.93818,95.21793l-95.21793,30.93818l-30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group7-bridge0"/>
+      <path d="M561.99442,561.99442l-30.93818,95.21793l-95.21793,-30.93818l30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group8-bridge0"/>
+      <path d="M435.83831,626.27417l-80.99721,58.84792l-58.84792,-80.99721l80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen3-group9-bridge0"/>
+    </g>
+    <g id="gen4" stroke="#773366" opacity="0.6">
+      <path d="M295.99318,504.00682l-100.11806,0l58.84792,-80.99721l100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group0-bridge0"/>
+      <path d="M254.72304,423.00961l-80.99721,-58.84792l95.21793,-30.93818l80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group1-bridge0"/>
+      <path d="M268.94376,333.22351l-30.93818,-95.21793l95.21793,30.93818l30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group2-bridge0"/>
+      <path d="M333.22351,268.94376l30.93818,-95.21793l58.84792,80.99721l-30.93818,95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group3-bridge0"/>
+      <path d="M423.00961,254.72304l80.99721,-58.84792l0,100.11806l-80.99721,58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group4-bridge0"/>
+      <path d="M504.00682,295.99318l100.11806,0l-58.84792,80.99721l-100.11806,0z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group5-bridge0"/>
+      <path d="M545.27696,376.99039l80.99721,58.84792l-95.21793,30.93818l-80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group6-bridge0"/>
+      <path d="M531.05624,466.77649l30.93818,95.21793l-95.21793,-30.93818l-30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group7-bridge0"/>
+      <path d="M466.77649,531.05624l-30.93818,95.21793l-58.84792,-80.99721l30.93818,-95.21793z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group8-bridge0"/>
+      <path d="M376.99039,545.27696l-80.99721,58.84792l0,-100.11806l80.99721,-58.84792z"
+            data-paper-data="{&quot;generatorType&quot;:&quot;rhombusOnEdgePair&quot;,&quot;outputType&quot;:&quot;poly&quot;}"
+            id="gen4-group9-bridge0"/>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group0-bridge0">
+        <path d="M349.94097,716.06027l100.11806,0"/>
+        <path d="M362.45573,716.06027l75.70106,-3.86727"/>
+        <path d="M374.97049,716.06027l51.28406,-7.73455"/>
+        <path d="M387.48524,716.06027l26.86706,-11.60182"/>
+        <path d="M400,716.06027l2.45006,-15.46909"/>
+        <path d="M412.51476,716.06027l-21.96694,-19.33636"/>
+        <path d="M425.02951,716.06027l-46.38393,-23.20364"/>
+        <path d="M437.54427,716.06027l-70.80093,-27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group0-bridge1">
+        <path d="M254.72304,685.12209l100.11806,0"/>
+        <path d="M266.62528,688.98936l75.70106,-3.86727"/>
+        <path d="M278.52752,692.85663l51.28406,-7.73455"/>
+        <path d="M290.42976,696.72391l26.86706,-11.60182"/>
+        <path d="M302.33201,700.59118l2.45006,-15.46909"/>
+        <path d="M314.23425,704.45845l-21.96694,-19.33636"/>
+        <path d="M326.13649,708.32572l-46.38393,-23.20364"/>
+        <path d="M338.03873,712.193l-70.80093,-27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group1-bridge0">
+        <path d="M173.72583,626.27417l80.99721,58.84792"/>
+        <path d="M183.85048,633.63016l63.51657,41.36728"/>
+        <path d="M193.97513,640.98615l46.03593,23.88664"/>
+        <path d="M204.09978,648.34214l28.55529,6.40599"/>
+        <path d="M214.22444,655.69813l11.07465,-11.07465"/>
+        <path d="M224.34909,663.05412l-6.40599,-28.55529"/>
+        <path d="M234.47374,670.41011l-23.88664,-46.03593"/>
+        <path d="M244.59839,677.7661l-41.36728,-63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group1-bridge1">
+        <path d="M114.87791,545.27696l80.99721,58.84792"/>
+        <path d="M122.2339,555.40161l63.51657,41.36728"/>
+        <path d="M129.58989,565.52626l46.03593,23.88664"/>
+        <path d="M136.94588,575.65091l28.55529,6.40599"/>
+        <path d="M144.30187,585.77556l11.07465,-11.07465"/>
+        <path d="M151.65786,595.90022l-6.40599,-28.55529"/>
+        <path d="M159.01385,606.02487l-23.88664,-46.03593"/>
+        <path d="M166.36984,616.14952l-41.36728,-63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group2-bridge0">
+        <path d="M83.93973,450.05903l30.93818,95.21793"/>
+        <path d="M87.807,461.96127l27.07091,70.80093"/>
+        <path d="M91.67428,473.86351l23.20364,46.38393"/>
+        <path d="M95.54155,485.76575l19.33636,21.96694"/>
+        <path d="M99.40882,497.66799l15.46909,-2.45006"/>
+        <path d="M103.27609,509.57024l11.60182,-26.86706"/>
+        <path d="M107.14337,521.47248l7.73455,-51.28406"/>
+        <path d="M111.01064,533.37472l3.86727,-75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group2-bridge1">
+        <path d="M83.93973,349.94097l30.93818,95.21793"/>
+        <path d="M83.93973,362.45573l27.07091,70.80093"/>
+        <path d="M83.93973,374.97049l23.20364,46.38393"/>
+        <path d="M83.93973,387.48524l19.33636,21.96694"/>
+        <path d="M83.93973,400l15.46909,-2.45006"/>
+        <path d="M83.93973,412.51476l11.60182,-26.86706"/>
+        <path d="M83.93973,425.02951l7.73455,-51.28406"/>
+        <path d="M83.93973,437.54427l3.86727,-75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group3-bridge0">
+        <path d="M114.87791,254.72304l-30.93818,95.21793"/>
+        <path d="M111.01064,266.62528l-19.71492,73.19104"/>
+        <path d="M107.14337,278.52752l-8.49166,51.16415"/>
+        <path d="M103.27609,290.42976l2.73161,29.13725"/>
+        <path d="M99.40882,302.33201l13.95487,7.11036"/>
+        <path d="M95.54155,314.23425l25.17813,-14.91653"/>
+        <path d="M91.67428,326.13649l36.40139,-36.94342"/>
+        <path d="M87.807,338.03873l47.62466,-58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group3-bridge1">
+        <path d="M173.72583,173.72583l-30.93818,95.21793"/>
+        <path d="M166.36984,183.85048l-19.71492,73.19104"/>
+        <path d="M159.01385,193.97513l-8.49166,51.16415"/>
+        <path d="M151.65786,204.09978l2.73161,29.13725"/>
+        <path d="M144.30187,214.22444l13.95487,7.11036"/>
+        <path d="M136.94588,224.34909l25.17813,-14.91653"/>
+        <path d="M129.58989,234.47374l36.40139,-36.94342"/>
+        <path d="M122.2339,244.59839l47.62466,-58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group4-bridge0">
+        <path d="M254.72304,114.87791l-80.99721,58.84792"/>
+        <path d="M244.59839,122.2339l-58.97032,47.62466"/>
+        <path d="M234.47374,129.58989l-36.94342,36.40139"/>
+        <path d="M224.34909,136.94588l-14.91653,25.17813"/>
+        <path d="M214.22444,144.30187l7.11036,13.95487"/>
+        <path d="M204.09978,151.65786l29.13725,2.73161"/>
+        <path d="M193.97513,159.01385l51.16415,-8.49166"/>
+        <path d="M183.85048,166.36984l73.19104,-19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group4-bridge1">
+        <path d="M349.94097,83.93973l-80.99721,58.84792"/>
+        <path d="M338.03873,87.807l-58.97032,47.62466"/>
+        <path d="M326.13649,91.67428l-36.94342,36.40139"/>
+        <path d="M314.23425,95.54155l-14.91653,25.17813"/>
+        <path d="M302.33201,99.40882l7.11036,13.95487"/>
+        <path d="M290.42976,103.27609l29.13725,2.73161"/>
+        <path d="M278.52752,107.14337l51.16415,-8.49166"/>
+        <path d="M266.62528,111.01064l73.19104,-19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group5-bridge0">
+        <path d="M450.05903,83.93973l-100.11806,0"/>
+        <path d="M437.54427,83.93973l-75.70106,3.86727"/>
+        <path d="M425.02951,83.93973l-51.28406,7.73455"/>
+        <path d="M412.51476,83.93973l-26.86706,11.60182"/>
+        <path d="M400,83.93973l-2.45006,15.46909"/>
+        <path d="M387.48524,83.93973l21.96694,19.33636"/>
+        <path d="M374.97049,83.93973l46.38393,23.20364"/>
+        <path d="M362.45573,83.93973l70.80093,27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group5-bridge1">
+        <path d="M545.27696,114.87791l-100.11806,0"/>
+        <path d="M533.37472,111.01064l-75.70106,3.86727"/>
+        <path d="M521.47248,107.14337l-51.28406,7.73455"/>
+        <path d="M509.57024,103.27609l-26.86706,11.60182"/>
+        <path d="M497.66799,99.40882l-2.45006,15.46909"/>
+        <path d="M485.76575,95.54155l21.96694,19.33636"/>
+        <path d="M473.86351,91.67428l46.38393,23.20364"/>
+        <path d="M461.96127,87.807l70.80093,27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group6-bridge0">
+        <path d="M626.27417,173.72583l-80.99721,-58.84792"/>
+        <path d="M616.14952,166.36984l-63.51657,-41.36728"/>
+        <path d="M606.02487,159.01385l-46.03593,-23.88664"/>
+        <path d="M595.90022,151.65786l-28.55529,-6.40599"/>
+        <path d="M585.77556,144.30187l-11.07465,11.07465"/>
+        <path d="M575.65091,136.94588l6.40599,28.55529"/>
+        <path d="M565.52626,129.58989l23.88664,46.03593"/>
+        <path d="M555.40161,122.2339l41.36728,63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group6-bridge1">
+        <path d="M685.12209,254.72304l-80.99721,-58.84792"/>
+        <path d="M677.7661,244.59839l-63.51657,-41.36728"/>
+        <path d="M670.41011,234.47374l-46.03593,-23.88664"/>
+        <path d="M663.05412,224.34909l-28.55529,-6.40599"/>
+        <path d="M655.69813,214.22444l-11.07465,11.07465"/>
+        <path d="M648.34214,204.09978l6.40599,28.55529"/>
+        <path d="M640.98615,193.97513l23.88664,46.03593"/>
+        <path d="M633.63016,183.85048l41.36728,63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group7-bridge0">
+        <path d="M716.06027,349.94097l-30.93818,-95.21793"/>
+        <path d="M712.193,338.03873l-27.07091,-70.80093"/>
+        <path d="M708.32572,326.13649l-23.20364,-46.38393"/>
+        <path d="M704.45845,314.23425l-19.33636,-21.96694"/>
+        <path d="M700.59118,302.33201l-15.46909,2.45006"/>
+        <path d="M696.72391,290.42976l-11.60182,26.86706"/>
+        <path d="M692.85663,278.52752l-7.73455,51.28406"/>
+        <path d="M688.98936,266.62528l-3.86727,75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group7-bridge1">
+        <path d="M716.06027,450.05903l-30.93818,-95.21793"/>
+        <path d="M716.06027,437.54427l-27.07091,-70.80093"/>
+        <path d="M716.06027,425.02951l-23.20364,-46.38393"/>
+        <path d="M716.06027,412.51476l-19.33636,-21.96694"/>
+        <path d="M716.06027,400l-15.46909,2.45006"/>
+        <path d="M716.06027,387.48524l-11.60182,26.86706"/>
+        <path d="M716.06027,374.97049l-7.73455,51.28406"/>
+        <path d="M716.06027,362.45573l-3.86727,75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group8-bridge0">
+        <path d="M685.12209,545.27696l30.93818,-95.21793"/>
+        <path d="M688.98936,533.37472l19.71492,-73.19104"/>
+        <path d="M692.85663,521.47248l8.49166,-51.16415"/>
+        <path d="M696.72391,509.57024l-2.73161,-29.13725"/>
+        <path d="M700.59118,497.66799l-13.95487,-7.11036"/>
+        <path d="M704.45845,485.76575l-25.17813,14.91653"/>
+        <path d="M708.32572,473.86351l-36.40139,36.94342"/>
+        <path d="M712.193,461.96127l-47.62466,58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group8-bridge1">
+        <path d="M626.27417,626.27417l30.93818,-95.21793"/>
+        <path d="M633.63016,616.14952l19.71492,-73.19104"/>
+        <path d="M640.98615,606.02487l8.49166,-51.16415"/>
+        <path d="M648.34214,595.90022l-2.73161,-29.13725"/>
+        <path d="M655.69813,585.77556l-13.95487,-7.11036"/>
+        <path d="M663.05412,575.65091l-25.17813,14.91653"/>
+        <path d="M670.41011,565.52626l-36.40139,36.94342"/>
+        <path d="M677.7661,555.40161l-47.62466,58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group9-bridge0">
+        <path d="M545.27696,685.12209l80.99721,-58.84792"/>
+        <path d="M555.40161,677.7661l58.97032,-47.62466"/>
+        <path d="M565.52626,670.41011l36.94342,-36.40139"/>
+        <path d="M575.65091,663.05412l14.91653,-25.17813"/>
+        <path d="M585.77556,655.69813l-7.11036,-13.95487"/>
+        <path d="M595.90022,648.34214l-29.13725,-2.73161"/>
+        <path d="M606.02487,640.98615l-51.16415,8.49166"/>
+        <path d="M616.14952,633.63016l-73.19104,19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_4-group9-bridge1">
+        <path d="M450.05903,716.06027l80.99721,-58.84792"/>
+        <path d="M461.96127,712.193l58.97032,-47.62466"/>
+        <path d="M473.86351,708.32572l36.94342,-36.40139"/>
+        <path d="M485.76575,704.45845l14.91653,-25.17813"/>
+        <path d="M497.66799,700.59118l-7.11036,-13.95487"/>
+        <path d="M509.57024,696.72391l-29.13725,-2.73161"/>
+        <path d="M521.47248,692.85663l-51.16415,8.49166"/>
+        <path d="M533.37472,688.98936l-73.19104,19.71492"/>
+      </g>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group0-bridge0">
+        <path d="M354.8411,685.12209l-100.11806,0"/>
+        <path d="M342.32634,685.12209l-94.95929,-10.12465"/>
+        <path d="M329.81158,685.12209l-89.80052,-20.2493"/>
+        <path d="M317.29683,685.12209l-84.64176,-30.37395"/>
+        <path d="M304.78207,685.12209l-79.48299,-40.49861"/>
+        <path d="M292.26731,685.12209l-74.32422,-50.62326"/>
+        <path d="M279.75255,685.12209l-69.16545,-60.74791"/>
+        <path d="M267.2378,685.12209l-64.00669,-70.87256"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group1-bridge0">
+        <path d="M195.87512,604.12488l-80.99721,-58.84792"/>
+        <path d="M185.75047,596.76889l-70.87256,-64.00669"/>
+        <path d="M175.62582,589.4129l-60.74791,-69.16545"/>
+        <path d="M165.50117,582.05691l-50.62326,-74.32422"/>
+        <path d="M155.37652,574.70092l-40.49861,-79.48299"/>
+        <path d="M145.25187,567.34493l-30.37395,-84.64176"/>
+        <path d="M135.12721,559.98894l-20.2493,-89.80052"/>
+        <path d="M125.00256,552.63295l-10.12465,-94.95929"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group2-bridge0">
+        <path d="M114.87791,445.1589l-30.93818,-95.21793"/>
+        <path d="M111.01064,433.25666l-19.71492,-93.44034"/>
+        <path d="M107.14337,421.35442l-8.49166,-91.66275"/>
+        <path d="M103.27609,409.45218l2.73161,-89.88516"/>
+        <path d="M99.40882,397.54994l13.95487,-88.10757"/>
+        <path d="M95.54155,385.6477l25.17813,-86.32998"/>
+        <path d="M91.67428,373.74545l36.40139,-84.55239"/>
+        <path d="M87.807,361.84321l47.62466,-82.7748"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group3-bridge0">
+        <path d="M142.78765,268.94376l30.93818,-95.21793"/>
+        <path d="M146.65492,257.04152l38.97315,-87.18296"/>
+        <path d="M150.52219,245.13928l47.00812,-79.14799"/>
+        <path d="M154.38947,233.23704l55.04309,-71.11302"/>
+        <path d="M158.25674,221.3348l63.07806,-63.07806"/>
+        <path d="M162.12401,209.43255l71.11302,-55.04309"/>
+        <path d="M165.99128,197.53031l79.14799,-47.00812"/>
+        <path d="M169.85856,185.62807l87.18296,-38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group4-bridge0">
+        <path d="M268.94376,142.78765l80.99721,-58.84792"/>
+        <path d="M279.06841,135.43166l82.7748,-47.62466"/>
+        <path d="M289.19306,128.07567l84.55239,-36.40139"/>
+        <path d="M299.31771,120.71968l86.32998,-25.17813"/>
+        <path d="M309.44237,113.36369l88.10757,-13.95487"/>
+        <path d="M319.56702,106.0077l89.88516,-2.73161"/>
+        <path d="M329.69167,98.65171l91.66275,8.49166"/>
+        <path d="M339.81632,91.29572l93.44034,19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group5-bridge0">
+        <path d="M445.1589,114.87791l100.11806,0"/>
+        <path d="M457.67366,114.87791l94.95929,10.12465"/>
+        <path d="M470.18842,114.87791l89.80052,20.2493"/>
+        <path d="M482.70317,114.87791l84.64176,30.37395"/>
+        <path d="M495.21793,114.87791l79.48299,40.49861"/>
+        <path d="M507.73269,114.87791l74.32422,50.62326"/>
+        <path d="M520.24745,114.87791l69.16545,60.74791"/>
+        <path d="M532.7622,114.87791l64.00669,70.87256"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group6-bridge0">
+        <path d="M604.12488,195.87512l80.99721,58.84792"/>
+        <path d="M614.24953,203.23111l70.87256,64.00669"/>
+        <path d="M624.37418,210.5871l60.74791,69.16545"/>
+        <path d="M634.49883,217.94309l50.62326,74.32422"/>
+        <path d="M644.62348,225.29908l40.49861,79.48299"/>
+        <path d="M654.74813,232.65507l30.37395,84.64176"/>
+        <path d="M664.87279,240.01106l20.2493,89.80052"/>
+        <path d="M674.99744,247.36705l10.12465,94.95929"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group7-bridge0">
+        <path d="M685.12209,354.8411l30.93818,95.21793"/>
+        <path d="M688.98936,366.74334l19.71492,93.44034"/>
+        <path d="M692.85663,378.64558l8.49166,91.66275"/>
+        <path d="M696.72391,390.54782l-2.73161,89.88516"/>
+        <path d="M700.59118,402.45006l-13.95487,88.10757"/>
+        <path d="M704.45845,414.3523l-25.17813,86.32998"/>
+        <path d="M708.32572,426.25455l-36.40139,84.55239"/>
+        <path d="M712.193,438.15679l-47.62466,82.7748"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group8-bridge0">
+        <path d="M657.21235,531.05624l-30.93818,95.21793"/>
+        <path d="M653.34508,542.95848l-38.97315,87.18296"/>
+        <path d="M649.47781,554.86072l-47.00812,79.14799"/>
+        <path d="M645.61053,566.76296l-55.04309,71.11302"/>
+        <path d="M641.74326,578.6652l-63.07806,63.07806"/>
+        <path d="M637.87599,590.56745l-71.11302,55.04309"/>
+        <path d="M634.00872,602.46969l-79.14799,47.00812"/>
+        <path d="M630.14144,614.37193l-87.18296,38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_5-group9-bridge0">
+        <path d="M531.05624,657.21235l-80.99721,58.84792"/>
+        <path d="M520.93159,664.56834l-82.7748,47.62466"/>
+        <path d="M510.80694,671.92433l-84.55239,36.40139"/>
+        <path d="M500.68229,679.28032l-86.32998,25.17813"/>
+        <path d="M490.55763,686.63631l-88.10757,13.95487"/>
+        <path d="M480.43298,693.9923l-89.88516,2.73161"/>
+        <path d="M470.30833,701.34829l-91.66275,-8.49166"/>
+        <path d="M460.18368,708.70428l-93.44034,-19.71492"/>
+      </g>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group0-bridge0">
+        <path d="M295.99318,604.12488l58.84792,80.99721"/>
+        <path d="M283.47842,604.12488l64.00669,70.87256"/>
+        <path d="M270.96367,604.12488l69.16545,60.74791"/>
+        <path d="M258.44891,604.12488l74.32422,50.62326"/>
+        <path d="M245.93415,604.12488l79.48299,40.49861"/>
+        <path d="M233.41939,604.12488l84.64176,30.37395"/>
+        <path d="M220.90464,604.12488l89.80052,20.2493"/>
+        <path d="M208.38988,604.12488l94.95929,10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group1-bridge0">
+        <path d="M195.87512,504.00682l0,100.11806"/>
+        <path d="M185.75047,496.65083l10.12465,94.95929"/>
+        <path d="M175.62582,489.29484l20.2493,89.80052"/>
+        <path d="M165.50117,481.93885l30.37395,84.64176"/>
+        <path d="M155.37652,474.58286l40.49861,79.48299"/>
+        <path d="M145.25187,467.22687l50.62326,74.32422"/>
+        <path d="M135.12721,459.87088l60.74791,69.16545"/>
+        <path d="M125.00256,452.51489l70.87256,64.00669"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group2-bridge0">
+        <path d="M173.72583,364.16169l-58.84792,80.99721"/>
+        <path d="M169.85856,352.25945l-47.62466,82.7748"/>
+        <path d="M165.99128,340.35721l-36.40139,84.55239"/>
+        <path d="M162.12401,328.45497l-25.17813,86.32998"/>
+        <path d="M158.25674,316.55273l-13.95487,88.10757"/>
+        <path d="M154.38947,304.65049l-2.73161,89.88516"/>
+        <path d="M150.52219,292.74824l8.49166,91.66275"/>
+        <path d="M146.65492,280.846l19.71492,93.44034"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group3-bridge0">
+        <path d="M238.00558,238.00558l-95.21793,30.93818"/>
+        <path d="M241.87285,226.10334l-87.18296,38.97315"/>
+        <path d="M245.74013,214.2011l-79.14799,47.00812"/>
+        <path d="M249.6074,202.29886l-71.11302,55.04309"/>
+        <path d="M253.47467,190.39661l-63.07806,63.07806"/>
+        <path d="M257.34194,178.49437l-55.04309,71.11302"/>
+        <path d="M261.20922,166.59213l-47.00812,79.14799"/>
+        <path d="M265.07649,154.68989l-38.97315,87.18296"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group4-bridge0">
+        <path d="M364.16169,173.72583l-95.21793,-30.93818"/>
+        <path d="M374.28634,166.36984l-93.44034,-19.71492"/>
+        <path d="M384.41099,159.01385l-91.66275,-8.49166"/>
+        <path d="M394.53565,151.65786l-89.88516,2.73161"/>
+        <path d="M404.6603,144.30187l-88.10757,13.95487"/>
+        <path d="M414.78495,136.94588l-86.32998,25.17813"/>
+        <path d="M424.9096,129.58989l-84.55239,36.40139"/>
+        <path d="M435.03425,122.2339l-82.7748,47.62466"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group5-bridge0">
+        <path d="M504.00682,195.87512l-58.84792,-80.99721"/>
+        <path d="M516.52158,195.87512l-64.00669,-70.87256"/>
+        <path d="M529.03633,195.87512l-69.16545,-60.74791"/>
+        <path d="M541.55109,195.87512l-74.32422,-50.62326"/>
+        <path d="M554.06585,195.87512l-79.48299,-40.49861"/>
+        <path d="M566.58061,195.87512l-84.64176,-30.37395"/>
+        <path d="M579.09536,195.87512l-89.80052,-20.2493"/>
+        <path d="M591.61012,195.87512l-94.95929,-10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group6-bridge0">
+        <path d="M604.12488,295.99318l0,-100.11806"/>
+        <path d="M614.24953,303.34917l-10.12465,-94.95929"/>
+        <path d="M624.37418,310.70516l-20.2493,-89.80052"/>
+        <path d="M634.49883,318.06115l-30.37395,-84.64176"/>
+        <path d="M644.62348,325.41714l-40.49861,-79.48299"/>
+        <path d="M654.74813,332.77313l-50.62326,-74.32422"/>
+        <path d="M664.87279,340.12912l-60.74791,-69.16545"/>
+        <path d="M674.99744,347.48511l-70.87256,-64.00669"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group7-bridge0">
+        <path d="M626.27417,435.83831l58.84792,-80.99721"/>
+        <path d="M630.14144,447.74055l47.62466,-82.7748"/>
+        <path d="M634.00872,459.64279l36.40139,-84.55239"/>
+        <path d="M637.87599,471.54503l25.17813,-86.32998"/>
+        <path d="M641.74326,483.44727l13.95487,-88.10757"/>
+        <path d="M645.61053,495.34951l2.73161,-89.88516"/>
+        <path d="M649.47781,507.25176l-8.49166,-91.66275"/>
+        <path d="M653.34508,519.154l-19.71492,-93.44034"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group8-bridge0">
+        <path d="M561.99442,561.99442l95.21793,-30.93818"/>
+        <path d="M558.12715,573.89666l87.18296,-38.97315"/>
+        <path d="M554.25987,585.7989l79.14799,-47.00812"/>
+        <path d="M550.3926,597.70114l71.11302,-55.04309"/>
+        <path d="M546.52533,609.60339l63.07806,-63.07806"/>
+        <path d="M542.65806,621.50563l55.04309,-71.11302"/>
+        <path d="M538.79078,633.40787l47.00812,-79.14799"/>
+        <path d="M534.92351,645.31011l38.97315,-87.18296"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_6-group9-bridge0">
+        <path d="M435.83831,626.27417l95.21793,30.93818"/>
+        <path d="M425.71366,633.63016l93.44034,19.71492"/>
+        <path d="M415.58901,640.98615l91.66275,8.49166"/>
+        <path d="M405.46435,648.34214l89.88516,-2.73161"/>
+        <path d="M395.3397,655.69813l88.10757,-13.95487"/>
+        <path d="M385.21505,663.05412l86.32998,-25.17813"/>
+        <path d="M375.0904,670.41011l84.55239,-36.40139"/>
+        <path d="M364.96575,677.7661l82.7748,-47.62466"/>
+      </g>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group0-bridge0">
+        <path d="M195.87512,604.12488l100.11806,0"/>
+        <path d="M208.38988,604.12488l87.6033,-12.51476"/>
+        <path d="M220.90464,604.12488l75.08854,-25.02951"/>
+        <path d="M233.41939,604.12488l62.57379,-37.54427"/>
+        <path d="M245.93415,604.12488l50.05903,-50.05903"/>
+        <path d="M258.44891,604.12488l37.54427,-62.57379"/>
+        <path d="M270.96367,604.12488l25.02951,-75.08854"/>
+        <path d="M283.47842,604.12488l12.51476,-87.6033"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group0-bridge1">
+        <path d="M195.87512,504.00682l100.11806,0"/>
+        <path d="M195.87512,516.52158l87.6033,-12.51476"/>
+        <path d="M195.87512,529.03633l75.08854,-25.02951"/>
+        <path d="M195.87512,541.55109l62.57379,-37.54427"/>
+        <path d="M195.87512,554.06585l50.05903,-50.05903"/>
+        <path d="M195.87512,566.58061l37.54427,-62.57379"/>
+        <path d="M195.87512,579.09536l25.02951,-75.08854"/>
+        <path d="M195.87512,591.61012l12.51476,-87.6033"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group1-bridge0">
+        <path d="M114.87791,445.1589l80.99721,58.84792"/>
+        <path d="M125.00256,452.51489l78.22855,41.36728"/>
+        <path d="M135.12721,459.87088l75.45989,23.88664"/>
+        <path d="M145.25187,467.22687l72.69123,6.40599"/>
+        <path d="M155.37652,474.58286l69.92256,-11.07465"/>
+        <path d="M165.50117,481.93885l67.1539,-28.55529"/>
+        <path d="M175.62582,489.29484l64.38524,-46.03593"/>
+        <path d="M185.75047,496.65083l61.61658,-63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group1-bridge1">
+        <path d="M173.72583,364.16169l80.99721,58.84792"/>
+        <path d="M166.36984,374.28634l78.22855,41.36728"/>
+        <path d="M159.01385,384.41099l75.45989,23.88664"/>
+        <path d="M151.65786,394.53565l72.69123,6.40599"/>
+        <path d="M144.30187,404.6603l69.92256,-11.07465"/>
+        <path d="M136.94588,414.78495l67.1539,-28.55529"/>
+        <path d="M129.58989,424.9096l64.38524,-46.03593"/>
+        <path d="M122.2339,435.03425l61.61658,-63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group2-bridge0">
+        <path d="M142.78765,268.94376l30.93818,95.21793"/>
+        <path d="M146.65492,280.846l38.97315,79.44842"/>
+        <path d="M150.52219,292.74824l47.00812,63.6789"/>
+        <path d="M154.38947,304.65049l55.04309,47.90939"/>
+        <path d="M158.25674,316.55273l63.07806,32.13987"/>
+        <path d="M162.12401,328.45497l71.11302,16.37036"/>
+        <path d="M165.99128,340.35721l79.14799,0.60085"/>
+        <path d="M169.85856,352.25945l87.18296,-15.16867"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group2-bridge1">
+        <path d="M238.00558,238.00558l30.93818,95.21793"/>
+        <path d="M226.10334,241.87285l38.97315,79.44842"/>
+        <path d="M214.2011,245.74013l47.00812,63.6789"/>
+        <path d="M202.29886,249.6074l55.04309,47.90939"/>
+        <path d="M190.39661,253.47467l63.07806,32.13987"/>
+        <path d="M178.49437,257.34194l71.11302,16.37036"/>
+        <path d="M166.59213,261.20922l79.14799,0.60085"/>
+        <path d="M154.68989,265.07649l87.18296,-15.16867"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group3-bridge0">
+        <path d="M268.94376,142.78765l-30.93818,95.21793"/>
+        <path d="M265.07649,154.68989l-15.16867,87.18296"/>
+        <path d="M261.20922,166.59213l0.60085,79.14799"/>
+        <path d="M257.34194,178.49437l16.37036,71.11302"/>
+        <path d="M253.47467,190.39661l32.13987,63.07806"/>
+        <path d="M249.6074,202.29886l47.90939,55.04309"/>
+        <path d="M245.74013,214.2011l63.6789,47.00812"/>
+        <path d="M241.87285,226.10334l79.44842,38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group3-bridge1">
+        <path d="M364.16169,173.72583l-30.93818,95.21793"/>
+        <path d="M352.25945,169.85856l-15.16867,87.18296"/>
+        <path d="M340.35721,165.99128l0.60085,79.14799"/>
+        <path d="M328.45497,162.12401l16.37036,71.11302"/>
+        <path d="M316.55273,158.25674l32.13987,63.07806"/>
+        <path d="M304.65049,154.38947l47.90939,55.04309"/>
+        <path d="M292.74824,150.52219l63.6789,47.00812"/>
+        <path d="M280.846,146.65492l79.44842,38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group4-bridge0">
+        <path d="M445.1589,114.87791l-80.99721,58.84792"/>
+        <path d="M435.03425,122.2339l-63.51657,61.61658"/>
+        <path d="M424.9096,129.58989l-46.03593,64.38524"/>
+        <path d="M414.78495,136.94588l-28.55529,67.1539"/>
+        <path d="M404.6603,144.30187l-11.07465,69.92256"/>
+        <path d="M394.53565,151.65786l6.40599,72.69123"/>
+        <path d="M384.41099,159.01385l23.88664,75.45989"/>
+        <path d="M374.28634,166.36984l41.36728,78.22855"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group4-bridge1">
+        <path d="M504.00682,195.87512l-80.99721,58.84792"/>
+        <path d="M496.65083,185.75047l-63.51657,61.61658"/>
+        <path d="M489.29484,175.62582l-46.03593,64.38524"/>
+        <path d="M481.93885,165.50117l-28.55529,67.1539"/>
+        <path d="M474.58286,155.37652l-11.07465,69.92256"/>
+        <path d="M467.22687,145.25187l6.40599,72.69123"/>
+        <path d="M459.87088,135.12721l23.88664,75.45989"/>
+        <path d="M452.51489,125.00256l41.36728,78.22855"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group5-bridge0">
+        <path d="M604.12488,195.87512l-100.11806,0"/>
+        <path d="M591.61012,195.87512l-87.6033,12.51476"/>
+        <path d="M579.09536,195.87512l-75.08854,25.02951"/>
+        <path d="M566.58061,195.87512l-62.57379,37.54427"/>
+        <path d="M554.06585,195.87512l-50.05903,50.05903"/>
+        <path d="M541.55109,195.87512l-37.54427,62.57379"/>
+        <path d="M529.03633,195.87512l-25.02951,75.08854"/>
+        <path d="M516.52158,195.87512l-12.51476,87.6033"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group5-bridge1">
+        <path d="M604.12488,295.99318l-100.11806,0"/>
+        <path d="M604.12488,283.47842l-87.6033,12.51476"/>
+        <path d="M604.12488,270.96367l-75.08854,25.02951"/>
+        <path d="M604.12488,258.44891l-62.57379,37.54427"/>
+        <path d="M604.12488,245.93415l-50.05903,50.05903"/>
+        <path d="M604.12488,233.41939l-37.54427,62.57379"/>
+        <path d="M604.12488,220.90464l-25.02951,75.08854"/>
+        <path d="M604.12488,208.38988l-12.51476,87.6033"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group6-bridge0">
+        <path d="M685.12209,354.8411l-80.99721,-58.84792"/>
+        <path d="M674.99744,347.48511l-78.22855,-41.36728"/>
+        <path d="M664.87279,340.12912l-75.45989,-23.88664"/>
+        <path d="M654.74813,332.77313l-72.69123,-6.40599"/>
+        <path d="M644.62348,325.41714l-69.92256,11.07465"/>
+        <path d="M634.49883,318.06115l-67.1539,28.55529"/>
+        <path d="M624.37418,310.70516l-64.38524,46.03593"/>
+        <path d="M614.24953,303.34917l-61.61658,63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group6-bridge1">
+        <path d="M626.27417,435.83831l-80.99721,-58.84792"/>
+        <path d="M633.63016,425.71366l-78.22855,-41.36728"/>
+        <path d="M640.98615,415.58901l-75.45989,-23.88664"/>
+        <path d="M648.34214,405.46435l-72.69123,-6.40599"/>
+        <path d="M655.69813,395.3397l-69.92256,11.07465"/>
+        <path d="M663.05412,385.21505l-67.1539,28.55529"/>
+        <path d="M670.41011,375.0904l-64.38524,46.03593"/>
+        <path d="M677.7661,364.96575l-61.61658,63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group7-bridge0">
+        <path d="M657.21235,531.05624l-30.93818,-95.21793"/>
+        <path d="M653.34508,519.154l-38.97315,-79.44842"/>
+        <path d="M649.47781,507.25176l-47.00812,-63.6789"/>
+        <path d="M645.61053,495.34951l-55.04309,-47.90939"/>
+        <path d="M641.74326,483.44727l-63.07806,-32.13987"/>
+        <path d="M637.87599,471.54503l-71.11302,-16.37036"/>
+        <path d="M634.00872,459.64279l-79.14799,-0.60085"/>
+        <path d="M630.14144,447.74055l-87.18296,15.16867"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group7-bridge1">
+        <path d="M561.99442,561.99442l-30.93818,-95.21793"/>
+        <path d="M573.89666,558.12715l-38.97315,-79.44842"/>
+        <path d="M585.7989,554.25987l-47.00812,-63.6789"/>
+        <path d="M597.70114,550.3926l-55.04309,-47.90939"/>
+        <path d="M609.60339,546.52533l-63.07806,-32.13987"/>
+        <path d="M621.50563,542.65806l-71.11302,-16.37036"/>
+        <path d="M633.40787,538.79078l-79.14799,-0.60085"/>
+        <path d="M645.31011,534.92351l-87.18296,15.16867"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group8-bridge0">
+        <path d="M531.05624,657.21235l30.93818,-95.21793"/>
+        <path d="M534.92351,645.31011l15.16867,-87.18296"/>
+        <path d="M538.79078,633.40787l-0.60085,-79.14799"/>
+        <path d="M542.65806,621.50563l-16.37036,-71.11302"/>
+        <path d="M546.52533,609.60339l-32.13987,-63.07806"/>
+        <path d="M550.3926,597.70114l-47.90939,-55.04309"/>
+        <path d="M554.25987,585.7989l-63.6789,-47.00812"/>
+        <path d="M558.12715,573.89666l-79.44842,-38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group8-bridge1">
+        <path d="M435.83831,626.27417l30.93818,-95.21793"/>
+        <path d="M447.74055,630.14144l15.16867,-87.18296"/>
+        <path d="M459.64279,634.00872l-0.60085,-79.14799"/>
+        <path d="M471.54503,637.87599l-16.37036,-71.11302"/>
+        <path d="M483.44727,641.74326l-32.13987,-63.07806"/>
+        <path d="M495.34951,645.61053l-47.90939,-55.04309"/>
+        <path d="M507.25176,649.47781l-63.6789,-47.00812"/>
+        <path d="M519.154,653.34508l-79.44842,-38.97315"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group9-bridge0">
+        <path d="M354.8411,685.12209l80.99721,-58.84792"/>
+        <path d="M364.96575,677.7661l63.51657,-61.61658"/>
+        <path d="M375.0904,670.41011l46.03593,-64.38524"/>
+        <path d="M385.21505,663.05412l28.55529,-67.1539"/>
+        <path d="M395.3397,655.69813l11.07465,-69.92256"/>
+        <path d="M405.46435,648.34214l-6.40599,-72.69123"/>
+        <path d="M415.58901,640.98615l-23.88664,-75.45989"/>
+        <path d="M425.71366,633.63016l-41.36728,-78.22855"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_7-group9-bridge1">
+        <path d="M295.99318,604.12488l80.99721,-58.84792"/>
+        <path d="M303.34917,614.24953l63.51657,-61.61658"/>
+        <path d="M310.70516,624.37418l46.03593,-64.38524"/>
+        <path d="M318.06115,634.49883l28.55529,-67.1539"/>
+        <path d="M325.41714,644.62348l11.07465,-69.92256"/>
+        <path d="M332.77313,654.74813l-6.40599,-72.69123"/>
+        <path d="M340.12912,664.87279l-23.88664,-75.45989"/>
+        <path d="M347.48511,674.99744l-41.36728,-78.22855"/>
+      </g>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group0-bridge0">
+        <path d="M195.87512,504.00682l58.84792,-80.99721"/>
+        <path d="M208.38988,504.00682l38.97717,-70.87256"/>
+        <path d="M220.90464,504.00682l19.10642,-60.74791"/>
+        <path d="M233.41939,504.00682l-0.76432,-50.62326"/>
+        <path d="M245.93415,504.00682l-20.63507,-40.49861"/>
+        <path d="M258.44891,504.00682l-40.50582,-30.37395"/>
+        <path d="M270.96367,504.00682l-60.37656,-20.2493"/>
+        <path d="M283.47842,504.00682l-80.24731,-10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group0-bridge1">
+        <path d="M354.8411,423.00961l-58.84792,80.99721"/>
+        <path d="M342.32634,423.00961l-38.97717,70.87256"/>
+        <path d="M329.81158,423.00961l-19.10642,60.74791"/>
+        <path d="M317.29683,423.00961l0.76432,50.62326"/>
+        <path d="M304.78207,423.00961l20.63507,40.49861"/>
+        <path d="M292.26731,423.00961l40.50582,30.37395"/>
+        <path d="M279.75255,423.00961l60.37656,20.2493"/>
+        <path d="M267.2378,423.00961l80.24731,10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group1-bridge0">
+        <path d="M173.72583,364.16169l95.21793,-30.93818"/>
+        <path d="M183.85048,371.51768l73.19104,-34.4269"/>
+        <path d="M193.97513,378.87367l51.16415,-37.91562"/>
+        <path d="M204.09978,386.22966l29.13725,-41.40433"/>
+        <path d="M214.22444,393.58565l7.11036,-44.89305"/>
+        <path d="M224.34909,400.94164l-14.91653,-48.38177"/>
+        <path d="M234.47374,408.29763l-36.94342,-51.87048"/>
+        <path d="M244.59839,415.65362l-58.97032,-55.3592"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group1-bridge1">
+        <path d="M349.94097,392.07143l-95.21793,30.93818"/>
+        <path d="M339.81632,384.71544l-73.19104,34.4269"/>
+        <path d="M329.69167,377.35945l-51.16415,37.91562"/>
+        <path d="M319.56702,370.00346l-29.13725,41.40433"/>
+        <path d="M309.44237,362.64747l-7.11036,44.89305"/>
+        <path d="M299.31771,355.29148l14.91653,48.38177"/>
+        <path d="M289.19306,347.93549l36.94342,51.87048"/>
+        <path d="M279.06841,340.5795l58.97032,55.3592"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group2-bridge0">
+        <path d="M238.00558,238.00558l95.21793,30.93818"/>
+        <path d="M241.87285,249.90782l79.44842,15.16867"/>
+        <path d="M245.74013,261.81006l63.6789,-0.60085"/>
+        <path d="M249.6074,273.7123l47.90939,-16.37036"/>
+        <path d="M253.47467,285.61455l32.13987,-32.13987"/>
+        <path d="M257.34194,297.51679l16.37036,-47.90939"/>
+        <path d="M261.20922,309.41903l0.60085,-63.6789"/>
+        <path d="M265.07649,321.32127l-15.16867,-79.44842"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group2-bridge1">
+        <path d="M364.16169,364.16169l-95.21793,-30.93818"/>
+        <path d="M360.29442,352.25945l-79.44842,-15.16867"/>
+        <path d="M356.42715,340.35721l-63.6789,0.60085"/>
+        <path d="M352.55987,328.45497l-47.90939,16.37036"/>
+        <path d="M348.6926,316.55273l-32.13987,32.13987"/>
+        <path d="M344.82533,304.65049l-16.37036,47.90939"/>
+        <path d="M340.95806,292.74824l-0.60085,63.6789"/>
+        <path d="M337.09078,280.846l15.16867,79.44842"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group3-bridge0">
+        <path d="M364.16169,173.72583l58.84792,80.99721"/>
+        <path d="M360.29442,185.62807l55.3592,58.97032"/>
+        <path d="M356.42715,197.53031l51.87048,36.94342"/>
+        <path d="M352.55987,209.43255l48.38177,14.91653"/>
+        <path d="M348.6926,221.3348l44.89305,-7.11036"/>
+        <path d="M344.82533,233.23704l41.40433,-29.13725"/>
+        <path d="M340.95806,245.13928l37.91562,-51.16415"/>
+        <path d="M337.09078,257.04152l34.4269,-73.19104"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group3-bridge1">
+        <path d="M392.07143,349.94097l-58.84792,-80.99721"/>
+        <path d="M395.9387,338.03873l-55.3592,-58.97032"/>
+        <path d="M399.80597,326.13649l-51.87048,-36.94342"/>
+        <path d="M403.67325,314.23425l-48.38177,-14.91653"/>
+        <path d="M407.54052,302.33201l-44.89305,7.11036"/>
+        <path d="M411.40779,290.42976l-41.40433,29.13725"/>
+        <path d="M415.27506,278.52752l-37.91562,51.16415"/>
+        <path d="M419.14234,266.62528l-34.4269,73.19104"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group4-bridge0">
+        <path d="M504.00682,195.87512l0,100.11806"/>
+        <path d="M493.88217,203.23111l10.12465,80.24731"/>
+        <path d="M483.75752,210.5871l20.2493,60.37656"/>
+        <path d="M473.63287,217.94309l30.37395,40.50582"/>
+        <path d="M463.50822,225.29908l40.49861,20.63507"/>
+        <path d="M453.38356,232.65507l50.62326,0.76432"/>
+        <path d="M443.25891,240.01106l60.74791,-19.10642"/>
+        <path d="M433.13426,247.36705l70.87256,-38.97717"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group4-bridge1">
+        <path d="M423.00961,354.8411l0,-100.11806"/>
+        <path d="M433.13426,347.48511l-10.12465,-80.24731"/>
+        <path d="M443.25891,340.12912l-20.2493,-60.37656"/>
+        <path d="M453.38356,332.77313l-30.37395,-40.50582"/>
+        <path d="M463.50822,325.41714l-40.49861,-20.63507"/>
+        <path d="M473.63287,318.06115l-50.62326,-0.76432"/>
+        <path d="M483.75752,310.70516l-60.74791,19.10642"/>
+        <path d="M493.88217,303.34917l-70.87256,38.97717"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group5-bridge0">
+        <path d="M604.12488,295.99318l-58.84792,80.99721"/>
+        <path d="M591.61012,295.99318l-38.97717,70.87256"/>
+        <path d="M579.09536,295.99318l-19.10642,60.74791"/>
+        <path d="M566.58061,295.99318l0.76432,50.62326"/>
+        <path d="M554.06585,295.99318l20.63507,40.49861"/>
+        <path d="M541.55109,295.99318l40.50582,30.37395"/>
+        <path d="M529.03633,295.99318l60.37656,20.2493"/>
+        <path d="M516.52158,295.99318l80.24731,10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group5-bridge1">
+        <path d="M445.1589,376.99039l58.84792,-80.99721"/>
+        <path d="M457.67366,376.99039l38.97717,-70.87256"/>
+        <path d="M470.18842,376.99039l19.10642,-60.74791"/>
+        <path d="M482.70317,376.99039l-0.76432,-50.62326"/>
+        <path d="M495.21793,376.99039l-20.63507,-40.49861"/>
+        <path d="M507.73269,376.99039l-40.50582,-30.37395"/>
+        <path d="M520.24745,376.99039l-60.37656,-20.2493"/>
+        <path d="M532.7622,376.99039l-80.24731,-10.12465"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group6-bridge0">
+        <path d="M626.27417,435.83831l-95.21793,30.93818"/>
+        <path d="M616.14952,428.48232l-73.19104,34.4269"/>
+        <path d="M606.02487,421.12633l-51.16415,37.91562"/>
+        <path d="M595.90022,413.77034l-29.13725,41.40433"/>
+        <path d="M585.77556,406.41435l-7.11036,44.89305"/>
+        <path d="M575.65091,399.05836l14.91653,48.38177"/>
+        <path d="M565.52626,391.70237l36.94342,51.87048"/>
+        <path d="M555.40161,384.34638l58.97032,55.3592"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group6-bridge1">
+        <path d="M450.05903,407.92857l95.21793,-30.93818"/>
+        <path d="M460.18368,415.28456l73.19104,-34.4269"/>
+        <path d="M470.30833,422.64055l51.16415,-37.91562"/>
+        <path d="M480.43298,429.99654l29.13725,-41.40433"/>
+        <path d="M490.55763,437.35253l7.11036,-44.89305"/>
+        <path d="M500.68229,444.70852l-14.91653,-48.38177"/>
+        <path d="M510.80694,452.06451l-36.94342,-51.87048"/>
+        <path d="M520.93159,459.4205l-58.97032,-55.3592"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group7-bridge0">
+        <path d="M561.99442,561.99442l-95.21793,-30.93818"/>
+        <path d="M558.12715,550.09218l-79.44842,-15.16867"/>
+        <path d="M554.25987,538.18994l-63.6789,0.60085"/>
+        <path d="M550.3926,526.2877l-47.90939,16.37036"/>
+        <path d="M546.52533,514.38545l-32.13987,32.13987"/>
+        <path d="M542.65806,502.48321l-16.37036,47.90939"/>
+        <path d="M538.79078,490.58097l-0.60085,63.6789"/>
+        <path d="M534.92351,478.67873l15.16867,79.44842"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group7-bridge1">
+        <path d="M435.83831,435.83831l95.21793,30.93818"/>
+        <path d="M439.70558,447.74055l79.44842,15.16867"/>
+        <path d="M443.57285,459.64279l63.6789,-0.60085"/>
+        <path d="M447.44013,471.54503l47.90939,-16.37036"/>
+        <path d="M451.3074,483.44727l32.13987,-32.13987"/>
+        <path d="M455.17467,495.34951l16.37036,-47.90939"/>
+        <path d="M459.04194,507.25176l0.60085,-63.6789"/>
+        <path d="M462.90922,519.154l-15.16867,-79.44842"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group8-bridge0">
+        <path d="M435.83831,626.27417l-58.84792,-80.99721"/>
+        <path d="M439.70558,614.37193l-55.3592,-58.97032"/>
+        <path d="M443.57285,602.46969l-51.87048,-36.94342"/>
+        <path d="M447.44013,590.56745l-48.38177,-14.91653"/>
+        <path d="M451.3074,578.6652l-44.89305,7.11036"/>
+        <path d="M455.17467,566.76296l-41.40433,29.13725"/>
+        <path d="M459.04194,554.86072l-37.91562,51.16415"/>
+        <path d="M462.90922,542.95848l-34.4269,73.19104"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group8-bridge1">
+        <path d="M407.92857,450.05903l58.84792,80.99721"/>
+        <path d="M404.0613,461.96127l55.3592,58.97032"/>
+        <path d="M400.19403,473.86351l51.87048,36.94342"/>
+        <path d="M396.32675,485.76575l48.38177,14.91653"/>
+        <path d="M392.45948,497.66799l44.89305,-7.11036"/>
+        <path d="M388.59221,509.57024l41.40433,-29.13725"/>
+        <path d="M384.72494,521.47248l37.91562,-51.16415"/>
+        <path d="M380.85766,533.37472l34.4269,-73.19104"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group9-bridge0">
+        <path d="M295.99318,604.12488l0,-100.11806"/>
+        <path d="M306.11783,596.76889l-10.12465,-80.24731"/>
+        <path d="M316.24248,589.4129l-20.2493,-60.37656"/>
+        <path d="M326.36713,582.05691l-30.37395,-40.50582"/>
+        <path d="M336.49178,574.70092l-40.49861,-20.63507"/>
+        <path d="M346.61644,567.34493l-50.62326,-0.76432"/>
+        <path d="M356.74109,559.98894l-60.74791,19.10642"/>
+        <path d="M366.86574,552.63295l-70.87256,38.97717"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_8-group9-bridge1">
+        <path d="M376.99039,445.1589l0,100.11806"/>
+        <path d="M366.86574,452.51489l10.12465,80.24731"/>
+        <path d="M356.74109,459.87088l20.2493,60.37656"/>
+        <path d="M346.61644,467.22687l30.37395,40.50582"/>
+        <path d="M336.49178,474.58286l40.49861,20.63507"/>
+        <path d="M326.36713,481.93885l50.62326,0.76432"/>
+        <path d="M316.24248,489.29484l60.74791,-19.10642"/>
+        <path d="M306.11783,496.65083l70.87256,-38.97717"/>
+      </g>
+    </g>
+    <g stroke="#0099cc">
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group0-bridge0">
+        <path d="M354.8411,423.00961l-100.11806,0"/>
+        <path d="M342.32634,423.00961l-75.70106,-3.86727"/>
+        <path d="M329.81158,423.00961l-51.28406,-7.73455"/>
+        <path d="M317.29683,423.00961l-26.86706,-11.60182"/>
+        <path d="M304.78207,423.00961l-2.45006,-15.46909"/>
+        <path d="M292.26731,423.00961l21.96694,-19.33636"/>
+        <path d="M279.75255,423.00961l46.38393,-23.20364"/>
+        <path d="M267.2378,423.00961l70.80093,-27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group1-bridge0">
+        <path d="M349.94097,392.07143l-80.99721,-58.84792"/>
+        <path d="M339.81632,384.71544l-58.97032,-47.62466"/>
+        <path d="M329.69167,377.35945l-36.94342,-36.40139"/>
+        <path d="M319.56702,370.00346l-14.91653,-25.17813"/>
+        <path d="M309.44237,362.64747l7.11036,-13.95487"/>
+        <path d="M299.31771,355.29148l29.13725,-2.73161"/>
+        <path d="M289.19306,347.93549l51.16415,8.49166"/>
+        <path d="M279.06841,340.5795l73.19104,19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group2-bridge0">
+        <path d="M364.16169,364.16169l-30.93818,-95.21793"/>
+        <path d="M360.29442,352.25945l-19.71492,-73.19104"/>
+        <path d="M356.42715,340.35721l-8.49166,-51.16415"/>
+        <path d="M352.55987,328.45497l2.73161,-29.13725"/>
+        <path d="M348.6926,316.55273l13.95487,-7.11036"/>
+        <path d="M344.82533,304.65049l25.17813,14.91653"/>
+        <path d="M340.95806,292.74824l36.40139,36.94342"/>
+        <path d="M337.09078,280.846l47.62466,58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group3-bridge0">
+        <path d="M392.07143,349.94097l30.93818,-95.21793"/>
+        <path d="M395.9387,338.03873l27.07091,-70.80093"/>
+        <path d="M399.80597,326.13649l23.20364,-46.38393"/>
+        <path d="M403.67325,314.23425l19.33636,-21.96694"/>
+        <path d="M407.54052,302.33201l15.46909,2.45006"/>
+        <path d="M411.40779,290.42976l11.60182,26.86706"/>
+        <path d="M415.27506,278.52752l7.73455,51.28406"/>
+        <path d="M419.14234,266.62528l3.86727,75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group4-bridge0">
+        <path d="M423.00961,354.8411l80.99721,-58.84792"/>
+        <path d="M433.13426,347.48511l63.51657,-41.36728"/>
+        <path d="M443.25891,340.12912l46.03593,-23.88664"/>
+        <path d="M453.38356,332.77313l28.55529,-6.40599"/>
+        <path d="M463.50822,325.41714l11.07465,11.07465"/>
+        <path d="M473.63287,318.06115l-6.40599,28.55529"/>
+        <path d="M483.75752,310.70516l-23.88664,46.03593"/>
+        <path d="M493.88217,303.34917l-41.36728,63.51657"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group5-bridge0">
+        <path d="M445.1589,376.99039l100.11806,0"/>
+        <path d="M457.67366,376.99039l75.70106,3.86727"/>
+        <path d="M470.18842,376.99039l51.28406,7.73455"/>
+        <path d="M482.70317,376.99039l26.86706,11.60182"/>
+        <path d="M495.21793,376.99039l2.45006,15.46909"/>
+        <path d="M507.73269,376.99039l-21.96694,19.33636"/>
+        <path d="M520.24745,376.99039l-46.38393,23.20364"/>
+        <path d="M532.7622,376.99039l-70.80093,27.07091"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group6-bridge0">
+        <path d="M450.05903,407.92857l80.99721,58.84792"/>
+        <path d="M460.18368,415.28456l58.97032,47.62466"/>
+        <path d="M470.30833,422.64055l36.94342,36.40139"/>
+        <path d="M480.43298,429.99654l14.91653,25.17813"/>
+        <path d="M490.55763,437.35253l-7.11036,13.95487"/>
+        <path d="M500.68229,444.70852l-29.13725,2.73161"/>
+        <path d="M510.80694,452.06451l-51.16415,-8.49166"/>
+        <path d="M520.93159,459.4205l-73.19104,-19.71492"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group7-bridge0">
+        <path d="M435.83831,435.83831l30.93818,95.21793"/>
+        <path d="M439.70558,447.74055l19.71492,73.19104"/>
+        <path d="M443.57285,459.64279l8.49166,51.16415"/>
+        <path d="M447.44013,471.54503l-2.73161,29.13725"/>
+        <path d="M451.3074,483.44727l-13.95487,7.11036"/>
+        <path d="M455.17467,495.34951l-25.17813,-14.91653"/>
+        <path d="M459.04194,507.25176l-36.40139,-36.94342"/>
+        <path d="M462.90922,519.154l-47.62466,-58.97032"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group8-bridge0">
+        <path d="M407.92857,450.05903l-30.93818,95.21793"/>
+        <path d="M404.0613,461.96127l-27.07091,70.80093"/>
+        <path d="M400.19403,473.86351l-23.20364,46.38393"/>
+        <path d="M396.32675,485.76575l-19.33636,21.96694"/>
+        <path d="M392.45948,497.66799l-15.46909,-2.45006"/>
+        <path d="M388.59221,509.57024l-11.60182,-26.86706"/>
+        <path d="M384.72494,521.47248l-7.73455,-51.28406"/>
+        <path d="M380.85766,533.37472l-3.86727,-75.70106"/>
+      </g>
+      <g
+        data-paper-data="{&quot;generatorType&quot;:&quot;lineBridgeOnEdge&quot;,&quot;outputType&quot;:&quot;lineBridge&quot;,&quot;steps&quot;:8,&quot;flip1&quot;:false,&quot;flip2&quot;:false}"
+        id="__gen_9-group9-bridge0">
+        <path d="M376.99039,445.1589l-80.99721,58.84792"/>
+        <path d="M366.86574,452.51489l-63.51657,41.36728"/>
+        <path d="M356.74109,459.87088l-46.03593,23.88664"/>
+        <path d="M346.61644,467.22687l-28.55529,6.40599"/>
+        <path d="M336.49178,474.58286l-11.07465,-11.07465"/>
+        <path d="M326.36713,481.93885l6.40599,-28.55529"/>
+        <path d="M316.24248,489.29484l23.88664,-46.03593"/>
+        <path d="M306.11783,496.65083l41.36728,-63.51657"/>
+      </g>
+    </g>
+  </g>
+  <g id="__annotations" fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+     stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="sans-serif"
+     font-weight="normal" font-size="none" text-anchor="none" opacity="0.9" style="mix-blend-mode: normal">
+    <g visibility="hidden">
+      <text x="404" y="404" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">0</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="396" y="614.70685">0</text>
+        <text x="330.888" y="604.39412">1</text>
+        <text x="272.14962" y="574.46542">2</text>
+        <text x="225.53458" y="527.85038">3</text>
+        <text x="195.60588" y="469.112">4</text>
+        <text x="185.29315" y="404">5</text>
+        <text x="195.60588" y="338.888">6</text>
+        <text x="225.53458" y="280.14962">7</text>
+        <text x="272.14962" y="233.53458">8</text>
+        <text x="330.888" y="203.60588">9</text>
+        <text x="396" y="193.29315">10</text>
+        <text x="461.112" y="203.60588">11</text>
+        <text x="519.85038" y="233.53458">12</text>
+        <text x="566.46542" y="280.14962">13</text>
+        <text x="596.39412" y="338.888">14</text>
+        <text x="606.70685" y="404">15</text>
+        <text x="596.39412" y="469.112">16</text>
+        <text x="566.46542" y="527.85038">17</text>
+        <text x="519.85038" y="574.46542">18</text>
+        <text x="461.112" y="604.39412">19</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="356.39103" y="704.59118" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">0</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="381.76372" y="704.59118">0</text>
+        <text x="380.13034" y="714.90391">1</text>
+        <text x="315.01835" y="704.59118">2</text>
+        <text x="316.65172" y="694.27845">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="188.80048" y="619.19952" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">1</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="207.79955" y="638.8155">0</text>
+        <text x="200.41645" y="646.19859">1</text>
+        <text x="153.80141" y="599.58355">2</text>
+        <text x="161.1845" y="592.20045">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="103.40882" y="451.60897" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">2</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="105.72155" y="483.34828">0</text>
+        <text x="95.40882" y="484.98165">1</text>
+        <text x="85.09609" y="419.86966">2</text>
+        <text x="95.40882" y="418.23628">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="132.83278" y="265.8334" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">3</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="114.52005" y="297.57271">0</text>
+        <text x="105.21681" y="292.83247">1</text>
+        <text x="135.14551" y="234.09409">2</text>
+        <text x="144.44875" y="238.83433">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="265.8334" y="132.83278" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">4</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="230.83433" y="152.44875">0</text>
+        <text x="226.09409" y="143.14551">1</text>
+        <text x="284.83247" y="113.21681">2</text>
+        <text x="289.57271" y="122.52005">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="451.60897" y="103.40882" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">5</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="410.23628" y="103.40882">0</text>
+        <text x="411.86966" y="93.09609">1</text>
+        <text x="476.98165" y="103.40882">2</text>
+        <text x="475.34828" y="113.72155">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="619.19952" y="188.80048" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">6</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="584.20045" y="169.1845">0</text>
+        <text x="591.58355" y="161.80141">1</text>
+        <text x="638.19859" y="208.41645">2</text>
+        <text x="630.8155" y="215.79955">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="704.59118" y="356.39103" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">7</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="686.27845" y="324.65172">0</text>
+        <text x="696.59118" y="323.01835">1</text>
+        <text x="706.90391" y="388.13034">2</text>
+        <text x="696.59118" y="389.76372">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="675.16722" y="542.1666" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">8</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="677.47995" y="510.42729">0</text>
+        <text x="686.78319" y="515.16753">1</text>
+        <text x="656.85449" y="573.90591">2</text>
+        <text x="647.55125" y="569.16567">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="542.1666" y="675.16722" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">9</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="561.16567" y="655.55125">0</text>
+        <text x="565.90591" y="664.85449">1</text>
+        <text x="507.16753" y="694.78319">2</text>
+        <text x="502.42729" y="685.47995">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="279.35811" y="648.62348" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">0</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="304.7308" y="648.62348">0</text>
+        <text x="290.97408" y="675.62255">1</text>
+        <text x="237.98542" y="648.62348">2</text>
+        <text x="251.74214" y="621.62441">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="159.37652" y="528.64189" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">1</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="178.37559" y="548.25786">0</text>
+        <text x="151.37652" y="562.01458">1</text>
+        <text x="124.37745" y="509.02592">2</text>
+        <text x="151.37652" y="495.2692">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="132.83278" y="361.05133" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">2</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="135.14551" y="392.79064">0</text>
+        <text x="105.21681" y="388.0504">1</text>
+        <text x="114.52005" y="329.31202">2</text>
+        <text x="144.44875" y="334.05226">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="209.8657" y="209.8657" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">3</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="191.55298" y="241.60502">0</text>
+        <text x="170.12639" y="220.17843">1</text>
+        <text x="212.17843" y="178.12639">2</text>
+        <text x="233.60502" y="199.55298">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="361.05133" y="132.83278" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">4</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="326.05226" y="152.44875">0</text>
+        <text x="321.31202" y="122.52005">1</text>
+        <text x="380.0504" y="113.21681">2</text>
+        <text x="384.79064" y="143.14551">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="528.64189" y="159.37652" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">5</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="487.2692" y="159.37652">0</text>
+        <text x="501.02592" y="132.37745">1</text>
+        <text x="554.01458" y="159.37652">2</text>
+        <text x="540.25786" y="186.37559">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="648.62348" y="279.35811" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">6</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="613.62441" y="259.74214">0</text>
+        <text x="640.62348" y="245.98542">1</text>
+        <text x="667.62255" y="298.97408">2</text>
+        <text x="640.62348" y="312.7308">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="675.16722" y="446.94867" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">7</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="656.85449" y="415.20936">0</text>
+        <text x="686.78319" y="419.9496">1</text>
+        <text x="677.47995" y="478.68798">2</text>
+        <text x="647.55125" y="473.94774">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="598.1343" y="598.1343" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">8</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="600.44702" y="566.39498">0</text>
+        <text x="621.87361" y="587.82157">1</text>
+        <text x="579.82157" y="629.87361">2</text>
+        <text x="558.39498" y="608.44702">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="446.94867" y="675.16722" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">9</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="465.94774" y="655.55125">0</text>
+        <text x="470.68798" y="685.47995">1</text>
+        <text x="411.9496" y="694.78319">2</text>
+        <text x="407.20936" y="664.85449">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="249.93415" y="558.06585" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">0</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="275.30684" y="558.06585">0</text>
+        <text x="241.93415" y="591.43853">1</text>
+        <text x="208.56147" y="558.06585">2</text>
+        <text x="241.93415" y="524.69316">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="188.80048" y="438.08426" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">1</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="207.79955" y="457.70023">0</text>
+        <text x="161.1845" y="465.08333">1</text>
+        <text x="153.80141" y="418.46828">2</text>
+        <text x="200.41645" y="411.08519">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="209.8657" y="305.08364" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">2</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="212.17843" y="336.82295">0</text>
+        <text x="170.12639" y="315.39636">1</text>
+        <text x="191.55298" y="273.34433">2</text>
+        <text x="233.60502" y="294.77091">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="305.08364" y="209.8657" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">3</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="286.77091" y="241.60502">0</text>
+        <text x="265.34433" y="199.55298">1</text>
+        <text x="307.39636" y="178.12639">2</text>
+        <text x="328.82295" y="220.17843">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="438.08426" y="188.80048" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">4</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="403.08519" y="208.41645">0</text>
+        <text x="410.46828" y="161.80141">1</text>
+        <text x="457.08333" y="169.1845">2</text>
+        <text x="449.70023" y="215.79955">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="558.06585" y="249.93415" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">5</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="516.69316" y="249.93415">0</text>
+        <text x="550.06585" y="216.56147">1</text>
+        <text x="583.43853" y="249.93415">2</text>
+        <text x="550.06585" y="283.30684">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="619.19952" y="369.91574" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">6</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="584.20045" y="350.29977">0</text>
+        <text x="630.8155" y="342.91667">1</text>
+        <text x="638.19859" y="389.53172">2</text>
+        <text x="591.58355" y="396.91481">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="598.1343" y="502.91636" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">7</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="579.82157" y="471.17705">0</text>
+        <text x="621.87361" y="492.60364">1</text>
+        <text x="600.44702" y="534.65567">2</text>
+        <text x="558.39498" y="513.22909">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="502.91636" y="598.1343" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">8</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="505.22909" y="566.39498">0</text>
+        <text x="526.65567" y="608.44702">1</text>
+        <text x="484.60364" y="629.87361">2</text>
+        <text x="463.17705" y="587.82157">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="369.91574" y="619.19952" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">9</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="388.91481" y="599.58355">0</text>
+        <text x="381.53172" y="646.19859">1</text>
+        <text x="334.91667" y="638.8155">2</text>
+        <text x="342.29977" y="592.20045">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="279.35811" y="467.50822" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">0</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="304.7308" y="467.50822">0</text>
+        <text x="251.74214" y="494.50729">1</text>
+        <text x="237.98542" y="467.50822">2</text>
+        <text x="290.97408" y="440.50914">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="265.8334" y="382.11656" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">1</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="284.83247" y="401.73253">0</text>
+        <text x="226.09409" y="392.42929">1</text>
+        <text x="230.83433" y="362.50059">2</text>
+        <text x="289.57271" y="371.80383">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="305.08364" y="305.08364" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">2</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="307.39636" y="336.82295">0</text>
+        <text x="265.34433" y="294.77091">1</text>
+        <text x="286.77091" y="273.34433">2</text>
+        <text x="328.82295" y="315.39636">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="382.11656" y="265.8334" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">3</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="363.80383" y="297.57271">0</text>
+        <text x="354.50059" y="238.83433">1</text>
+        <text x="384.42929" y="234.09409">2</text>
+        <text x="393.73253" y="292.83247">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="467.50822" y="279.35811" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">4</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="432.50914" y="298.97408">0</text>
+        <text x="459.50822" y="245.98542">1</text>
+        <text x="486.50729" y="259.74214">2</text>
+        <text x="459.50822" y="312.7308">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="528.64189" y="340.49178" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">5</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="487.2692" y="340.49178">0</text>
+        <text x="540.25786" y="313.49271">1</text>
+        <text x="554.01458" y="340.49178">2</text>
+        <text x="501.02592" y="367.49086">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="542.1666" y="425.88344" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">6</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="507.16753" y="406.26747">0</text>
+        <text x="565.90591" y="415.57071">1</text>
+        <text x="561.16567" y="445.49941">2</text>
+        <text x="502.42729" y="436.19617">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="502.91636" y="502.91636" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">7</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="484.60364" y="471.17705">0</text>
+        <text x="526.65567" y="513.22909">1</text>
+        <text x="505.22909" y="534.65567">2</text>
+        <text x="463.17705" y="492.60364">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="425.88344" y="542.1666" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">8</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="428.19617" y="510.42729">0</text>
+        <text x="437.49941" y="569.16567">1</text>
+        <text x="407.57071" y="573.90591">2</text>
+        <text x="398.26747" y="515.16753">3</text>
+      </g>
+    </g>
+    <g visibility="hidden">
+      <text x="340.49178" y="528.64189" id="polyIndexLabel" fill="#808080" font-size="18" text-anchor="middle">9</text>
+      <g id="edgeLabels" fill="#000000" font-size="10" text-anchor="start">
+        <text x="359.49086" y="509.02592">0</text>
+        <text x="332.49178" y="562.01458">1</text>
+        <text x="305.49271" y="548.25786">2</text>
+        <text x="332.49178" y="495.2692">3</text>
+      </g>
+    </g>
+  </g>
+</svg>

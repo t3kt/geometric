@@ -6,29 +6,22 @@ export class BuildModel {
   context: BuildContext;
   basisPoly: BuildPoly;
   polyGroups: BuildGroup[];
-  lineBridgeGroups: BuildGroup[];
 
-  constructor({context, basisPoly, polyGroups, lineBridgeGroups}) {
+  constructor({context, basisPoly, polyGroups}) {
     this.context = context;
     this.basisPoly = basisPoly;
     this.polyGroups = polyGroups || [];
-    this.lineBridgeGroups = lineBridgeGroups || [];
   }
 
   static fromBuildContext(context: BuildContext) {
     const polyGroups: BuildGroup[] = [];
-    const lineBridgeGroups: BuildGroup[] = [];
-    _.forEach(context.polyGroupsById, (group, groupId) => {
-      polyGroups.push(BuildGroup.fromPaperGroup(context, group, {id: groupId}));
-    });
-    _.forEach(context.lineBridgeGroupsById, (group, groupId) => {
-      lineBridgeGroups.push(BuildGroup.fromPaperGroup(context, group, {id: groupId}));
+    _.forEach(context.orderedPolyGroups, (group) => {
+      polyGroups.push(BuildGroup.fromPaperGroup(context, group, {}));
     });
     return new BuildModel({
       context: context,
       basisPoly: context.basisPoly ? BuildPoly.fromPaperPath(context, context.basisPoly, {}) : null,
       polyGroups: polyGroups,
-      lineBridgeGroups: lineBridgeGroups,
     });
   }
 }

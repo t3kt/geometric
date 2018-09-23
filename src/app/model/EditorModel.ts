@@ -90,6 +90,9 @@ export class EditorModel {
   }
 
   private buildGroupAnnotations(group: BuildGroup, layer: paper.Layer) {
+    if (group.data['outputType'] == 'lineBridge') {
+      return;
+    }
     for (let poly of group.polys) {
       this.buildPolyAnnotations(poly, layer);
     }

@@ -1,0 +1,256 @@
+{
+  name: 'pattern7',
+  base: {
+    sides: 20,
+    radius: 0.4,
+    attrs: {
+      strokeColor: '#006633',
+      strokeWidth: 1,
+    },
+  },
+  generators: [
+    {
+      type: 'rhombusOnEdgePair',
+      id: 'gen1',
+      source: {
+        type: 'zip',
+        source1: {
+          step: 2,
+          wrap: true,
+        },
+        source2: {
+          step: 2,
+          start: 1,
+          wrap: true,
+        },
+      },
+      attrs: {
+        strokeColor: '#773366',
+        opacity: 0.6,
+      },
+    },
+    {
+      type: 'rhombusOnEdgePair',
+      id: 'gen2',
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: '_prev',
+          },
+          indices: [
+            3,
+          ],
+        },
+        source2: {
+          from: {
+            from: '_prev',
+            start: 1,
+            wrap: true,
+          },
+          indices: [
+            0,
+          ],
+        },
+      },
+      attrs: {
+        strokeColor: '#773366',
+        opacity: 0.6,
+      },
+    },
+    {
+      type: 'rhombusOnEdgePair',
+      id: 'gen3',
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: '_prev',
+          },
+          indices: [
+            3,
+          ],
+        },
+        source2: {
+          from: {
+            from: '_prev',
+            start: 1,
+            wrap: true,
+          },
+          indices: [
+            0,
+          ],
+        },
+      },
+      attrs: {
+        strokeColor: '#773366',
+        opacity: 0.6,
+      },
+    },
+    {
+      type: 'rhombusOnEdgePair',
+      id: 'gen4',
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: '_prev',
+          },
+          indices: [
+            3,
+          ],
+        },
+        source2: {
+          from: {
+            from: '_prev',
+            start: 1,
+            wrap: true,
+          },
+          indices: [
+            0,
+          ],
+        },
+      },
+      attrs: {
+        strokeColor: '#773366',
+        opacity: 0.6,
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen1',
+          },
+          indices: [1, 2],
+        },
+        source2: {
+          from: {
+            from: 'gen1',
+          },
+          indices: [0, 3],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen1',
+          },
+          indices: [3],
+        },
+        source2: {
+          from: {
+            from: 'gen1',
+            start: 1,
+            wrap: true,
+          },
+          indices: [0],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen2',
+          },
+          indices: [3],
+        },
+        source2: {
+          from: {
+            from: 'gen2',
+          },
+          indices: [0],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen3',
+          },
+          indices: [1, 2],
+        },
+        source2: {
+          from: {
+            from: 'gen3',
+          },
+          indices: [0, 3],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen4',
+          },
+          indices: [1, 3],
+        },
+        source2: {
+          from: {
+            from: 'gen4',
+          },
+          indices: [2, 0],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+    {
+      type: 'lineBridgeOnEdge',
+      steps: 8,
+      source: {
+        type: 'zip',
+        source1: {
+          from: {
+            from: 'gen4',
+          },
+          indices: [3],
+        },
+        source2: {
+          from: {
+            from: 'gen4',
+            start: 1,
+            wrap: true,
+          },
+          indices: [0],
+        }
+      },
+      attrs: {
+        strokeColor: '#0099CC',
+      },
+    },
+  ],
+}
