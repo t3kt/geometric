@@ -41,7 +41,7 @@ export function buildJsonFromItem(item) {
     obj.points = _.map(item.segments, buildJsonFromItem);
     obj.closed = item.closed;
   } else if (item instanceof paper.Project) {
-    obj.children = _.map(item.layers, buildJsonFromItem);
+    obj.children = _(item.layers).filter((layer) => layer.name != '__annotations').map(buildJsonFromItem).value();
   } else if (item.children && item.children.length) {
     obj.children = _.map(item.children, buildJsonFromItem);
   }
