@@ -206,7 +206,7 @@ class IndexRangeSelector extends IndexSelector {
   }
 }
 
-class BuildContext {
+export class BuildContext {
   paper: paper.PaperScope;
   width: number;
   height: number;
@@ -718,8 +718,7 @@ export class GeoDocument {
     this.generators = _.map(util.stripIgnoredItems(generators), Generator.of);
   }
 
-  build(paper: paper.PaperScope, width: number = 500, height: number = 500) {
-    const context = new BuildContext({paper, width, height});
+  buildDoc(context: BuildContext) {
     this.base.build(context);
     for (const generator of this.generators) {
       generator.generate(context);

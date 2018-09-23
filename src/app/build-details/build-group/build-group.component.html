@@ -1,0 +1,19 @@
+<span class="label">Poly Group [id: {{groupInfo.id}}, name: {{groupInfo.name}}]</span>
+<ul>
+  <li *ngIf="groupInfo.polys.length">
+    <span class="label">Polys</span>
+    <ul>
+      <li *ngFor="let poly of groupInfo.polys">
+        <build-poly [polyInfo]="poly"></build-poly>
+      </li>
+    </ul>
+  </li>
+  <li *ngIf="groupInfo.subGroups.length">
+    <span class="label">Sub Groups</span>
+    <ul>
+      <li *ngFor="let subGroup of groupInfo.subGroups">
+        <build-group [groupInfo]="subGroup"></build-group>
+      </li>
+    </ul>
+  </li>
+</ul>

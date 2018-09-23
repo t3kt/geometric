@@ -1,0 +1,25 @@
+<ul *ngIf="!buildInfo">
+  <li>(no build info)</li>
+</ul>
+<ul *ngIf="buildInfo">
+  <li *ngIf="buildInfo.basisPoly">
+    <span class="label">Basis Poly</span>
+    <build-poly [polyInfo]="buildInfo.basisPoly"></build-poly>
+  </li>
+  <li *ngIf="buildInfo.polyGroups.length">
+    <span class="label">Poly Groups</span>
+    <ul>
+      <li *ngFor="let groupInfo of buildInfo.polyGroups">
+        <build-group [groupInfo]="groupInfo"></build-group>
+      </li>
+    </ul>
+  </li>
+  <li *ngIf="buildInfo.lineBridgeGroups.length">
+    <span class="label">Line Bridge Groups</span>
+    <ul>
+      <li *ngFor="let groupInfo of buildInfo.lineBridgeGroups">
+        <build-group [groupInfo]="groupInfo"></build-group>
+      </li>
+    </ul>
+  </li>
+</ul>

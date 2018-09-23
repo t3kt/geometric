@@ -25,13 +25,15 @@ export class GeoDisplayComponent implements OnInit {
     const paper = this.editorModel.paperScope;
     paper.project.clear();
     const doc = this.editorModel.doc.value;
+    this.editorModel.initBuildContext();
     if (!doc) {
+      this.editorModel.notifyBuilt();
       return;
     }
-    const size = this.editorModel.size.value;
-    paper.view.viewSize.set(size.width, size.height);
-    doc.build(paper, size.width, size.height);
+    paper.view.viewSize.set(this.editorModel.buildContext.width, this.editorModel.buildContext.height);
+    doc.buildDoc(this.editorModel.buildContext);
     paper.view.draw();
+    this.editorModel.notifyBuilt();
   }
 
 }

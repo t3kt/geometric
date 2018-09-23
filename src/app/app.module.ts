@@ -16,13 +16,21 @@ import {
 import {EditorToolbarComponent} from './editor-toolbar/editor-toolbar.component';
 import {EditorPanelComponent} from './editor-panel/editor-panel.component';
 import {FormsModule} from "@angular/forms";
+import { DocTreeComponent } from './doc-tree/doc-tree.component';
+import {TreeNodeComponent} from "./doc-tree/tree-node/tree-node.component";
+import { BuildDetailsComponent } from './build-details/build-details.component';
+import { BuildGroupComponent } from './build-details/build-group/build-group.component';
+import { BuildPolyComponent } from './build-details/build-poly/build-poly.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GeoDisplayComponent,
     EditorToolbarComponent,
-    EditorPanelComponent
+    EditorPanelComponent,
+    BuildDetailsComponent,
+    BuildGroupComponent,
+    BuildPolyComponent,
   ],
   imports: [
     BrowserModule,
