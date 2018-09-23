@@ -152,7 +152,7 @@ class IndexSelector {
   }
 }
 
-class IndexListSelector extends IndexSelector {
+export class IndexListSelector extends IndexSelector {
   indices: number[];
   wrap: boolean;
 
@@ -167,7 +167,7 @@ class IndexListSelector extends IndexSelector {
   }
 }
 
-class IndexRangeSelector extends IndexSelector {
+export class IndexRangeSelector extends IndexSelector {
   start: number;
   end?: number;
   step: number;
@@ -191,15 +191,25 @@ class IndexRangeSelector extends IndexSelector {
       end = this.end;
     }
     let indices;
-    if (!this.wrap || this.step === 1) {
+    if (!this.wrap && this.step === 1) {
       indices = _.range(this.start, end, this.step);
     } else {
       indices = [];
       if (this.end === total) {
         indices = _.take(_.range(this.start, end), total, this.step);
       } else {
-        // TODO: STUFF!
-        throw new Error('not implemented: ranges with wrapping, end point, and step != 1');
+        let i = this.start;
+        for (;;) {
+          if (indices.indexOf(i) != -1) {
+            break;
+          }
+          if (this.end != null && i >= (this.end % total)) {
+            break;
+          }
+          indices.push(i);
+          i = (i + this.step) % total;
+        }
+        return indices;
       }
     }
     return postProcessIndices(indices, total, this.wrap);
