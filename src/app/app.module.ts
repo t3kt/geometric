@@ -9,7 +9,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule,
+  MatInputModule, MatSlideToggleModule,
   MatTabsModule,
   MatToolbarModule
 } from "@angular/material";
@@ -41,6 +41,7 @@ import { BuildPolyComponent } from './build-details/build-poly/build-poly.compon
     MatInputModule,
     MatTabsModule,
     MatToolbarModule,
+    MatSlideToggleModule,
     FormsModule,
   ],
   providers: [EditorModel],

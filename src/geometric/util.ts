@@ -195,17 +195,27 @@ export function drawPolySegmentIndices(paper: paper.PaperScope, poly) {
     const prevPt = segment.previous.point;
     const currPt = segment.point;
     const textPt = averagePoints([prevPt, currPt, center]);
-    textPt.x -= 6;
+    textPt.x -= 4;
     textPt.y += 4;
     texts.push(new paper.PointText({
       point: textPt,
       content: i.toString(),
       fillColor: 'black',
-      fontFamily: 'Courier New',
-      fontSize: 12
+      fontSize: 10,
     }));
   }
-  return texts;
+  return new paper.Group(texts);
+}
+
+export function drawPolyIndex(paper: paper.PaperScope, poly: paper.Path, index: number) {
+  const center = poly.bounds.center;
+  return new paper.PointText({
+    point: center.subtract(new paper.Point(-4, -4)),
+    content: index.toString(),
+    fillColor: 'grey',
+    fontSize: 18,
+    justification: 'center',
+  });
 }
 
 function isIgnoredItem(obj, key = null) {

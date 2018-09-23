@@ -1,4 +1,11 @@
-<span class="label">Poly Group [id: {{groupInfo.id}}, name: {{groupInfo.name}}]</span>
+<span class="label">[{{groupInfo.index}}] Poly Group (id: {{groupInfo.id}}, name: {{groupInfo.name}})</span>
+<div class="actions">
+  <button mat-button (click)="highlight()">Highlight</button>
+  <mat-slide-toggle
+    [(ngModel)]="groupInfo.annotationsVisible">
+    Annotations
+  </mat-slide-toggle>
+</div>
 <ul>
   <li *ngIf="groupInfo.polys.length">
     <span class="label">Polys</span>

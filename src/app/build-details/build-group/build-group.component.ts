@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {GroupInfo} from "../../model/BuildInfoModel";
+import {BuildGroup} from "../../model/BuildModel";
+import {EditorModel} from "../../model/EditorModel";
 
 @Component({
   selector: 'build-group',
@@ -8,7 +9,13 @@ import {GroupInfo} from "../../model/BuildInfoModel";
 })
 export class BuildGroupComponent {
 
-  @Input()
-  groupInfo: GroupInfo;
+  constructor(private editorModel: EditorModel) { }
 
+  @Input()
+  groupInfo: BuildGroup;
+
+
+  highlight() {
+    this.editorModel.setHighlightedItem(this.groupInfo.item);
+  }
 }

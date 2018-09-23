@@ -1,5 +1,11 @@
-<span class="label">Poly [name: {{polyInfo.name}}]</span>
-<button mat-button (click)="highlight()">Highlight</button>
+<span class="label">[{{polyInfo.index}}] Poly (name: {{polyInfo.name}})</span>
+<div class="actions">
+  <button mat-button (click)="highlight()">Highlight</button>
+  <mat-slide-toggle
+    [(ngModel)]="polyInfo.annotationsVisible">
+    Annotations
+  </mat-slide-toggle>
+</div>
 <ul>
   <li>
     <span class="label">Sides: {{polyInfo.numSides}}</span>
