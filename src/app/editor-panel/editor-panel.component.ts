@@ -46,7 +46,7 @@ export class EditorPanelComponent implements OnInit {
       this.outputText = '';
     } else {
       const outObj = buildJsonFromItem(this.editorModel.paperScope);
-      this.outputText = JSON5.stringify(outObj, null, '  ');
+      this.outputText = JSON.stringify(outObj, null, '  ');
     }
   }
 
